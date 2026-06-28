@@ -5,8 +5,9 @@ built for a tertiary/quaternary referral center rotation.
 
 ## Contents
 
-- **`index.html`** — the landing page (served at the site root).
-- **`Colorectal_Rotation_Reference.dc.html`** — the same page under its canonical name.
+- **`index.html`** — the page itself (served at the site root). This is the single canonical copy.
+- **`Colorectal_Rotation_Reference.dc.html`** — a thin redirect to `index.html`, kept so the
+  original URL still works.
 - **`support.js`** — the dc-runtime that renders the page (loaded via `./support.js`).
 - **`colorectal_surgery_cheat_sheet.md`** — the source cheat sheet (Markdown) the page is built from.
 
