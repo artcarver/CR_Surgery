@@ -63,6 +63,52 @@ body{margin:0;background:var(--bg)}
 section[data-sec]>[data-toggle]{box-shadow:0 1px 2px rgba(0,0,0,.045),0 1px 0 rgba(0,0,0,.02);transition:border-color .18s,box-shadow .18s}
 section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat) 45%,var(--line));box-shadow:0 2px 8px rgba(0,0,0,.06)}
 [data-card]{transition:border-color .18s}
+/* ============ uniform component styles (replaces former inline styles) ============ */
+.crs-section{scroll-margin-top:74px;margin:0 0 16px}
+.crs-toggle{display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none}
+.crs-badge{width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none}
+.crs-titlewrap{flex:1;min-width:0}
+.crs-h2{margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600}
+.crs-subtitle{font-size:12px;color:var(--ink-3)}
+.crs-subtitle.accent{color:var(--cat);font-weight:500}
+.crs-chev{color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none}
+.crs-body{display:flex;flex-direction:column;gap:10px;padding-top:10px}
+.crs-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.crs-card.compact{padding:8px}
+.crs-h3{margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat)}
+.crs-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink)}
+.crs-list.mt{margin-top:6px}
+.crs-list.mb{margin-bottom:14px}
+.crs-list.log{color:var(--ink-3)}
+.crs-navlink{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px}
+.crs-chip{text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:500}
+.crs-dot{width:7px;height:7px;border-radius:50%;flex:none}
+.crs-dot-sm{width:6px;height:6px;border-radius:50%}
+.crs-tablewrap{overflow-x:auto;margin:8px 0 4px}
+.crs-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.4}
+.crs-th{text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600}
+.crs-th-sub{font-weight:500;color:var(--ink-3);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.crs-th-key{font-family:'IBM Plex Mono',monospace;color:var(--cat)}
+.crs-td{padding:7px 9px;border:1px solid var(--line)}
+.crs-td.label{color:var(--ink-2)}
+.crs-td.fill{padding:14px 9px}
+.crs-cell{border:1px solid var(--line);padding:7px 10px;color:var(--ink)}
+.crs-key{border:1px solid var(--line);padding:7px 10px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap}
+.crs-key.cat{color:var(--cat)}
+.crs-rows{display:flex;flex-direction:column}
+.crs-qa{display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}
+.crs-qa:last-child{border-bottom:none}
+.crs-qa-q{flex:1;color:var(--ink-2)}
+.crs-qa-a{flex:1.3;color:var(--ink)}
+.crs-kv{display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline}
+.crs-kv:last-child{border-bottom:none}
+.crs-kv-k{flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px}
+.crs-kv-v{flex:1;font-size:14px;line-height:1.4;color:var(--ink)}
+.crs-flag{display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px}
+.crs-flag-mark{color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4}
+.crs-flag p{margin:0;font-size:14px;line-height:1.5;color:var(--ink)}
+.crs-pre{margin:0;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:13px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.55;white-space:pre-wrap;overflow:auto;color:var(--ink)}
+
 /* visible keyboard focus for all interactive controls */
 [data-toggle]:focus-visible,[data-nav]:focus-visible,[data-theme-btn]:focus-visible,[data-menu]:focus-visible,[data-expand-all]:focus-visible,[data-collapse-all]:focus-visible,[data-search]:focus-visible,[data-clear]:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
 /* top bar: wrap to a second row on narrow screens so the search field and
@@ -127,24 +173,24 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <button data-collapse-all style="flex:1;appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);font-family:inherit;font-size:11px;font-weight:500;padding:7px;border-radius:8px;cursor:pointer;" style-hover="border-color:var(--accent);color:var(--accent);">Collapse all</button>
       </div>
       <div data-navlist style="display:flex;flex-direction:column;gap:1px;">
-        <a data-nav="sec-0" href="#sec-0" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.1 330);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">00</span><span>Decode the alphabet soup</span></a>
-        <a data-nav="sec-1" href="#sec-1" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.52 0.09 195);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">01</span><span>Anatomy</span></a>
-        <a data-nav="sec-2" href="#sec-2" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.11 280);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">02</span><span>The operations</span></a>
-        <a data-nav="sec-3" href="#sec-3" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.58 0.1 70);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">03</span><span>Stomas</span></a>
-        <a data-nav="sec-4" href="#sec-4" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.12 330);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">04</span><span>Colorectal oncology</span></a>
-        <a data-nav="sec-5" href="#sec-5" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.52 0.09 150);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">05</span><span>Perioperative management</span></a>
-        <a data-nav="sec-6" href="#sec-6" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.53 0.18 27);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">06</span><span>The anastomotic leak</span></a>
-        <a data-nav="sec-7" href="#sec-7" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.57 0.11 50);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">07</span><span>Benign &amp; inflammatory</span></a>
-        <a data-nav="sec-8" href="#sec-8" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.1 245);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">08</span><span>Didn't realize relevant</span></a>
-        <a data-nav="sec-9" href="#sec-9" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.52 0.09 150);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">09</span><span>How to be useful</span></a>
-        <a data-nav="sec-10" href="#sec-10" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.52 0.09 195);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">10</span><span>Rapid-fire pimp answers</span></a>
-        <a data-nav="sec-11" href="#sec-11" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.1 245);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">11</span><span>Daily routine &amp; logistics</span></a>
-        <a data-nav="sec-12" href="#sec-12" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.11 280);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">12</span><span>OR etiquette</span></a>
+        <a data-nav="sec-0" href="#sec-0" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.1 330)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">00</span><span>Decode the alphabet soup</span></a>
+        <a data-nav="sec-1" href="#sec-1" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 195)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">01</span><span>Anatomy</span></a>
+        <a data-nav="sec-2" href="#sec-2" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.11 280)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">02</span><span>The operations</span></a>
+        <a data-nav="sec-3" href="#sec-3" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.58 0.1 70)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">03</span><span>Stomas</span></a>
+        <a data-nav="sec-4" href="#sec-4" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.12 330)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">04</span><span>Colorectal oncology</span></a>
+        <a data-nav="sec-5" href="#sec-5" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 150)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">05</span><span>Perioperative management</span></a>
+        <a data-nav="sec-6" href="#sec-6" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.53 0.18 27)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">06</span><span>The anastomotic leak</span></a>
+        <a data-nav="sec-7" href="#sec-7" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.57 0.11 50)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">07</span><span>Benign &amp; inflammatory</span></a>
+        <a data-nav="sec-8" href="#sec-8" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.1 245)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">08</span><span>Didn't realize relevant</span></a>
+        <a data-nav="sec-9" href="#sec-9" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 150)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">09</span><span>How to be useful</span></a>
+        <a data-nav="sec-10" href="#sec-10" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 195)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">10</span><span>Rapid-fire pimp answers</span></a>
+        <a data-nav="sec-11" href="#sec-11" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.1 245)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">11</span><span>Daily routine &amp; logistics</span></a>
+        <a data-nav="sec-12" href="#sec-12" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.11 280)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">12</span><span>OR etiquette</span></a>
         <div style="height:1px;background:var(--line);margin:8px 10px;"></div>
-        <a data-nav="sec-13" href="#sec-13" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.12 195);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">13</span><span>Key numbers</span></a>
-        <a data-nav="sec-14" href="#sec-14" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.53 0.18 27);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">14</span><span>Red flags</span></a>
-        <a data-nav="sec-15" href="#sec-15" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.45 0.03 250);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">15</span><span>Note templates</span></a>
-        <a data-nav="sec-16" href="#sec-16" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.52 0.09 150);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">16</span><span>Make it yours</span></a>
+        <a data-nav="sec-13" href="#sec-13" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.12 195)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">13</span><span>Key numbers</span></a>
+        <a data-nav="sec-14" href="#sec-14" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.53 0.18 27)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">14</span><span>Red flags</span></a>
+        <a data-nav="sec-15" href="#sec-15" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.45 0.03 250)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">15</span><span>Note templates</span></a>
+        <a data-nav="sec-16" href="#sec-16" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 150)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">16</span><span>Make it yours</span></a>
       </div>
     </nav>
 
@@ -152,10 +198,10 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
 
       <div data-noprint style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--ink-3);align-self:center;margin-right:2px;">QUICK ACCESS</span>
-        <a data-nav="sec-13" href="#sec-13" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:500;" style-hover="border-color:var(--accent);"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.5 0.12 195);"></span>Key numbers</a>
-        <a data-nav="sec-14" href="#sec-14" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:500;" style-hover="border-color:var(--critical);"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.53 0.18 27);"></span>Red flags</a>
-        <a data-nav="sec-15" href="#sec-15" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:500;" style-hover="border-color:var(--accent);"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.45 0.03 250);"></span>Note templates</a>
-        <a data-nav="sec-1" href="#sec-1" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:500;" style-hover="border-color:var(--accent);"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.52 0.09 195);"></span>Anatomy</a>
+        <a data-nav="sec-13" href="#sec-13" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:oklch(0.5 0.12 195)"></span>Key numbers</a>
+        <a data-nav="sec-14" href="#sec-14" class="crs-chip" style-hover="border-color:var(--critical);"><span class="crs-dot-sm" style="background:oklch(0.53 0.18 27)"></span>Red flags</a>
+        <a data-nav="sec-15" href="#sec-15" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:oklch(0.45 0.03 250)"></span>Note templates</a>
+        <a data-nav="sec-1" href="#sec-1" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:oklch(0.52 0.09 195)"></span>Anatomy</a>
       </div>
 
       <div data-intro style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:22px;">
@@ -172,20 +218,20 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <div style="font-size:15px;">No matches. Try a shorter or different term.</div>
       </div>
 
-      <section data-sec id="sec-0" data-collapsed="0" style="--cat:oklch(0.5 0.1 330);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">00</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Decode the alphabet soup</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Glossary — read this once</div>
+      <section data-sec id="sec-0" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.1 330)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">00</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Decode the alphabet soup</h2>
+            <div class="crs-subtitle">Glossary — read this once</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Anatomy &amp; vessels</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Anatomy &amp; vessels</h3>
+            <ul class="crs-list">
               <li><strong>SMA / IMA</strong> — superior / inferior mesenteric artery.</li><li><strong>SMV / IMV</strong> — corresponding veins.</li><li><strong>SRA</strong> — superior rectal artery; <strong>TI</strong> — terminal ileum.</li>
               <li><strong>TME</strong> — total mesorectal excision (key rectal-cancer dissection).</li><li><strong>CME / CVL</strong> — complete mesocolic excision / central vascular ligation (colon-cancer equivalent).</li>
               <li><strong>CRM</strong> — circumferential (radial) resection margin; <strong>MRF</strong> — mesorectal fascia; <strong>EMVI</strong> — extramural vascular invasion (rectal-MRI/path terms).</li>
@@ -193,9 +239,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Operations &amp; procedures</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Operations &amp; procedures</h3>
+            <ul class="crs-list">
               <li><strong>LAR</strong> — low anterior resection (rectal cancer, sphincter-preserving).</li><li><strong>APR</strong> — abdominoperineal resection (removes anus → permanent colostomy).</li>
               <li><strong>TAC</strong> — total abdominal colectomy; <strong>IRA</strong> — ileorectal anastomosis.</li><li><strong>IPAA</strong> — ileal pouch-anal anastomosis (the "J-pouch").</li><li><strong>Hartmann</strong> — resection + end colostomy + closed rectal stump.</li>
               <li><strong>TaTME</strong> — transanal TME; <strong>TAMIS / TEM</strong> — transanal minimally invasive / endoscopic microsurgery (local rectal excision).</li><li><strong>EMR / ESD</strong> — endoscopic mucosal resection / submucosal dissection.</li>
@@ -204,18 +250,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Cancer staging &amp; pathology</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Cancer staging &amp; pathology</h3>
+            <ul class="crs-list">
               <li><strong>CRC / LARC / mCRC</strong> — colorectal cancer / locally advanced rectal cancer / metastatic CRC.</li><li><strong>TNM</strong> — Tumor/Node/Metastasis staging; <strong>AJCC</strong> — publishes it.</li>
               <li><strong>CEA</strong> — carcinoembryonic antigen (trend marker, not screening).</li><li><strong>pCR / cCR / MPR</strong> — pathologic / clinical complete response / major pathologic response.</li>
               <li><strong>LVI / PNI</strong> — lymphovascular / perineural invasion (high-risk features).</li><li><strong>IHC / NGS</strong> — immunohistochemistry / next-generation sequencing.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Molecular markers &amp; genes</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Molecular markers &amp; genes</h3>
+            <ul class="crs-list">
               <li><strong>MMR</strong> — mismatch repair; <strong>dMMR / pMMR</strong> — deficient / proficient.</li><li><strong>MSI / MSI-H / MSS</strong> — microsatellite instability / high / stable (the genomic signature of dMMR).</li>
               <li><strong>ctDNA</strong> — circulating tumor DNA; <strong>MRD</strong> — minimal/molecular residual disease.</li><li><strong>KRAS / NRAS / BRAF / PIK3CA / HER2</strong> — mutations/markers guiding targeted drugs.</li>
               <li><strong>APC, MLH1, MSH2, MSH6, PMS2, EPCAM, MUTYH</strong> — genes behind hereditary CRC syndromes.</li><li><strong>EGFR</strong> — target of cetuximab/panitumumab.</li><li><strong>PD-1 / PD-L1 / CTLA-4</strong> — immune checkpoints blocked by immunotherapy.</li>
@@ -223,9 +269,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Chemo, drugs &amp; immunotherapy</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Chemo, drugs &amp; immunotherapy</h3>
+            <ul class="crs-list">
               <li><strong>5-FU</strong> — 5-fluorouracil (backbone); <strong>leucovorin</strong> — potentiates 5-FU; <strong>capecitabine</strong> — oral 5-FU prodrug.</li>
               <li><strong>FOLFOX / mFOLFOX6</strong> — 5-FU + leucovorin + oxaliplatin.</li><li><strong>CAPOX / XELOX</strong> — capecitabine + oxaliplatin.</li><li><strong>FOLFIRI</strong> — 5-FU + leucovorin + irinotecan; <strong>FOLFIRINOX</strong> — adds both.</li>
               <li><strong>Oxaliplatin</strong> — platinum; signature toxicity is cumulative <strong>neuropathy</strong>.</li><li><strong>ICI</strong> — immune checkpoint inhibitor (nivolumab, pembrolizumab, dostarlimab, atezolizumab; ipilimumab = anti-CTLA-4).</li>
@@ -233,18 +279,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Treatment-strategy terms</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Treatment-strategy terms</h3>
+            <ul class="crs-list">
               <li><strong>Neoadjuvant</strong> — therapy before surgery; <strong>adjuvant</strong> — after.</li><li><strong>TNT</strong> — total neoadjuvant therapy (all chemo + radiation before surgery).</li>
               <li><strong>CRT / SCRT / LCRT</strong> — chemoradiation / short-course RT / long-course chemoradiation.</li><li><strong>W&amp;W / NOM</strong> — watch-and-wait / non-operative management.</li>
               <li><strong>DFS / OS / PFS / RFS</strong> — disease-free / overall / progression-free / recurrence-free survival.</li><li><strong>NCCN</strong> — writes the cancer-treatment guidelines.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Perioperative, complications &amp; management</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Perioperative, complications &amp; management</h3>
+            <ul class="crs-list">
               <li><strong>ERAS</strong> — Enhanced Recovery After Surgery (the perioperative pathway you round inside).</li><li><strong>MBP</strong> — mechanical bowel prep; <strong>ORS</strong> — oral rehydration solution.</li>
               <li><strong>VTE / DVT / PE</strong> — venous thromboembolism / DVT / pulmonary embolism.</li><li><strong>LMWH</strong> — low-molecular-weight heparin; <strong>SCD</strong> — sequential compression device.</li>
               <li><strong>SSI</strong> — surgical site infection; <strong>AKI</strong> — acute kidney injury.</li><li><strong>SBO / LBO</strong> — small / large bowel obstruction; <strong>ileus</strong> — sluggish non-mechanical bowel.</li>
@@ -253,18 +299,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Disease &amp; benign-condition terms</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Disease &amp; benign-condition terms</h3>
+            <ul class="crs-list">
               <li><strong>IBD / UC / CD</strong> — inflammatory bowel disease / ulcerative colitis / Crohn's; <strong>ASUC</strong> — acute severe UC.</li><li><strong>Anti-TNF</strong> — anti-tumor-necrosis-factor biologic (e.g., infliximab).</li>
               <li><strong>LARS</strong> — low anterior resection syndrome.</li><li><strong>Hinchey</strong> — severity grading for complicated diverticulitis (I–IV).</li><li><strong>Goodsall's rule</strong> — predicts the path of an anal fistula.</li>
               <li><strong>C. diff</strong> — Clostridioides difficile (post-antibiotic colitis bug).</li><li><strong>HPV</strong> — human papillomavirus (cause of anal squamous cancer).</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Trials you'll hear name-dropped</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Trials you'll hear name-dropped</h3>
+            <ul class="crs-list">
               <li><strong>PROSPECT</strong> — selected rectal cancers can skip radiation (FOLFOX + selective chemoradiation).</li><li><strong>OPRA / RAPIDO / PRODIGE 23</strong> — established TNT and organ preservation in rectal cancer.</li>
               <li><strong>CheckMate 8HW / KEYNOTE-177</strong> — immunotherapy first-line for metastatic dMMR CRC.</li><li><strong>ATOMIC</strong> — adjuvant atezolizumab + FOLFOX for stage III dMMR colon.</li><li><strong>NICHE-2 / NICHE-3</strong> — neoadjuvant immunotherapy for dMMR colon.</li>
               <li><strong>BREAKWATER</strong> — first-line encorafenib + cetuximab + chemo for BRAF V600E mCRC.</li><li><strong>DYNAMIC / CIRCULATE / ORACLE</strong> — ctDNA-guided adjuvant trials (ORACLE enrolls at UCSD).</li><li><strong>IDEA</strong> — defined 3- vs 6-month adjuvant chemo duration.</li>
@@ -274,38 +320,38 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-1" data-collapsed="0" style="--cat:oklch(0.52 0.09 195);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">01</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Anatomy you will actually be asked about</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Segments · vessels · watershed · planes · sphincters · nerves</div>
+            <section data-sec id="sec-1" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 195)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">01</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Anatomy you will actually be asked about</h2>
+            <div class="crs-subtitle">Segments · vessels · watershed · planes · sphincters · nerves</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Segments, fixation &amp; surface anatomy</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Segments, fixation &amp; surface anatomy</h3>
+            <ul class="crs-list">
               <li><strong>Order:</strong> cecum → ascending → hepatic flexure → transverse → splenic flexure → descending → sigmoid → rectum (12–15 cm) → anal canal (~2–5 cm).</li>
               <li><strong>Fixation</strong> (dictates what gets mobilized): ascending and descending colon are <strong>retroperitoneal (fixed)</strong>; transverse and sigmoid are <strong>intraperitoneal on a mesentery (mobile)</strong>.<ul class="crs-sub"><li>Flexures must be <strong>taken down</strong> for anastomotic reach, and the mobile sigmoid &amp; cecum are the segments that <strong>volvulize</strong>.</li></ul></li>
               <li><strong>Taeniae coli:</strong> three longitudinal bands that <strong>converge at the appendiceal base</strong> (landmark for the appendix) and again at the <strong>rectosigmoid junction</strong>, fanning into the continuous longitudinal muscle of the rectum (rectum has no taeniae, haustra, or appendices epiploicae).</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Arterial supply, by embryologic origin</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Arterial supply, by embryologic origin</h3>
+            <ul class="crs-list">
               <li><strong>Midgut → SMA:</strong> cecum, ascending, hepatic flexure, proximal ⅔ transverse.<ul class="crs-sub"><li>Branches: <strong>ileocolic</strong> (most consistent, supplies cecum/TI), <strong>right colic</strong> (variable, often absent), <strong>middle colic</strong>.</li></ul></li>
               <li><strong>Hindgut → IMA:</strong> distal ⅓ transverse, descending, sigmoid, upper rectum.<ul class="crs-sub"><li>Branches: <strong>left colic</strong>, <strong>sigmoidal branches</strong>, terminating as the <strong>superior rectal (hemorrhoidal) artery</strong>.</li></ul></li>
               <li><strong>Why oncologic resections look the way they do:</strong> take the whole vascular pedicle plus draining lymphatics.<ul class="crs-sub"><li>Right cancer → ligate ileocolic ± right/middle colic (right hemicolectomy); left → high IMA ligation.</li><li>Margin is dictated by blood supply &amp; lymphatics, not just tumor edge.</li><li>Examine a minimum of <strong>12 lymph nodes</strong> for accurate staging.</li></ul></li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Collaterals &amp; watershed zones (high-yield for ischemia)</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Collaterals &amp; watershed zones (high-yield for ischemia)</h3>
+            <ul class="crs-list">
               <li><strong>Marginal artery of Drummond:</strong> continuous collateral arcade along the mesenteric border connecting SMA &amp; IMA territories; perfuses colon after a pedicle is ligated.</li>
               <li><strong>Arc of Riolan (meandering mesenteric artery):</strong> a more central, variable SMA–IMA collateral; prominent with proximal SMA/IMA stenosis.</li>
               <li><strong>Griffiths point (splenic flexure):</strong> watershed between middle colic (SMA) &amp; left colic (IMA) — <strong>#1 site of ischemic colitis</strong>.<ul class="crs-sub"><li><strong>Sudeck point (rectosigmoid):</strong> watershed between last sigmoidal branch &amp; superior rectal artery.</li></ul></li>
@@ -313,18 +359,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Venous &amp; lymphatic drainage (explains metastatic patterns)</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Venous &amp; lymphatic drainage (explains metastatic patterns)</h3>
+            <ul class="crs-list">
               <li>Colon and <strong>upper rectum</strong> → portal system (SMV/IMV → portal vein) → <strong>liver is the first and most common met site</strong>.</li>
               <li><strong>Lower rectum/anal canal</strong> → partly systemic via middle/inferior rectal veins → internal iliac → IVC, so low lesions can metastasize to <strong>lung directly, bypassing the liver</strong>.</li>
               <li>Lymphatics follow arteries.<ul class="crs-sub"><li>Above the dentate line → internal iliac/mesenteric nodes; below → <strong>inguinal nodes</strong> (why anal canal cancers get groin attention).</li></ul></li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Rectum &amp; the surgical planes</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Rectum &amp; the surgical planes</h3>
+            <ul class="crs-list">
               <li>Rectum ~12–15 cm from the anal verge; three transverse folds (valves of Houston).<ul class="crs-sub"><li>No true mesentery — it carries the <strong>mesorectum</strong>, a fascial envelope of fat, vessels, lymphatics.</li></ul></li>
               <li><strong>Total mesorectal excision (TME):</strong> sharp dissection in the avascular areolar "holy plane" between mesorectal fascia (visceral) and presacral/parietal fascia.<ul class="crs-sub"><li>Sharp TME (Heald) dramatically reduced local recurrence vs blunt technique.</li></ul></li>
               <li><strong>Circumferential resection margin (CRM):</strong> the radial margin.<ul class="crs-sub"><li>Positive/threatened CRM (≤1 mm) is the strongest predictor of local recurrence and a key reason for neoadjuvant therapy.</li><li>Pelvic MRI pre-op assesses tumor vs mesorectal fascia.</li></ul></li>
@@ -332,44 +378,44 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Anal canal — the dentate line is the whole exam</h3>
-            <div style="overflow-x:auto;margin:8px 0 4px;">
-              <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;min-width:460px;">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Anal canal — the dentate line is the whole exam</h3>
+            <div class="crs-tablewrap">
+              <table class="crs-table" style="min-width:460px">
                 <thead><tr>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Feature</th>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Above dentate line</th>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Below dentate line</th>
+                  <th class="crs-th">Feature</th>
+                  <th class="crs-th">Above dentate line</th>
+                  <th class="crs-th">Below dentate line</th>
                 </tr></thead>
                 <tbody>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Embryology</td><td style="padding:7px 9px;border:1px solid var(--line);">Endoderm (hindgut)</td><td style="padding:7px 9px;border:1px solid var(--line);">Ectoderm (proctodeum)</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Epithelium</td><td style="padding:7px 9px;border:1px solid var(--line);">Columnar → transitional</td><td style="padding:7px 9px;border:1px solid var(--line);">Squamous</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Innervation</td><td style="padding:7px 9px;border:1px solid var(--line);">Visceral (insensate)</td><td style="padding:7px 9px;border:1px solid var(--line);">Somatic, inferior rectal n. (pain)</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Arterial</td><td style="padding:7px 9px;border:1px solid var(--line);">Superior/middle rectal</td><td style="padding:7px 9px;border:1px solid var(--line);">Inferior rectal</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Venous/lymphatic</td><td style="padding:7px 9px;border:1px solid var(--line);">Portal → internal iliac nodes</td><td style="padding:7px 9px;border:1px solid var(--line);">Systemic → inguinal nodes</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Hemorrhoids</td><td style="padding:7px 9px;border:1px solid var(--line);">Internal (painless, bleed)</td><td style="padding:7px 9px;border:1px solid var(--line);">External (painful when thrombosed)</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Malignancy</td><td style="padding:7px 9px;border:1px solid var(--line);">Adenocarcinoma</td><td style="padding:7px 9px;border:1px solid var(--line);">Squamous cell carcinoma</td></tr>
+                  <tr><td class="crs-td label">Embryology</td><td class="crs-td">Endoderm (hindgut)</td><td class="crs-td">Ectoderm (proctodeum)</td></tr>
+                  <tr><td class="crs-td label">Epithelium</td><td class="crs-td">Columnar → transitional</td><td class="crs-td">Squamous</td></tr>
+                  <tr><td class="crs-td label">Innervation</td><td class="crs-td">Visceral (insensate)</td><td class="crs-td">Somatic, inferior rectal n. (pain)</td></tr>
+                  <tr><td class="crs-td label">Arterial</td><td class="crs-td">Superior/middle rectal</td><td class="crs-td">Inferior rectal</td></tr>
+                  <tr><td class="crs-td label">Venous/lymphatic</td><td class="crs-td">Portal → internal iliac nodes</td><td class="crs-td">Systemic → inguinal nodes</td></tr>
+                  <tr><td class="crs-td label">Hemorrhoids</td><td class="crs-td">Internal (painless, bleed)</td><td class="crs-td">External (painful when thrombosed)</td></tr>
+                  <tr><td class="crs-td label">Malignancy</td><td class="crs-td">Adenocarcinoma</td><td class="crs-td">Squamous cell carcinoma</td></tr>
                 </tbody>
               </table>
             </div>
-            <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+            <ul class="crs-list mt">
               <li>You can band <strong>internal</strong> hemorrhoids in clinic (visceral, insensate) but <strong>never an external one</strong> (somatic, exquisitely painful).</li>
               <li><strong>Anal transition zone</strong> sits just above the dentate line — relevant in IPAA (a residual cuff can develop "cuffitis" or dysplasia).</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Sphincter complex &amp; continence</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Sphincter complex &amp; continence</h3>
+            <ul class="crs-list">
               <li><strong>Internal anal sphincter (IAS):</strong> smooth muscle, involuntary, autonomic; continuation of the rectal circular muscle; provides most resting tone.</li>
               <li><strong>External anal sphincter (EAS):</strong> skeletal muscle, voluntary (pudendal n.); continuous superiorly with puborectalis and levator ani.</li>
               <li><strong>Puborectalis sling</strong> maintains the anorectal angle — key to gross continence.<ul class="crs-sub"><li>The palpable upper edge on DRE is the <strong>anorectal ring</strong>; dividing it causes incontinence (limits how aggressive a fistulotomy can be).</li></ul></li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Pelvic autonomic nerves (the ones surgeons protect)</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Pelvic autonomic nerves (the ones surgeons protect)</h3>
+            <ul class="crs-list">
               <li><strong>Superior hypogastric plexus / hypogastric nerves (sympathetic, L1–L3):</strong> ejaculation, bladder-neck closure.<ul class="crs-sub"><li>Injury → <strong>retrograde ejaculation</strong>, bladder dysfunction.</li><li>At risk at the IMA origin and sacral promontory.</li></ul></li>
               <li><strong>Pelvic splanchnic / inferior hypogastric (nervi erigentes) plexus (parasympathetic, S2–S4):</strong> erection, detrusor contraction.<ul class="crs-sub"><li>Injury → <strong>erectile and bladder dysfunction</strong>.</li><li>At risk along the lateral pelvic sidewalls during low dissection.</li></ul></li>
               <li>"Nerve-sparing TME" is the deliberate preservation of these planes — a major quality-of-life issue, especially in younger patients.</li>
@@ -379,20 +425,20 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-2" data-collapsed="0" style="--cat:oklch(0.5 0.11 280);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">02</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">The operations — decode the eponyms &amp; know the why</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Resections · pouches · technique concepts</div>
+            <section data-sec id="sec-2" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.11 280)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">02</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">The operations — decode the eponyms &amp; know the why</h2>
+            <div class="crs-subtitle">Resections · pouches · technique concepts</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">The core resections</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">The core resections</h3>
+            <ul class="crs-list">
               <li><strong>Right hemicolectomy:</strong> cecum/ascending ± hepatic flexure; ileocolic anastomosis.<ul class="crs-sub"><li>Generally lower leak risk (small bowel to colon, excellent supply; stapled ileocolic leaks less than handsewn).</li><li><strong>Extended right</strong> adds the transverse for hepatic flexure/proximal transverse lesions.</li></ul></li>
               <li><strong>Left hemicolectomy / sigmoidectomy:</strong> descending/sigmoid; colocolonic or colorectal anastomosis.<ul class="crs-sub"><li>Higher leak risk than right-sided.</li></ul></li>
               <li><strong>Low anterior resection (LAR):</strong> rectal cancer with <strong>sphincter preservation</strong>.<ul class="crs-sub"><li>TME + colorectal or coloanal anastomosis.</li><li>Low (&lt;5 cm from verge), coloanal, and IPAA anastomoses are usually <strong>protected by a diverting loop ileostomy</strong>.</li></ul></li>
@@ -403,18 +449,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Restorative &amp; specialized</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Restorative &amp; specialized</h3>
+            <ul class="crs-list">
               <li><strong>Restorative proctocolectomy with IPAA ("J-pouch"):</strong> definitive operation for UC and FAP.<ul class="crs-sub"><li>Removes colon &amp; rectum, builds an ileal reservoir anastomosed to the anus, restoring transanal defecation.</li><li>Usually <strong>staged</strong>.</li><li>Complications: <strong>pouchitis</strong> (most common long-term), leak, pelvic sepsis, <strong>cuffitis</strong>, pouch fistula, pouch failure.</li></ul></li>
               <li><strong>TaTME (transanal TME):</strong> bottom-up dissection for difficult low rectal tumors, obese/narrow male pelvis.<ul class="crs-sub"><li>Note the <strong>local-recurrence controversy</strong> — Norway paused TaTME nationally over early recurrence signals; reserved for selected cases at experienced centers.</li></ul></li>
               <li><strong>Local options:</strong> transanal excision / TAMIS / TEM for select early (T1, favorable) rectal lesions; polypectomy/EMR/ESD endoscopically for early lesions.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Technique concepts to recognize in the OR</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Technique concepts to recognize in the OR</h3>
+            <ul class="crs-list">
               <li><strong>Complete mesocolic excision (CME) / central vascular ligation (CVL):</strong> the colon-cancer analogue of TME — dissect embryologic planes and ligate the feeding vessel at its origin for a complete mesenteric envelope and maximal node yield.</li>
               <li><strong>Intracorporeal vs extracorporeal anastomosis:</strong> in MIS right colectomy, <strong>intracorporeal</strong> anastomosis is associated with faster bowel-function recovery and fewer wound/hernia issues.</li>
               <li><strong>ICG fluorescence angiography:</strong> IV indocyanine green to <strong>confirm anastomotic perfusion</strong> intraoperatively — a modifiable leak risk you can sometimes see before committing.</li>
@@ -425,52 +471,52 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-3" data-collapsed="0" style="--cat:oklch(0.58 0.1 70);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">03</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Stomas</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Identify it before rounds — it tells you the operation</div>
+      <section data-sec id="sec-3" data-collapsed="0" class="crs-section" style="--cat:oklch(0.58 0.1 70)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">03</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Stomas</h2>
+            <div class="crs-subtitle">Identify it before rounds — it tells you the operation</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Ileostomy vs colostomy</h3>
-            <div style="overflow-x:auto;margin:8px 0 4px;">
-              <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;min-width:460px;">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Ileostomy vs colostomy</h3>
+            <div class="crs-tablewrap">
+              <table class="crs-table" style="min-width:460px">
                 <thead><tr>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;"></th>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Ileostomy</th>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Colostomy</th>
+                  <th class="crs-th"></th>
+                  <th class="crs-th">Ileostomy</th>
+                  <th class="crs-th">Colostomy</th>
                 </tr></thead>
                 <tbody>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Usual location</td><td style="padding:7px 9px;border:1px solid var(--line);">RLQ</td><td style="padding:7px 9px;border:1px solid var(--line);">LLQ</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Construction</td><td style="padding:7px 9px;border:1px solid var(--line);"><strong>Spouted</strong> (Brooke — protects skin from enzyme-rich effluent)</td><td style="padding:7px 9px;border:1px solid var(--line);">Flush to skin</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Output character</td><td style="padding:7px 9px;border:1px solid var(--line);">Liquid/loose, enzyme-rich</td><td style="padding:7px 9px;border:1px solid var(--line);">More formed, feculent</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Typical output</td><td style="padding:7px 9px;border:1px solid var(--line);">High (often 800–1200+ mL/day)</td><td style="padding:7px 9px;border:1px solid var(--line);">Lower</td></tr>
+                  <tr><td class="crs-td label">Usual location</td><td class="crs-td">RLQ</td><td class="crs-td">LLQ</td></tr>
+                  <tr><td class="crs-td label">Construction</td><td class="crs-td"><strong>Spouted</strong> (Brooke — protects skin from enzyme-rich effluent)</td><td class="crs-td">Flush to skin</td></tr>
+                  <tr><td class="crs-td label">Output character</td><td class="crs-td">Liquid/loose, enzyme-rich</td><td class="crs-td">More formed, feculent</td></tr>
+                  <tr><td class="crs-td label">Typical output</td><td class="crs-td">High (often 800–1200+ mL/day)</td><td class="crs-td">Lower</td></tr>
                 </tbody>
               </table>
             </div>
-            <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
+            <ul class="crs-list mt">
               <li><strong>End vs loop:</strong> <em>End</em> = single lumen, distal bowel removed/oversewn (APR, Hartmann, end ileostomy after TAC).<ul class="crs-sub"><li><em>Loop</em> = two openings on one stoma, almost always <strong>temporary/diverting</strong> to protect a downstream anastomosis (loop ileostomy after LAR or IPAA).</li></ul></li>
               <li><strong>Diverting loop ileostomy is preferred over loop transverse colostomy</strong> for protecting low anastomoses — lower prolapse, parastomal hernia, and reversal complications.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">High ostomy output — the thing you'll actually manage</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">High ostomy output — the thing you'll actually manage</h3>
+            <ul class="crs-list">
               <li>A new ileostomy putting out <strong>&gt;1200–1500 mL/day</strong> drives dehydration, <strong>AKI, hypokalemia, hypomagnesemia, metabolic acidosis</strong>.<ul class="crs-sub"><li><strong>Dehydration from high ostomy output is the leading cause of readmission after colorectal surgery.</strong></li></ul></li>
               <li><strong>Management ladder:</strong> anti-motility agents (loperamide, often high-dose; add diphenoxylate-atropine) → bulking/thickening (fiber, banana flakes) → <strong>oral rehydration solution</strong> rather than free water (hypotonic fluid worsens sodium loss) → PPI/H2 blocker to reduce secretory volume → hold diuretics/laxatives → <strong>aggressively replete magnesium</strong> → somatostatin analogs if refractory.</li>
               <li><strong>Round on the number:</strong> "Ileostomy put out 1,400 over 24h, making good urine, lytes stable, repleted Mg" signals competence.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Viability &amp; complications</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Viability &amp; complications</h3>
+            <ul class="crs-list">
               <li><strong>Viability:</strong> pink/red = healthy; <strong>dusky/black = ischemia → escalate now</strong>.<ul class="crs-sub"><li>A small rim of necrosis above fascia may be watched; necrosis below fascia is an emergency.</li></ul></li>
               <li><strong>A stoma that stops + distension + nausea = obstruction or ileus</strong>, not "it's resting." Loop ileostomy "outlet obstruction" is a known early complication.</li>
               <li>Chronic: <strong>parastomal hernia, prolapse, retraction, stenosis, high-output dermatitis</strong>.</li>
@@ -480,20 +526,20 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-4" data-collapsed="0" style="--cat:oklch(0.5 0.12 330);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">04</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Colorectal oncology</h2>
-            <div style="font-size:12px;color:var(--ink-3);">The part that's changing fastest — re-verify against NCCN</div>
+            <section data-sec id="sec-4" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.12 330)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">04</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Colorectal oncology</h2>
+            <div class="crs-subtitle">The part that's changing fastest — re-verify against NCCN</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Workup &amp; staging</h3>
-            <ul style="margin:0 0 14px;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Workup &amp; staging</h3>
+            <ul class="crs-list mb">
               <li><strong>Colon:</strong> full colonoscopy with biopsy + <strong>tattoo</strong> of the lesion, <strong>CT chest/abdomen/pelvis</strong>, baseline <strong>CEA</strong>.<ul class="crs-sub"><li>Clear the whole colon (synchronous cancers ~3–5%).</li></ul></li>
               <li><strong>Rectal adds:</strong> <strong>pelvic MRI</strong> (T stage, nodes, CRM, EMVI) and often endorectal ultrasound for early lesions.<ul class="crs-sub"><li>Local staging drives neoadjuvant decisions.</li></ul></li>
             </ul>
@@ -501,57 +547,57 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 8px;">AJCC 8th edition · TNM</div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:10px;align-items:start;margin:0 0 10px;">
 
-              <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;">
-                <thead><tr><th colspan="2" style="text-align:left;padding:7px 10px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;"><span style="font-family:'IBM Plex Mono',monospace;color:var(--cat);">T</span> <span style="font-weight:500;color:var(--ink-3);font-size:11px;text-transform:uppercase;letter-spacing:.05em;">Tumor depth</span></th></tr></thead>
+              <table class="crs-table">
+                <thead><tr><th colspan="2" class="crs-th"><span class="crs-th-key">T</span> <span class="crs-th-sub">Tumor depth</span></th></tr></thead>
                 <tbody>
-                  <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;width:1%;">Tis</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Intramucosal</td></tr>
-                  <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">T1</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Into submucosa</td></tr>
-                  <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">T2</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Into muscularis propria</td></tr>
-                  <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">T3</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Through MP into pericolorectal tissue</td></tr>
-                  <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">T4a</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Penetrates visceral peritoneum</td></tr>
-                  <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">T4b</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Invades adjacent organ / structure</td></tr>
+                  <tr><td class="crs-key" style="width:1%">Tis</td><td class="crs-cell">Intramucosal</td></tr>
+                  <tr><td class="crs-key">T1</td><td class="crs-cell">Into submucosa</td></tr>
+                  <tr><td class="crs-key">T2</td><td class="crs-cell">Into muscularis propria</td></tr>
+                  <tr><td class="crs-key">T3</td><td class="crs-cell">Through MP into pericolorectal tissue</td></tr>
+                  <tr><td class="crs-key">T4a</td><td class="crs-cell">Penetrates visceral peritoneum</td></tr>
+                  <tr><td class="crs-key">T4b</td><td class="crs-cell">Invades adjacent organ / structure</td></tr>
                 </tbody>
               </table>
 
               <div style="display:grid;gap:10px;align-content:start;">
-                <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;">
-                  <thead><tr><th colspan="2" style="text-align:left;padding:7px 10px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;"><span style="font-family:'IBM Plex Mono',monospace;color:var(--cat);">N</span> <span style="font-weight:500;color:var(--ink-3);font-size:11px;text-transform:uppercase;letter-spacing:.05em;">Regional nodes</span></th></tr></thead>
+                <table class="crs-table">
+                  <thead><tr><th colspan="2" class="crs-th"><span class="crs-th-key">N</span> <span class="crs-th-sub">Regional nodes</span></th></tr></thead>
                   <tbody>
-                    <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;width:1%;">N1</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">1–3 nodes <span style="color:var(--ink-3);">· N1c = tumor deposits, node-neg</span></td></tr>
-                    <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">N2</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">≥4 nodes</td></tr>
+                    <tr><td class="crs-key" style="width:1%">N1</td><td class="crs-cell">1–3 nodes <span style="color:var(--ink-3);">· N1c = tumor deposits, node-neg</span></td></tr>
+                    <tr><td class="crs-key">N2</td><td class="crs-cell">≥4 nodes</td></tr>
                   </tbody>
                 </table>
-                <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;">
-                  <thead><tr><th colspan="2" style="text-align:left;padding:7px 10px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;"><span style="font-family:'IBM Plex Mono',monospace;color:var(--cat);">M</span> <span style="font-weight:500;color:var(--ink-3);font-size:11px;text-transform:uppercase;letter-spacing:.05em;">Metastasis</span></th></tr></thead>
+                <table class="crs-table">
+                  <thead><tr><th colspan="2" class="crs-th"><span class="crs-th-key">M</span> <span class="crs-th-sub">Metastasis</span></th></tr></thead>
                   <tbody>
-                    <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;width:1%;">M1a</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">One organ / site</td></tr>
-                    <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">M1b</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">More than one site</td></tr>
-                    <tr><td style="border:1px solid var(--line);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);white-space:nowrap;">M1c</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">Peritoneal</td></tr>
+                    <tr><td class="crs-key" style="width:1%">M1a</td><td class="crs-cell">One organ / site</td></tr>
+                    <tr><td class="crs-key">M1b</td><td class="crs-cell">More than one site</td></tr>
+                    <tr><td class="crs-key">M1c</td><td class="crs-cell">Peritoneal</td></tr>
                   </tbody>
                 </table>
               </div>
 
             </div>
             <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;margin:0 0 14px;">
-              <thead><tr><th colspan="2" style="text-align:left;padding:7px 10px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;"><span style="font-family:'IBM Plex Mono',monospace;color:var(--cat);letter-spacing:.04em;">STAGE</span> <span style="font-weight:500;color:var(--ink-3);font-size:11px;text-transform:uppercase;letter-spacing:.05em;">by TNM grouping</span></th></tr></thead>
+              <thead><tr><th colspan="2" class="crs-th"><span class="crs-th-key" style="letter-spacing:.04em">STAGE</span> <span class="crs-th-sub">by TNM grouping</span></th></tr></thead>
               <tbody>
-                <tr><td style="border:1px solid var(--line);padding:7px 11px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);white-space:nowrap;width:1%;">I</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">T1–2 N0</td></tr>
-                <tr><td style="border:1px solid var(--line);padding:7px 11px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);white-space:nowrap;">II</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">T3–4 N0</td></tr>
-                <tr><td style="border:1px solid var(--line);padding:7px 11px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);white-space:nowrap;">III</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">any N+</td></tr>
-                <tr><td style="border:1px solid var(--line);padding:7px 11px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);white-space:nowrap;">IV</td><td style="border:1px solid var(--line);padding:7px 10px;color:var(--ink);">M1</td></tr>
+                <tr><td class="crs-key cat" style="width:1%">I</td><td class="crs-cell">T1–2 N0</td></tr>
+                <tr><td class="crs-key cat">II</td><td class="crs-cell">T3–4 N0</td></tr>
+                <tr><td class="crs-key cat">III</td><td class="crs-cell">any N+</td></tr>
+                <tr><td class="crs-key cat">IV</td><td class="crs-cell">M1</td></tr>
               </tbody>
             </table>
 
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px;line-height:1.5;color:var(--ink);">
+            <ul class="crs-list">
               <li><strong>CEA</strong> is surveillance/trend, <strong>not screening</strong>.<ul class="crs-sub"><li>A rising CEA after curative resection = recurrence until proven otherwise.</li></ul></li>
               <li><strong>Screening &amp; epidemiology:</strong> early-onset CRC (&lt;50) is rising; average-risk screening now <strong>starts at age 45</strong> (ACS/USPSTF).<ul class="crs-sub"><li>Options: colonoscopy, FIT, stool-DNA, and the blood-based <strong>cfDNA test (Shield)</strong> — FDA-approved (2024), NCCN-recognized (2025) for average-risk 45+; colonoscopy remains gold standard and is required for any positive non-colonoscopy test.</li></ul></li>
               <li><strong>Stage IV / advanced:</strong> <strong>colorectal liver metastases</strong> can be <strong>resected for cure</strong> when feasible, sometimes after <strong>conversion chemotherapy</strong> downsizes them.<ul class="crs-sub"><li><strong>Peritoneal mets:</strong> CRS ± HIPEC at specialized centers — though <strong>PRODIGE 7</strong> questioned the added benefit of HIPEC (mitomycin) over complete cytoreduction alone.</li></ul></li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Molecular testing every tumor gets — and why</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Molecular testing every tumor gets — and why</h3>
+            <ul class="crs-list">
               <li><strong>Universal MMR/MSI testing</strong> on all CRC (IHC for MLH1/MSH2/MSH6/PMS2, or PCR/NGS for MSI) — two reasons:<ul class="crs-sub" style="list-style:none;padding-left:2px;"><li><strong>1. Lynch screening.</strong> Loss of staining flags possible Lynch → germline testing + genetics. If <strong>MLH1 is lost</strong>, reflex <strong>BRAF V600E</strong> and/or <strong>MLH1 promoter methylation</strong> — if positive, likely <strong>sporadic</strong> (methylation-driven), not Lynch.</li><li><strong>2. Therapy &amp; prognosis.</strong> <strong>dMMR/MSI-high tumors respond to ICIs</strong> and <strong>resist single-agent fluoropyrimidine</strong>. In stage II, dMMR is a <strong>good</strong> prognostic sign and argues against adjuvant 5-FU monotherapy.</li></ul></li>
               <li><strong>RAS/RAF &amp; targeted therapy (metastatic):</strong> <strong>KRAS/NRAS mutations</strong> → no benefit from anti-EGFR (cetuximab/panitumumab); those work only in <strong>RAS wild-type</strong>.<ul class="crs-sub"><li>Even then, <strong>right-sided primaries respond poorly to anti-EGFR</strong> — sidedness guides first-line biologic (anti-EGFR for left, bevacizumab for right).</li></ul></li>
               <li><strong>BRAF V600E</strong> (~10%, poor prognosis): <strong>BREAKWATER</strong> established first-line <strong>encorafenib + cetuximab + mFOLFOX6</strong>, roughly doubling median OS (~30 months) — FDA fully approved (2026).<ul class="crs-sub"><li>Now first-line, not just salvage (older BEACON used it after progression).</li></ul></li>
@@ -559,9 +605,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Adjuvant chemotherapy after colon resection</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Adjuvant chemotherapy after colon resection</h3>
+            <ul class="crs-list">
               <li><strong>Stage III (node-positive): adjuvant chemo is standard</strong> — <strong>FOLFOX</strong> or <strong>CAPOX/XELOX</strong>, ~<strong>15% absolute survival benefit</strong>.</li>
               <li><strong>Duration (IDEA):</strong> <strong>3 vs 6 months</strong> risk-adapted.<ul class="crs-sub"><li>Lower-risk (T1–3, N1) often 3 months of CAPOX (less oxaliplatin neurotoxicity); higher-risk (T4 or N2) generally 6 months.</li></ul></li>
               <li><strong>Oxaliplatin's signature toxicity:</strong> cumulative, dose-dependent <strong>peripheral sensory neuropathy</strong> (and cold dysesthesia) — the reason shorter courses are attractive.</li>
@@ -569,9 +615,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Immunotherapy across dMMR/MSI-high (~10–15% of CRC) — moving earlier</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Immunotherapy across dMMR/MSI-high (~10–15% of CRC) — moving earlier</h3>
+            <ul class="crs-list">
               <li><strong>Metastatic:</strong> <strong>nivolumab + ipilimumab</strong> is now first-line (CheckMate 8HW) — 2-yr PFS ~72% vs ~14% with chemo; <strong>pembrolizumab</strong> monotherapy (KEYNOTE-177) is the single-agent option.<ul class="crs-sub"><li>Chemo is comparatively ineffective here.</li></ul></li>
               <li><strong>Stage III colon — adjuvant (ATOMIC, ASCO 2025 plenary):</strong> adding <strong>atezolizumab to FOLFOX</strong> improved 3-yr DFS to <strong>~86% vs ~77%</strong> (HR ~0.50) — practice-changing for dMMR stage III.</li>
               <li><strong>Locally advanced colon — neoadjuvant (NICHE-2/NICHE-3):</strong> short course of <strong>nivolumab + ipilimumab</strong> (or nivo + relatlimab) before surgery → <strong>~98–99% pathologic response, ~68% pCR</strong>; NICHE-2 reported <strong>~100% 3-yr DFS</strong>.<ul class="crs-sub"><li>Open question: neoadjuvant immuno may beat adjuvant and allow de-escalation of chemo &amp; surgery.</li></ul></li>
@@ -579,9 +625,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Rectal cancer neoadjuvant strategy — what tumor board debates</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Rectal cancer neoadjuvant strategy — what tumor board debates</h3>
+            <ul class="crs-list">
               <li><strong>Total neoadjuvant therapy (TNT):</strong> deliver <strong>all</strong> chemoradiation <strong>and</strong> systemic chemo <strong>before</strong> surgery.<ul class="crs-sub"><li>Improves distant control and downstaging, raises pCR/cCR.</li><li><strong>OPRA</strong> showed consolidation chemo after chemoradiation preserves the rectum in ~half of selected patients.</li></ul></li>
               <li><strong>Watch-and-wait / NOM:</strong> patients with a <strong>clinical complete response (cCR)</strong> after TNT may be surveilled instead of resected — DRE + flexible endoscopy + MRI intensively (scope every 3–4 months, MRI ~every 6 months early), salvage surgery if regrowth.<ul class="crs-sub"><li>Builds on Habr-Gama &amp; the International Watch &amp; Wait Database.</li></ul></li>
               <li><strong>PROSPECT (de-escalation of radiation):</strong> for <strong>intermediate-risk</strong> rectal cancer (cT2N+, cT3N0, cT3N+) eligible for sphincter-sparing surgery, <strong>neoadjuvant FOLFOX with selective chemoradiation</strong> was <strong>non-inferior</strong> to standard chemoradiation; only ~9–10% needed radiation.<ul class="crs-sub"><li><strong>Excluded</strong> T4, N2, and tumors ≤3 mm from the mesorectal fascia — does <strong>not</strong> apply to high-risk disease.</li></ul></li>
@@ -589,9 +635,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">ctDNA / minimal residual disease — the emerging tool</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">ctDNA / minimal residual disease — the emerging tool</h3>
+            <ul class="crs-list">
               <li><strong>ctDNA</strong> detects <strong>MRD</strong> after curative resection.<ul class="crs-sub"><li>Post-op positivity carries a <strong>markedly higher recurrence risk</strong> (HR often 5–10×), outperforms CEA, with lead times up to ~11 months before radiographic recurrence.</li></ul></li>
               <li><strong>De-escalation is better supported than escalation:</strong> DYNAMIC showed a ctDNA-negative result can safely <strong>spare chemo</strong> in stage II; whether intensifying chemo rescues ctDNA-positive patients is still unproven (CIRCULATE, COBRA, DYNAMIC-III validating).<ul class="crs-sub"><li>Increasingly ordered — recognize it on a chart, but don't treat ctDNA-positive escalation as settled. (UCSD's <strong>ORACLE</strong> observational trial is enrolling here.)</li></ul></li>
             </ul>
@@ -600,20 +646,20 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-5" data-collapsed="0" style="--cat:oklch(0.52 0.09 150);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">05</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Perioperative / medical management</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Your daily bread — ERAS, ileus, SSI, VTE, fluids</div>
+            <section data-sec id="sec-5" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 150)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">05</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Perioperative / medical management</h2>
+            <div class="crs-subtitle">Your daily bread — ERAS, ileus, SSI, VTE, fluids</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">ERAS — colorectal is where it was born</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">ERAS — colorectal is where it was born</h3>
+            <ul class="crs-list">
               <li><strong>Preop:</strong> structured counseling, <strong>carbohydrate loading</strong>, avoid prolonged fasting (<strong>clears up to 2 h, solids up to 6 h</strong>), no routine long-acting sedative premed, immunonutrition for malnourished, VTE/antibiotic prophylaxis timing.</li>
               <li><strong>Bowel prep:</strong> trend favors <strong>mechanical bowel prep + oral antibiotics</strong> (neomycin/erythromycin or neomycin/metronidazole) for elective colorectal to cut SSI and possibly leak; "no prep" used selectively.<ul class="crs-sub"><li>Don't be surprised by either.</li></ul></li>
               <li><strong>Intraop:</strong> MIS when feasible, <strong>goal-directed (euvolemic) fluids</strong>, <strong>avoid hypotension (MAP ≥65)</strong>, normothermia, multimodal/regional analgesia (<strong>TAP block</strong>, epidural for open), <strong>avoid routine NG tubes &amp; drains</strong>.</li>
@@ -622,26 +668,26 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Ileus vs mechanical obstruction</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Ileus vs mechanical obstruction</h3>
+            <ul class="crs-list">
               <li><strong>Ileus</strong> (expected, functional): diffuse quiet bowel sounds, gradual distension, nausea, <strong>diffuse</strong> gas pattern.<ul class="crs-sub"><li>Worsened by <strong>opioids, hypokalemia, hypomagnesemia</strong>, immobility, inflammation.</li><li>Manage: minimize opioids, <strong>correct electrolytes</strong>, mobilize, alvimopan, NG if vomiting.</li></ul></li>
               <li><strong>Early mechanical SBO:</strong> colicky pain, <strong>transition point</strong> on CT, often adhesive or internal hernia / twisted stoma limb.<ul class="crs-sub"><li>Different problem; may need intervention.</li></ul></li>
               <li>Both look like "distended, not passing gas, nauseated" — the team leans on exam, electrolytes, and CT to separate them.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">SSI &amp; post-op diarrhea</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">SSI &amp; post-op diarrhea</h3>
+            <ul class="crs-list">
               <li><strong>SSI</strong> is among the most common complications (why MBP + oral antibiotics trend).<ul class="crs-sub"><li><strong>Superficial incisional:</strong> open the wound, pack, ± antibiotics for surrounding cellulitis.</li><li><strong>Deep / organ-space (intra-abdominal/pelvic abscess):</strong> image-guided percutaneous drainage or return to OR + antibiotics — always raises the question of an <strong>underlying anastomotic leak</strong>.</li></ul></li>
               <li><strong>Post-op C. diff:</strong> new watery diarrhea, especially after perioperative antibiotics → send <strong>stool C. diff toxin/PCR</strong>; first-line is <strong>oral vancomycin</strong> (or fidaxomicin), not metronidazole, for all but the mildest cases.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">VTE prophylaxis &amp; fluids/nutrition</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">VTE prophylaxis &amp; fluids/nutrition</h3>
+            <ul class="crs-list">
               <li><strong>VTE:</strong> malignancy + pelvic surgery + immobility = high risk.<ul class="crs-sub"><li>Inpatient pharmacologic (LMWH/heparin) + mechanical (SCDs).</li><li><strong>Extended prophylaxis (~4 weeks of LMWH after discharge)</strong> is standard for abdominopelvic cancer resections.</li></ul></li>
               <li>New ileostomy / high output → track <strong>Na, K, Mg, HCO3, Cr</strong> daily; replete Mg liberally.<ul class="crs-sub"><li>Watch the <strong>POD2–3 mobilization diuresis</strong> after third-spacing.</li></ul></li>
               <li><strong>Albumin/prealbumin, recent steroid/biologic exposure, smoking</strong> are modifiable leak/wound-healing risks — flag in IBD and cancer patients.<ul class="crs-sub"><li>Severe malnutrition may warrant preoperative optimization or delayed anastomosis.</li></ul></li>
@@ -651,20 +697,20 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-6" data-collapsed="0" style="--cat:oklch(0.53 0.18 27);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">06</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">The anastomotic leak</h2>
-            <div style="font-size:12px;color:var(--cat);font-weight:500;">The single most important thing on this rotation</div>
+      <section data-sec id="sec-6" data-collapsed="0" class="crs-section" style="--cat:oklch(0.53 0.18 27)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">06</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">The anastomotic leak</h2>
+            <div class="crs-subtitle accent">The single most important thing on this rotation</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Recognize it early — what the team is quietly watching for</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Recognize it early — what the team is quietly watching for</h3>
+            <ul class="crs-list">
               <li><strong>Incidence ~1–30%</strong> by location — <strong>low rectal/coloanal leak the most</strong>, right-sided/ileocolic the least.</li>
               <li><strong>Classic timing: POD 5–7</strong> (can be earlier, or present as late as 2–3 weeks).</li>
               <li><strong>First sign is often tachycardia</strong> and a clinical "something's off" <em>before</em> frank peritonitis.<ul class="crs-sub"><li>Then: fever, <strong>leukocytosis, rising CRP/procalcitonin</strong>, <strong>failure to progress / new or persistent ileus</strong>, increasing pain, <strong>purulent or feculent drain output</strong>, and the telltale patient who <strong>was improving then plateaus/backslides around POD 5</strong>.</li><li>A <strong>CRP that fails to fall by ~POD 3–4</strong> is a useful early red flag.</li></ul></li>
@@ -673,18 +719,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Risk factors</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Risk factors</h3>
+            <ul class="crs-list">
               <li><strong>Non-modifiable:</strong> low (rectal) anastomosis / short distance from verge, <strong>male sex / narrow pelvis</strong>, emergency surgery, comorbidity, prior pelvic radiation.</li>
               <li><strong>Modifiable:</strong> <strong>malnutrition/hypoalbuminemia, steroids/immunosuppression, smoking, obesity, perioperative transfusion</strong>, possibly NSAIDs.</li>
               <li><strong>Intraoperative:</strong> <strong>tension</strong> (mitigated by splenic flexure mobilization), <strong>poor perfusion</strong> (assessed by ICG), contamination, technical factors.<ul class="crs-sub"><li>Higher-volume surgeons and stapled ileocolic anastomoses leak less.</li></ul></li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Management &amp; the classic teaching points</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Management &amp; the classic teaching points</h3>
+            <ul class="crs-list">
               <li><strong>Management</strong> ranges from <strong>antibiotics ± percutaneous drainage</strong> (contained leak, stable) to <strong>reoperation with washout + proximal diversion or takedown</strong> (free leak, peritonitis, sepsis).<ul class="crs-sub"><li><strong>Delay in recognition directly increases mortality.</strong></li></ul></li>
               <li><strong>The diverting loop ileostomy mitigates the consequences of a leak</strong> (less peritonitis/sepsis, fewer reoperations, lower mortality) — <strong>it does NOT prevent the leak itself.</strong> A classic, frequent pimp question.</li>
               <li><strong>The NSAID debate:</strong> non-selective NSAIDs (especially ketorolac) associated in some studies with higher leak rates; practice varies.<ul class="crs-sub"><li>Know it's <strong>debated, not settled</strong>.</li></ul></li>
@@ -694,35 +740,35 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-7" data-collapsed="0" style="--cat:oklch(0.57 0.11 50);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">07</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Benign &amp; inflammatory disease</h2>
-            <div style="font-size:12px;color:var(--ink-3);">IBD · diverticulitis · ischemic colitis · C. diff · anorectal</div>
+            <section data-sec id="sec-7" data-collapsed="0" class="crs-section" style="--cat:oklch(0.57 0.11 50)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">07</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Benign &amp; inflammatory disease</h2>
+            <div class="crs-subtitle">IBD · diverticulitis · ischemic colitis · C. diff · anorectal</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">IBD surgery — UC vs Crohn's is a core distinction</h3>
-            <div style="overflow-x:auto;margin:8px 0 4px;">
-              <table style="width:100%;border-collapse:collapse;font-size:13px;line-height:1.4;min-width:520px;">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">IBD surgery — UC vs Crohn's is a core distinction</h3>
+            <div class="crs-tablewrap">
+              <table class="crs-table" style="min-width:520px">
                 <thead><tr>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;"></th>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Ulcerative colitis</th>
-                  <th style="text-align:left;padding:7px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Crohn's disease</th>
+                  <th class="crs-th"></th>
+                  <th class="crs-th">Ulcerative colitis</th>
+                  <th class="crs-th">Crohn's disease</th>
                 </tr></thead>
                 <tbody>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Pattern</td><td style="padding:7px 9px;border:1px solid var(--line);">Mucosal, <strong>continuous</strong>, rectum proximally, <strong>colon only</strong></td><td style="padding:7px 9px;border:1px solid var(--line);"><strong>Transmural, skip lesions, mouth-to-anus</strong></td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Surgery intent</td><td style="padding:7px 9px;border:1px solid var(--line);"><strong>Curative</strong> (remove colon + rectum)</td><td style="padding:7px 9px;border:1px solid var(--line);"><strong>Palliative</strong> — resect problem, preserve length</td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Hallmark complications</td><td style="padding:7px 9px;border:1px solid var(--line);">Toxic megacolon, dysplasia/cancer, bleeding</td><td style="padding:7px 9px;border:1px solid var(--line);"><strong>Fistulas, abscesses, strictures, perianal disease</strong></td></tr>
-                  <tr><td style="padding:7px 9px;border:1px solid var(--line);color:var(--ink-2);">Definitive op</td><td style="padding:7px 9px;border:1px solid var(--line);">Total proctocolectomy ± <strong>IPAA</strong></td><td style="padding:7px 9px;border:1px solid var(--line);">Segmental resection / <strong>strictureplasty</strong></td></tr>
+                  <tr><td class="crs-td label">Pattern</td><td class="crs-td">Mucosal, <strong>continuous</strong>, rectum proximally, <strong>colon only</strong></td><td class="crs-td"><strong>Transmural, skip lesions, mouth-to-anus</strong></td></tr>
+                  <tr><td class="crs-td label">Surgery intent</td><td class="crs-td"><strong>Curative</strong> (remove colon + rectum)</td><td class="crs-td"><strong>Palliative</strong> — resect problem, preserve length</td></tr>
+                  <tr><td class="crs-td label">Hallmark complications</td><td class="crs-td">Toxic megacolon, dysplasia/cancer, bleeding</td><td class="crs-td"><strong>Fistulas, abscesses, strictures, perianal disease</strong></td></tr>
+                  <tr><td class="crs-td label">Definitive op</td><td class="crs-td">Total proctocolectomy ± <strong>IPAA</strong></td><td class="crs-td">Segmental resection / <strong>strictureplasty</strong></td></tr>
                 </tbody>
               </table>
             </div>
-            <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+            <ul class="crs-list mt">
               <li><strong>Acute severe UC (ASUC):</strong> diagnosed by <strong>Truelove &amp; Witts criteria</strong>.<ul class="crs-sub"><li>Treat with <strong>IV corticosteroids</strong>; no response in ~3–5 days → <strong>rescue infliximab or cyclosporine</strong>; ongoing failure, perforation, refractory bleeding, or toxic megacolon → <strong>surgery</strong>.</li></ul></li>
               <li><strong>Emergency UC surgery = subtotal/total abdominal colectomy with end ileostomy — NOT a pouch.</strong> Sick patients on high-dose steroids have far higher pouch complication rates and the diagnosis may be indeterminate.<ul class="crs-sub"><li>Rectum and pouch dealt with later.</li></ul></li>
               <li><strong>IPAA staging — 2-stage</strong> (standard elective): (1) proctocolectomy + pouch + diverting loop ileostomy, (2) ileostomy reversal ~8–12 weeks later.<ul class="crs-sub"><li><strong>3-stage</strong> (sick/steroids/emergency/toxic megacolon): (1) TAC + end ileostomy, (2) completion proctectomy + pouch + diverting ileostomy, (3) reversal.</li></ul></li>
@@ -733,9 +779,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Diverticulitis — Hinchey &amp; modern management</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Diverticulitis — Hinchey &amp; modern management</h3>
+            <ul class="crs-list">
               <li><strong>Modified Hinchey:</strong> <strong>Ia</strong> confined pericolic inflammation/phlegmon; <strong>Ib</strong> pericolic/mesocolic abscess; <strong>II</strong> walled-off pelvic/retroperitoneal/distant abscess; <strong>III</strong> purulent peritonitis; <strong>IV</strong> feculent peritonitis (free perforation).</li>
               <li><strong>Diagnosis:</strong> CT abdomen/pelvis with IV contrast (<strong>sensitivity ~94%, specificity ~99%</strong>).</li>
               <li><strong>Uncomplicated (Hinchey Ia):</strong> increasingly <strong>outpatient</strong>; oral antibiotics shorten stays, and selected immunocompetent patients can be managed <strong>without antibiotics</strong> (DINAMO and related RCTs).<ul class="crs-sub"><li>When used: ciprofloxacin + metronidazole or amoxicillin-clavulanate.</li><li>Sigmoid is the usual site (~60–70%); right-sided predominates in Asian populations.</li></ul></li>
@@ -745,17 +791,17 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Ischemic colitis &amp; C. diff (surgical angle)</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Ischemic colitis &amp; C. diff (surgical angle)</h3>
+            <ul class="crs-list">
               <li><strong>Ischemic colitis:</strong> lives at the <strong>watershed zones</strong> (Griffiths, Sudeck).<ul class="crs-sub"><li>Older patient, low-flow/hypotensive event, <strong>bloody diarrhea + crampy pain</strong>, <strong>"thumbprinting"</strong> (submucosal edema) on imaging.</li><li><strong>Rectum usually spared</strong> (dual supply).</li><li>Mostly <strong>medical</strong> (bowel rest, IV fluids, antibiotics); surgery for full-thickness necrosis, perforation, peritonitis.</li><li>Distinguish from <strong>acute mesenteric ischemia</strong> (SMA event, "pain out of proportion," small bowel, surgical emergency).</li></ul></li>
               <li><strong>Fulminant C. diff</strong> (ileus, megacolon, shock, rising lactate, marked leukocytosis) failing maximal medical therapy → surgery: <strong>TAC with end ileostomy</strong>, or the colon-sparing <strong>diverting loop ileostomy + intraoperative colonic lavage</strong> with antegrade vancomycin.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Anorectal disease (clinic &amp; minor OR)</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Anorectal disease (clinic &amp; minor OR)</h3>
+            <ul class="crs-list">
               <li><strong>Cryptoglandular hypothesis:</strong> obstruction/infection of anal glands at the dentate line is the common origin of <strong>abscess → fistula</strong>.</li>
               <li><strong>Anorectal abscess:</strong> treat with <strong>incision and drainage</strong> (don't wait it out; antibiotics alone insufficient).<ul class="crs-sub"><li>Add antibiotics for cellulitis, immunosuppression, diabetes, valvular disease.</li><li>Named by space: perianal, ischiorectal, intersphincteric, supralevator.</li></ul></li>
               <li><strong>Fistula-in-ano (Parks):</strong> intersphincteric, transsphincteric, suprasphincteric, extrasphincteric.<ul class="crs-sub"><li><strong>Goodsall's rule:</strong> external opening <strong>anterior</strong> to the transverse anal line → <strong>straight radial</strong> tract; <strong>posterior</strong> (or anterior &gt;3 cm away) → <strong>curved</strong> tract to the posterior midline.</li><li>Treatment: <strong>fistulotomy</strong> for low/simple; <strong>seton</strong> (draining/cutting), <strong>LIFT</strong>, or advancement flap for complex/high tracts to protect continence.</li><li><strong>Perianal Crohn's:</strong> drain sepsis, place setons, then <strong>medical therapy (anti-TNF) first</strong>.</li></ul></li>
@@ -769,20 +815,20 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-8" data-collapsed="0" style="--cat:oklch(0.5 0.1 245);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">08</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Things you maybe didn't realize were relevant</h2>
-            <div style="font-size:12px;color:var(--ink-3);">LARS · ureteral stents · presacral bleeding · hereditary syndromes</div>
+            <section data-sec id="sec-8" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.1 245)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">08</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Things you maybe didn't realize were relevant</h2>
+            <div class="crs-subtitle">LARS · ureteral stents · presacral bleeding · hereditary syndromes</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Quality-of-life &amp; intraoperative dread</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Quality-of-life &amp; intraoperative dread</h3>
+            <ul class="crs-list">
               <li><strong>Low Anterior Resection Syndrome (LARS):</strong> after sphincter-preserving rectal surgery — <strong>urgency, frequency, clustering, fragmentation, incontinence</strong>.<ul class="crs-sub"><li>A major QoL burden and part of why organ-preserving strategies are attractive.</li><li>Has a name and a validated <strong>LARS score</strong>.</li></ul></li>
               <li><strong>Prophylactic ureteral stents:</strong> urology often places stents before <strong>redo pelvic, large tumor, or severe diverticular</strong> cases because the <strong>ureters get encased in inflammation</strong>.<ul class="crs-sub"><li>Postop stents = that's why; watch urine output and for hematuria.</li></ul></li>
               <li><strong>Presacral venous bleeding:</strong> dreaded complication during low rectal/TME dissection — the <strong>presacral venous plexus</strong> is valveless, high-volume, very hard to control.</li>
@@ -791,9 +837,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Hereditary syndromes you should recognize</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Hereditary syndromes you should recognize</h3>
+            <ul class="crs-list">
               <li><strong>Why CEA, why MMR, why genetics:</strong> not checkbox labs.<ul class="crs-sub"><li>A young patient, right-sided or multiple tumors, and dMMR → <strong>Lynch workup that changes the whole family's care</strong>.</li></ul></li>
               <li><strong>Lynch (HNPCC):</strong> germline <strong>MLH1, MSH2, MSH6, PMS2, or EPCAM</strong>.<ul class="crs-sub"><li>Identified mainly by <strong>universal tumor MMR/MSI testing</strong> (old Amsterdam II / Bethesda criteria miss ~half).</li><li>Surveillance colonoscopy <strong>every 1–2 years</strong>.</li><li>When CRC develops, many advocate <strong>extended/subtotal colectomy</strong> (high metachronous risk).</li><li><strong>Aspirin</strong> reduces CRC risk (CAPP2).</li><li><strong>Endometrial cancer is the #2 malignancy</strong> — extracolonic surveillance matters.</li></ul></li>
               <li><strong>Familial adenomatous polyposis (FAP):</strong> germline <strong>APC</strong>, hundreds–thousands of adenomas, near-100% cancer risk → <strong>prophylactic colectomy/proctocolectomy</strong> (TAC-IRA or proctocolectomy-IPAA) typically in late teens/20s.<ul class="crs-sub"><li>Plus <strong>upper GI/duodenal surveillance</strong> (ampullary/duodenal cancer) and <strong>desmoid tumor</strong> risk (can preclude pouch).</li></ul></li>
@@ -802,9 +848,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Drains &amp; readmissions</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Drains &amp; readmissions</h3>
+            <ul class="crs-list">
               <li><strong>Drains tell stories:</strong> know each drain's <strong>volume and character</strong> daily.<ul class="crs-sub"><li><strong>Feculent/purulent or a sudden change around POD 5</strong> = think leak.</li></ul></li>
               <li><strong>Why the loop-ileostomy patient bounces back in a month:</strong> <strong>dehydration from high output → AKI → readmission</strong>, not the incision.<ul class="crs-sub"><li>Counsel hydration + loperamide before discharge.</li></ul></li>
             </ul>
@@ -813,19 +859,19 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-9" data-collapsed="0" style="--cat:oklch(0.52 0.09 150);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">09</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">How to be useful</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Earn a good eval without loving the OR</div>
+      <section data-sec id="sec-9" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 150)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">09</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">How to be useful</h2>
+            <div class="crs-subtitle">Earn a good eval without loving the OR</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <ul class="crs-list">
               <li><strong>Prerounds checklist per patient:</strong> POD#, operation + indication, vitals and <strong>trends (especially HR)</strong>, <strong>I&amp;Os</strong>, <strong>stoma &amp; drain outputs (volume + character)</strong>, flatus/stool, diet status, lines/tubes/Foley, pain regimen (and opioid-sparing progress), ambulation, key labs (<strong>WBC, lytes, Cr, Mg, Hgb, lactate</strong> if sick), antibiotics + day, VTE prophylaxis.</li>
               <li><strong>Present in surgical cadence — tight and forward-looking:</strong> "POD3 from sigmoidectomy for a diverticular stricture, afebrile, HR 70s–80s, tolerating regular diet, ostomy 600 mL over 24h, passing flatus, ambulating, pain controlled on PO.<ul class="crs-sub"><li>Plan: Foley out, transition fully to PO analgesia, continue ERAS, anticipate discharge POD4–5."</li></ul></li>
               <li><strong>In the OR:</strong> know <strong>today's</strong> relevant anatomy (TME plane, ureter, vascular pedicle), ask <strong>one</strong> good thinking question, otherwise retract well and watch the planes.<ul class="crs-sub"><li>You don't have to perform enthusiasm.</li></ul></li>
@@ -837,84 +883,84 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-10" data-collapsed="0" style="--cat:oklch(0.52 0.09 195);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">10</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Rapid-fire pimp answers</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Question → answer, for the page or the pocket</div>
+            <section data-sec id="sec-10" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 195)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">10</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Rapid-fire pimp answers</h2>
+            <div class="crs-subtitle">Question → answer, for the page or the pocket</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 8px;">
-            <div style="display:flex;flex-direction:column;">
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Colon watershed areas</span><span style="flex:1.3;color:var(--ink);"><strong>Splenic flexure (Griffiths), rectosigmoid (Sudeck)</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">SMA–IMA collaterals</span><span style="flex:1.3;color:var(--ink);"><strong>Marginal artery of Drummond, arc of Riolan</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Most common CRC met site</span><span style="flex:1.3;color:var(--ink);"><strong>Liver</strong> (portal); low rectal/anal can go to <strong>lung directly</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Most common cause of LBO in adults</span><span style="flex:1.3;color:var(--ink);"><strong>Colorectal cancer (~60%)</strong>, then volvulus, then diverticular stricture</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Minimum nodes for staging</span><span style="flex:1.3;color:var(--ink);"><strong>≥12</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Dentate line significance</span><span style="flex:1.3;color:var(--ink);">Transition of epithelium, innervation, blood supply, lymphatic drainage, cancer type</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">IMA ligation risk</span><span style="flex:1.3;color:var(--ink);">Distal colonic ischemia if <strong>marginal artery</strong> poor (mitigated by splenic flexure mobilization)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Structure at risk in splenic flexure mobilization / IMA ligation</span><span style="flex:1.3;color:var(--ink);"><strong>Left ureter</strong> (crosses iliac vessels at pelvic brim — identify &amp; protect)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Strongest predictor of local recurrence in rectal cancer</span><span style="flex:1.3;color:var(--ink);"><strong>Quality of TME + negative CRM</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Diverting ileostomy after LAR</span><span style="flex:1.3;color:var(--ink);"><strong>Mitigates the consequences of a leak, does not prevent it</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Anastomotic leak timing / first sign</span><span style="flex:1.3;color:var(--ink);"><strong>POD 5–7; tachycardia &amp; failure to progress</strong> before peritonitis</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Imaging for suspected leak</span><span style="flex:1.3;color:var(--ink);"><strong>Triple-contrast (oral/rectal/IV) CT</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">UC vs Crohn's surgery</span><span style="flex:1.3;color:var(--ink);"><strong>UC curative</strong> (proctocolectomy/IPAA); <strong>Crohn's segmental</strong>, IPAA generally contraindicated</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Emergency UC operation</span><span style="flex:1.3;color:var(--ink);"><strong>Total abdominal colectomy with end ileostomy</strong> (not a pouch)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Toxic megacolon</span><span style="flex:1.3;color:var(--ink);">Colon <strong>&gt;6 cm</strong> + toxicity → emergent subtotal colectomy + end ileostomy</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Hinchey III/IV</span><span style="flex:1.3;color:var(--ink);">Resection; <strong>Hartmann</strong> vs <strong>primary anastomosis ± diversion</strong> (latter increasingly favored if stable)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Abscess drainage threshold (diverticulitis)</span><span style="flex:1.3;color:var(--ink);"><strong>Percutaneous if ≥~4 cm</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Anal fissure location</span><span style="flex:1.3;color:var(--ink);"><strong>Posterior midline</strong> (atypical/lateral → Crohn's, HIV, malignancy)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Goodsall's rule</span><span style="flex:1.3;color:var(--ink);"><strong>Anterior = straight radial; posterior = curved to posterior midline</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Hemorrhoid banding vs surgery</span><span style="flex:1.3;color:var(--ink);"><strong>Band I–III; hemorrhoidectomy III–IV</strong>; thrombosed external excise <strong>&lt;72 h</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Anal (squamous) cancer treatment</span><span style="flex:1.3;color:var(--ink);"><strong>Chemoradiation (Nigro)</strong>, surgery is salvage</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">#1 cause of readmission after colorectal surgery</span><span style="flex:1.3;color:var(--ink);"><strong>Dehydration from high ostomy output</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Why MMR/MSI on every tumor</span><span style="flex:1.3;color:var(--ink);"><strong>Lynch screening + immunotherapy eligibility</strong>; MLH1 loss → check BRAF/methylation to exclude sporadic</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Anti-EGFR works only in</span><span style="flex:1.3;color:var(--ink);"><strong>RAS wild-type AND left-sided</strong> primaries (right respond poorly even if RAS-WT)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">First-line for BRAF V600E mCRC</span><span style="flex:1.3;color:var(--ink);"><strong>Encorafenib + cetuximab + chemo</strong> (BREAKWATER); ~10%, poor prognosis</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">dMMR/MSI-high CRC + immunotherapy</span><span style="flex:1.3;color:var(--ink);">Metastatic <strong>nivo+ipi</strong> 1st-line; stage III adjuvant <strong>atezo+FOLFOX</strong> (ATOMIC); neoadjuvant <strong>nivo+ipi</strong> colon (NICHE), <strong>dostarlimab</strong> rectal</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Average-risk screening start age</span><span style="flex:1.3;color:var(--ink);"><strong>45</strong> (early-onset CRC rising); blood-based Shield an option, colonoscopy still gold standard</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Stage III colon adjuvant</span><span style="flex:1.3;color:var(--ink);"><strong>FOLFOX or CAPOX</strong>, 3 vs 6 months risk-adapted (IDEA); oxaliplatin → cumulative neuropathy</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">PROSPECT takeaway</span><span style="flex:1.3;color:var(--ink);">Intermediate-risk rectal cancer can often get <strong>FOLFOX with selective radiation omission</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Nerve causing retrograde ejaculation</span><span style="flex:1.3;color:var(--ink);"><strong>Sympathetic (superior hypogastric plexus)</strong></span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;font-size:14px;line-height:1.45;"><span style="flex:1;color:var(--ink-2);">Nerves for erection/bladder</span><span style="flex:1.3;color:var(--ink);"><strong>Parasympathetic pelvic splanchnics (S2–S4)</strong></span></div>
+          <div data-card class="crs-card compact">
+            <div class="crs-rows">
+              <div class="crs-qa"><span class="crs-qa-q">Colon watershed areas</span><span class="crs-qa-a"><strong>Splenic flexure (Griffiths), rectosigmoid (Sudeck)</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">SMA–IMA collaterals</span><span class="crs-qa-a"><strong>Marginal artery of Drummond, arc of Riolan</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Most common CRC met site</span><span class="crs-qa-a"><strong>Liver</strong> (portal); low rectal/anal can go to <strong>lung directly</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Most common cause of LBO in adults</span><span class="crs-qa-a"><strong>Colorectal cancer (~60%)</strong>, then volvulus, then diverticular stricture</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Minimum nodes for staging</span><span class="crs-qa-a"><strong>≥12</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Dentate line significance</span><span class="crs-qa-a">Transition of epithelium, innervation, blood supply, lymphatic drainage, cancer type</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">IMA ligation risk</span><span class="crs-qa-a">Distal colonic ischemia if <strong>marginal artery</strong> poor (mitigated by splenic flexure mobilization)</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Structure at risk in splenic flexure mobilization / IMA ligation</span><span class="crs-qa-a"><strong>Left ureter</strong> (crosses iliac vessels at pelvic brim — identify &amp; protect)</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Strongest predictor of local recurrence in rectal cancer</span><span class="crs-qa-a"><strong>Quality of TME + negative CRM</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Diverting ileostomy after LAR</span><span class="crs-qa-a"><strong>Mitigates the consequences of a leak, does not prevent it</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Anastomotic leak timing / first sign</span><span class="crs-qa-a"><strong>POD 5–7; tachycardia &amp; failure to progress</strong> before peritonitis</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Imaging for suspected leak</span><span class="crs-qa-a"><strong>Triple-contrast (oral/rectal/IV) CT</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">UC vs Crohn's surgery</span><span class="crs-qa-a"><strong>UC curative</strong> (proctocolectomy/IPAA); <strong>Crohn's segmental</strong>, IPAA generally contraindicated</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Emergency UC operation</span><span class="crs-qa-a"><strong>Total abdominal colectomy with end ileostomy</strong> (not a pouch)</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Toxic megacolon</span><span class="crs-qa-a">Colon <strong>&gt;6 cm</strong> + toxicity → emergent subtotal colectomy + end ileostomy</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Hinchey III/IV</span><span class="crs-qa-a">Resection; <strong>Hartmann</strong> vs <strong>primary anastomosis ± diversion</strong> (latter increasingly favored if stable)</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Abscess drainage threshold (diverticulitis)</span><span class="crs-qa-a"><strong>Percutaneous if ≥~4 cm</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Anal fissure location</span><span class="crs-qa-a"><strong>Posterior midline</strong> (atypical/lateral → Crohn's, HIV, malignancy)</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Goodsall's rule</span><span class="crs-qa-a"><strong>Anterior = straight radial; posterior = curved to posterior midline</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Hemorrhoid banding vs surgery</span><span class="crs-qa-a"><strong>Band I–III; hemorrhoidectomy III–IV</strong>; thrombosed external excise <strong>&lt;72 h</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Anal (squamous) cancer treatment</span><span class="crs-qa-a"><strong>Chemoradiation (Nigro)</strong>, surgery is salvage</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">#1 cause of readmission after colorectal surgery</span><span class="crs-qa-a"><strong>Dehydration from high ostomy output</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Why MMR/MSI on every tumor</span><span class="crs-qa-a"><strong>Lynch screening + immunotherapy eligibility</strong>; MLH1 loss → check BRAF/methylation to exclude sporadic</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Anti-EGFR works only in</span><span class="crs-qa-a"><strong>RAS wild-type AND left-sided</strong> primaries (right respond poorly even if RAS-WT)</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">First-line for BRAF V600E mCRC</span><span class="crs-qa-a"><strong>Encorafenib + cetuximab + chemo</strong> (BREAKWATER); ~10%, poor prognosis</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">dMMR/MSI-high CRC + immunotherapy</span><span class="crs-qa-a">Metastatic <strong>nivo+ipi</strong> 1st-line; stage III adjuvant <strong>atezo+FOLFOX</strong> (ATOMIC); neoadjuvant <strong>nivo+ipi</strong> colon (NICHE), <strong>dostarlimab</strong> rectal</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Average-risk screening start age</span><span class="crs-qa-a"><strong>45</strong> (early-onset CRC rising); blood-based Shield an option, colonoscopy still gold standard</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Stage III colon adjuvant</span><span class="crs-qa-a"><strong>FOLFOX or CAPOX</strong>, 3 vs 6 months risk-adapted (IDEA); oxaliplatin → cumulative neuropathy</span></div>
+              <div class="crs-qa"><span class="crs-qa-q">PROSPECT takeaway</span><span class="crs-qa-a">Intermediate-risk rectal cancer can often get <strong>FOLFOX with selective radiation omission</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Nerve causing retrograde ejaculation</span><span class="crs-qa-a"><strong>Sympathetic (superior hypogastric plexus)</strong></span></div>
+              <div class="crs-qa"><span class="crs-qa-q">Nerves for erection/bladder</span><span class="crs-qa-a"><strong>Parasympathetic pelvic splanchnics (S2–S4)</strong></span></div>
             </div>
           </div>
 
         </div>
       </section>
 
-            <section data-sec id="sec-11" data-collapsed="0" style="--cat:oklch(0.5 0.1 245);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">11</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Daily routine, logistics &amp; discharge criteria</h2>
-            <div style="font-size:12px;color:var(--ink-3);">The day · what to carry · how to be useful</div>
+            <section data-sec id="sec-11" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.1 245)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">11</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Daily routine, logistics &amp; discharge criteria</h2>
+            <div class="crs-subtitle">The day · what to carry · how to be useful</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">The day</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">The day</h3>
+            <ul class="crs-list">
               <li><strong>Arrive early (~5:00–5:30 AM)</strong> to preround.<ul class="crs-sub"><li>Surgery runs ahead of the clock; being late once is remembered.</li></ul></li>
               <li><strong>Preround data per patient:</strong> overnight events, vitals + trends (especially <strong>HR</strong>), <strong>I&amp;Os</strong>, <strong>drain outputs (volume + character)</strong>, <strong>stoma output (color, volume)</strong>, <strong>labs (CBC, BMP, ± lactate)</strong>, wound/incision check, and ask the patient directly about <strong>pain, flatus/BM, nausea, ambulation, diet tolerance</strong>.<ul class="crs-sub"><li>Have your note/card ready before rounds.</li></ul></li>
               <li><strong>Rounding presentation (surgical cadence):</strong> one-liner → overnight events → vitals/I&amp;Os → focused exam → labs → <strong>assessment + plan toward discharge</strong>.<ul class="crs-sub"><li>For post-ops, lead with <strong>POD# + procedure</strong> and frame everything around discharge criteria.</li></ul></li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Discharge criteria (ERAS targets)</h3>
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Discharge criteria (ERAS targets)</h3>
             <p style="margin:0;font-size:14px;line-height:1.55;color:var(--ink);"><strong>Tolerating diet, passing flatus/BM, pain controlled on PO meds, ambulating independently, afebrile,</strong> and (if present) <strong>stoma functioning with acceptable output</strong>. Don't discharge a fresh ileostomy until output is controlled — high output is the top readmission driver.</p>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">What to carry &amp; how to be genuinely useful</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">What to carry &amp; how to be genuinely useful</h3>
+            <ul class="crs-list">
               <li><strong>Carry:</strong> trauma shears, penlight, stethoscope, a pocket reference, a couple of pens.<ul class="crs-sub"><li>Knowing where to find <strong>op notes, pathology, and imaging</strong> quickly in Epic is its own skill — set up your patient lists and reports ahead of time.</li></ul></li>
               <li>Offer to help with <strong>dressing changes, drain management, and stoma care</strong>.<ul class="crs-sub"><li>See and present <strong>consults</strong> proactively.</li><li>Read about <strong>tomorrow's cases tonight</strong>.</li><li>Know your patients cold — labs, imaging, pathology.</li><li>When unsure, <strong>go examine the patient</strong>.</li></ul></li>
             </ul>
@@ -923,28 +969,28 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-12" data-collapsed="0" style="--cat:oklch(0.5 0.11 280);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">12</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">OR etiquette &amp; technical basics</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Before the case · in the room · sutures &amp; knots</div>
+      <section data-sec id="sec-12" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.11 280)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">12</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">OR etiquette &amp; technical basics</h2>
+            <div class="crs-subtitle">Before the case · in the room · sutures &amp; knots</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Before the case</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Before the case</h3>
+            <ul class="crs-list">
               <li><strong>Review the case the night before:</strong> history, imaging, pathology, and the <strong>planned procedure + relevant anatomy</strong> (the plane, the vessels, the ureter for that operation).</li>
               <li>Know whether it's <strong>open, lap, or robotic</strong>, and what your likely role is.</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">In the room</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">In the room</h3>
+            <ul class="crs-list">
               <li><strong>Introduce yourself to the scrub tech and circulating nurse</strong> — they run the room and will help you.<ul class="crs-sub"><li>Ask <strong>where you can stand</strong> and <strong>what you can touch</strong>.</li></ul></li>
               <li><strong>Scrub in early.</strong> Keep your hands above your waist and in front of you; assume everything below the waist and behind you is non-sterile.</li>
               <li><strong>Assisting:</strong> hold retractors <strong>steadily</strong> (constant, quiet tension — don't drift), <strong>follow the camera</strong> smoothly if driving the laparoscope, and <strong>suction where the surgeon is looking</strong>, not where you want to.</li>
@@ -957,110 +1003,110 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-13" data-collapsed="0" style="--cat:oklch(0.5 0.12 195);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">13</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Key numbers &amp; thresholds</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Quick card — every figure consolidated</div>
+            <section data-sec id="sec-13" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.12 195)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">13</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Key numbers &amp; thresholds</h2>
+            <div class="crs-subtitle">Quick card — every figure consolidated</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;">
-            <div style="display:flex;flex-direction:column;">
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">≥12</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Lymph nodes needed for adequate cancer staging</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">12–15 cm</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Length of the rectum from the anal verge</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">≤1 mm</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Threatened/positive CRM or mesorectal fascia margin</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">POD 5–7</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Classic window for anastomotic leak (watch HR, CRP)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">POD 3–4</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">CRP not falling = early red flag for leak</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">&gt;1200–1500</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">mL/day high ostomy output → dehydration/AKI risk</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">&gt;6 cm</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Colonic dilation defining toxic megacolon</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">≥~4 cm</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Diverticular abscess size prompting percutaneous drainage</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">~48 h</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Failure to improve on nonop diverticulitis → consider surgery</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">&lt;72 h</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Window to excise a thrombosed external hemorrhoid</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">2 h / 6 h</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Preop fasting: clear liquids / solids</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">MAP ≥65</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Intraop blood-pressure target</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">~4 weeks</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Extended post-discharge VTE prophylaxis after cancer resection</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">8–12 wks</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Typical interval to ileostomy reversal after LAR/IPAA</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">~3–5 days</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">IV-steroid trial in acute severe UC before rescue/surgery</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">3 vs 6 mo</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Risk-adapted adjuvant chemo duration (IDEA)</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">~15%</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Absolute survival benefit of adjuvant chemo in stage III colon</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">~10–15%</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Proportion of CRC that is dMMR/MSI-high</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;border-bottom:1px solid var(--line);align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">~3–5%</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Synchronous second cancers at diagnosis</span></div>
-              <div style="display:flex;gap:12px;padding:9px 10px;align-items:baseline;"><span style="flex:none;width:128px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--cat);font-size:14px;">Age 45</span><span style="flex:1;font-size:14px;line-height:1.4;color:var(--ink);">Average-risk CRC screening start</span></div>
+          <div data-card class="crs-card compact">
+            <div class="crs-rows">
+              <div class="crs-kv"><span class="crs-kv-k">≥12</span><span class="crs-kv-v">Lymph nodes needed for adequate cancer staging</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">12–15 cm</span><span class="crs-kv-v">Length of the rectum from the anal verge</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">≤1 mm</span><span class="crs-kv-v">Threatened/positive CRM or mesorectal fascia margin</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">POD 5–7</span><span class="crs-kv-v">Classic window for anastomotic leak (watch HR, CRP)</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">POD 3–4</span><span class="crs-kv-v">CRP not falling = early red flag for leak</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">&gt;1200–1500</span><span class="crs-kv-v">mL/day high ostomy output → dehydration/AKI risk</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">&gt;6 cm</span><span class="crs-kv-v">Colonic dilation defining toxic megacolon</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">≥~4 cm</span><span class="crs-kv-v">Diverticular abscess size prompting percutaneous drainage</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">~48 h</span><span class="crs-kv-v">Failure to improve on nonop diverticulitis → consider surgery</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">&lt;72 h</span><span class="crs-kv-v">Window to excise a thrombosed external hemorrhoid</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">2 h / 6 h</span><span class="crs-kv-v">Preop fasting: clear liquids / solids</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">MAP ≥65</span><span class="crs-kv-v">Intraop blood-pressure target</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">~4 weeks</span><span class="crs-kv-v">Extended post-discharge VTE prophylaxis after cancer resection</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">8–12 wks</span><span class="crs-kv-v">Typical interval to ileostomy reversal after LAR/IPAA</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">~3–5 days</span><span class="crs-kv-v">IV-steroid trial in acute severe UC before rescue/surgery</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">3 vs 6 mo</span><span class="crs-kv-v">Risk-adapted adjuvant chemo duration (IDEA)</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">~15%</span><span class="crs-kv-v">Absolute survival benefit of adjuvant chemo in stage III colon</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">~10–15%</span><span class="crs-kv-v">Proportion of CRC that is dMMR/MSI-high</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">~3–5%</span><span class="crs-kv-v">Synchronous second cancers at diagnosis</span></div>
+              <div class="crs-kv"><span class="crs-kv-k">Age 45</span><span class="crs-kv-v">Average-risk CRC screening start</span></div>
             </div>
           </div>
 
         </div>
       </section>
 
-      <section data-sec id="sec-14" data-collapsed="0" style="--cat:oklch(0.53 0.18 27);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">14</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Red flags — when to grab a resident</h2>
-            <div style="font-size:12px;color:var(--cat);font-weight:500;">Don't sit on these. State finding, trend, concern.</div>
+      <section data-sec id="sec-14" data-collapsed="0" class="crs-section" style="--cat:oklch(0.53 0.18 27)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">14</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Red flags — when to grab a resident</h2>
+            <div class="crs-subtitle accent">Don't sit on these. State finding, trend, concern.</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:8px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>POD 5-ish tachycardia + failure to progress</strong> (new ileus, plateau, climbing WBC/CRP) → possible <strong>anastomotic leak</strong>.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>POD 5-ish tachycardia + failure to progress</strong> (new ileus, plateau, climbing WBC/CRP) → possible <strong>anastomotic leak</strong>.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Dusky, black, or retracted stoma</strong> → <strong>stomal ischemia</strong>.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Dusky, black, or retracted stoma</strong> → <strong>stomal ischemia</strong>.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Stoma output stops + distension + nausea/vomiting</strong> → <strong>obstruction or outlet obstruction</strong>.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Stoma output stops + distension + nausea/vomiting</strong> → <strong>obstruction or outlet obstruction</strong>.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>High ostomy output + falling urine output / rising Cr</strong> → <strong>dehydration/AKI</strong> heading toward readmission.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>High ostomy output + falling urine output / rising Cr</strong> → <strong>dehydration/AKI</strong> heading toward readmission.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Pain out of proportion to exam</strong> → think <strong>mesenteric ischemia</strong>.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Pain out of proportion to exam</strong> → think <strong>mesenteric ischemia</strong>.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Diffuse peritonitis</strong> (rigid, rebound, guarding), hemodynamic instability, rising lactate → <strong>surgical emergency</strong>.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Diffuse peritonitis</strong> (rigid, rebound, guarding), hemodynamic instability, rising lactate → <strong>surgical emergency</strong>.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Sudden change in drain character</strong> (new purulent/feculent/high-volume) → <strong>leak/abscess</strong>.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Sudden change in drain character</strong> (new purulent/feculent/high-volume) → <strong>leak/abscess</strong>.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Brisk lower GI bleeding</strong> with instability → escalate, don't observe.</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Brisk lower GI bleeding</strong> with instability → escalate, don't observe.</p>
           </div>
-          <div data-card style="display:flex;gap:11px;align-items:flex-start;background:color-mix(in oklab,var(--cat) 6%,var(--surface));border:1px solid color-mix(in oklab,var(--cat) 24%,var(--line));border-radius:10px;padding:12px 14px;">
-            <span style="color:var(--cat);font-weight:700;flex:none;font-size:15px;line-height:1.4;">!</span>
-            <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink);"><strong>Fever + leukocytosis after initially improving</strong> → look for a source (leak, organ-space SSI, line, C. diff).</p>
+          <div data-card class="crs-flag">
+            <span class="crs-flag-mark">!</span>
+            <p><strong>Fever + leukocytosis after initially improving</strong> → look for a source (leak, organ-space SSI, line, C. diff).</p>
           </div>
 
         </div>
       </section>
 
-            <section data-sec id="sec-15" data-collapsed="0" style="--cat:oklch(0.45 0.03 250);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">15</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Note &amp; SmartPhrase templates</h2>
-            <div style="font-size:12px;color:var(--ink-3);">Skeletons to adapt into Epic SmartPhrases</div>
+            <section data-sec id="sec-15" data-collapsed="0" class="crs-section" style="--cat:oklch(0.45 0.03 250)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">15</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Note &amp; SmartPhrase templates</h2>
+            <div class="crs-subtitle">Skeletons to adapt into Epic SmartPhrases</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Post-op progress note (colorectal)</h3>
-            <pre style="margin:0;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:13px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.55;white-space:pre-wrap;overflow:auto;color:var(--ink);">[Age] [sex], POD[#] s/p [procedure] for [indication]
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Post-op progress note (colorectal)</h3>
+            <pre class="crs-pre">[Age] [sex], POD[#] s/p [procedure] for [indication]
 Overnight: [events / none]
 - Vitals: Tmax __, HR __, BP __, SpO2 __, UOP __ mL
 - I/O: in __ / out __ (urine __, drain __, stoma __)
@@ -1074,17 +1120,17 @@ A/P: POD[#] s/p [procedure], [progressing/lagging] toward discharge.
 - Anticipated discharge: POD[#]</pre>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Oral presentation skeleton (rounds)</h3>
-            <pre style="margin:0;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:13px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.55;white-space:pre-wrap;overflow:auto;color:var(--ink);">[Name] is POD[#] from [procedure] for [indication].
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Oral presentation skeleton (rounds)</h3>
+            <pre class="crs-pre">[Name] is POD[#] from [procedure] for [indication].
 Overnight [stable / events]. Afebrile, HR [trend], [diet], ostomy [__ mL],
 [passing flatus], [ambulating], pain [controlled on PO].
 Plan: [next 1-2 concrete steps] — targeting discharge POD[#].</pre>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Pre-round data to capture (checklist)</h3>
-            <pre style="margin:0;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:13px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;overflow:auto;color:var(--ink);">[ ] overnight events    [ ] vitals + HR trend    [ ] I/O (urine/drain/stoma)
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Pre-round data to capture (checklist)</h3>
+            <pre class="crs-pre">[ ] overnight events    [ ] vitals + HR trend    [ ] I/O (urine/drain/stoma)
 [ ] flatus/BM           [ ] diet tolerance       [ ] pain + regimen
 [ ] lines/tubes/Foley   [ ] incision/stoma exam  [ ] labs (CBC/BMP/±lactate)
 [ ] abx + day           [ ] VTE ppx              [ ] one concrete plan step</pre>
@@ -1093,29 +1139,29 @@ Plan: [next 1-2 concrete steps] — targeting discharge POD[#].</pre>
         </div>
       </section>
 
-      <section data-sec id="sec-16" data-collapsed="0" style="--cat:oklch(0.52 0.09 150);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
-          <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">16</span>
-          <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Make it yours</h2>
-            <div style="font-size:12px;color:var(--ink-3);">UCSD-specific — fill in during your first week</div>
+      <section data-sec id="sec-16" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 150)">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
+          <span class="crs-badge">16</span>
+          <div class="crs-titlewrap">
+            <h2 class="crs-h2">Make it yours</h2>
+            <div class="crs-subtitle">UCSD-specific — fill in during your first week</div>
           </div>
-          <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
+          <span data-chev class="crs-chev">▾</span>
         </div>
-        <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+        <div data-body class="crs-body">
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Service logistics</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.7;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Service logistics</h3>
+            <ul class="crs-list">
               <li>Rounds start: ____  |  Pre-round by: ____  |  Workroom/board location: ____</li>
               <li>Senior resident: ____ (pager ____)  |  Chief: ____ (pager ____)</li>
               <li>Wound/ostomy nurse (WOCN): ____  |  PA/NP: ____  |  Coordinator: ____</li>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Protocols &amp; order sets (Epic names)</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.7;color:var(--ink);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Protocols &amp; order sets (Epic names)</h3>
+            <ul class="crs-list">
               <li>ERAS colorectal order set: ____</li>
               <li>Bowel prep protocol: ____</li>
               <li>VTE prophylaxis default (inpatient / extended): ____</li>
@@ -1124,29 +1170,29 @@ Plan: [next 1-2 concrete steps] — targeting discharge POD[#].</pre>
             </ul>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Attending preferences</h3>
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Attending preferences</h3>
             <p style="margin:0 0 8px;font-size:12.5px;color:var(--ink-2);">Track as you go — saves you every time.</p>
             <div style="overflow-x:auto;">
-              <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:560px;">
+              <table class="crs-table" style="min-width:560px">
                 <thead><tr>
-                  <th style="text-align:left;padding:8px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Attending</th>
-                  <th style="text-align:left;padding:8px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Note/presentation style</th>
-                  <th style="text-align:left;padding:8px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">OR quirks / suture prefs</th>
-                  <th style="text-align:left;padding:8px 9px;border:1px solid var(--line);background:var(--surface-2);font-weight:600;">Pet pimp topics</th>
+                  <th class="crs-th">Attending</th>
+                  <th class="crs-th">Note/presentation style</th>
+                  <th class="crs-th">OR quirks / suture prefs</th>
+                  <th class="crs-th">Pet pimp topics</th>
                 </tr></thead>
                 <tbody>
-                  <tr><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td></tr>
-                  <tr><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td></tr>
-                  <tr><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td><td style="padding:14px 9px;border:1px solid var(--line);"></td></tr>
+                  <tr><td class="crs-td fill"></td><td class="crs-td fill"></td><td class="crs-td fill"></td><td class="crs-td fill"></td></tr>
+                  <tr><td class="crs-td fill"></td><td class="crs-td fill"></td><td class="crs-td fill"></td><td class="crs-td fill"></td></tr>
+                  <tr><td class="crs-td fill"></td><td class="crs-td fill"></td><td class="crs-td fill"></td><td class="crs-td fill"></td></tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Running "to verify / learned today" log</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:var(--ink-3);">
+          <div data-card class="crs-card">
+            <h3 class="crs-h3">Running "to verify / learned today" log</h3>
+            <ul class="crs-list log">
               <li>____________________________________________</li>
               <li>____________________________________________</li>
               <li>____________________________________________</li>
