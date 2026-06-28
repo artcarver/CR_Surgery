@@ -51,9 +51,10 @@ body{margin:0;background:var(--bg)}
 .crs-side::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
 ::selection{background:var(--accent-soft)}
 /* --- typographic refinement layer (scoped to this component) --- */
-[data-body] li,[data-body] p{line-height:1.64!important;color:var(--ink-2)!important;text-wrap:pretty}
+[data-body] li,[data-body] p{line-height:1.64!important;color:var(--ink-2)!important;text-wrap:pretty;max-width:68ch}
 [data-body] li{font-size:14.5px!important;padding-left:3px}
-[data-body] ul{row-gap:9px!important}
+[data-body] ul{row-gap:11px!important}
+[data-body] .crs-sub{list-style:circle;margin:7px 0 1px;padding-left:20px;row-gap:6px!important}[data-body] .crs-sub li{font-size:14px!important;max-width:64ch}[data-body] .crs-sub li::marker{color:var(--ink-3)}
 [data-body] strong{color:var(--ink)!important;font-weight:600}
 [data-body] em{color:var(--ink-2)!important;font-style:italic}
 [data-body] li::marker{color:var(--cat);font-size:.85em}
@@ -140,9 +141,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <a data-nav="sec-11" href="#sec-11" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.1 245);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">11</span><span>Daily routine &amp; logistics</span></a>
         <a data-nav="sec-12" href="#sec-12" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.11 280);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">12</span><span>OR etiquette</span></a>
         <div style="height:1px;background:var(--line);margin:8px 10px;"></div>
-        <a data-nav="sec-13" href="#sec-13" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.12 195);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">13</span><span>Key numbers ★</span></a>
-        <a data-nav="sec-14" href="#sec-14" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.53 0.18 27);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">14</span><span>Red flags ★</span></a>
-        <a data-nav="sec-15" href="#sec-15" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.45 0.03 250);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">15</span><span>Note templates ★</span></a>
+        <a data-nav="sec-13" href="#sec-13" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.5 0.12 195);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">13</span><span>Key numbers</span></a>
+        <a data-nav="sec-14" href="#sec-14" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.53 0.18 27);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">14</span><span>Red flags</span></a>
+        <a data-nav="sec-15" href="#sec-15" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.45 0.03 250);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">15</span><span>Note templates</span></a>
         <a data-nav="sec-16" href="#sec-16" style="display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:13.5px;" style-hover="background:var(--surface-2);"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.52 0.09 150);flex:none;"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">16</span><span>Make it yours</span></a>
       </div>
     </nav>
@@ -183,52 +184,41 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <div data-body style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
-            <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Ward &amp; presentation shorthand</h3>
-            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>POD#</strong> — postoperative day number (POD0 = day of surgery). First thing you state for any post-op patient.</li>
-              <li><strong>Pre-rounding</strong> — seeing/charting your patients alone before team rounds. <strong>One-liner</strong> — the summary sentence: age, history, POD#, operation, why they're here.</li>
-              <li><strong>SOAP note</strong> — Subjective, Objective, Assessment, Plan. <strong>Pimping</strong> — rapid-fire questioning to test/teach. <strong>Scut</strong> — the non-glamorous task work; doing it well earns goodwill.</li>
-              <li><strong>NPO</strong> — nothing by mouth. <strong>I&amp;O (I/Os)</strong> — intake and output (fluids in vs urine/drain/stoma out); a core daily number. <strong>DRE</strong> — digital rectal exam.</li>
-              <li><strong>CBC / BMP / CMP</strong> — complete blood count / basic / comprehensive metabolic panel. <strong>WBC, Hgb, Cr, Mg, lactate</strong> — white cells, hemoglobin, creatinine, magnesium, lactate (perfusion/sepsis marker).</li>
-            </ul>
-          </div>
-
-          <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Anatomy &amp; vessels</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>SMA / IMA</strong> — superior / inferior mesenteric artery. <strong>SMV / IMV</strong> — corresponding veins. <strong>SRA</strong> — superior rectal artery; <strong>TI</strong> — terminal ileum.</li>
-              <li><strong>TME</strong> — total mesorectal excision (key rectal-cancer dissection). <strong>CME / CVL</strong> — complete mesocolic excision / central vascular ligation (colon-cancer equivalent).</li>
+              <li><strong>SMA / IMA</strong> — superior / inferior mesenteric artery.</li><li><strong>SMV / IMV</strong> — corresponding veins.</li><li><strong>SRA</strong> — superior rectal artery; <strong>TI</strong> — terminal ileum.</li>
+              <li><strong>TME</strong> — total mesorectal excision (key rectal-cancer dissection).</li><li><strong>CME / CVL</strong> — complete mesocolic excision / central vascular ligation (colon-cancer equivalent).</li>
               <li><strong>CRM</strong> — circumferential (radial) resection margin; <strong>MRF</strong> — mesorectal fascia; <strong>EMVI</strong> — extramural vascular invasion (rectal-MRI/path terms).</li>
-              <li><strong>IAS / EAS</strong> — internal / external anal sphincter. <strong>Dentate (pectinate) line</strong> — anatomic divide of the anal canal (epithelium, nerves, blood supply all change here).</li>
+              <li><strong>IAS / EAS</strong> — internal / external anal sphincter.</li><li><strong>Dentate (pectinate) line</strong> — anatomic divide of the anal canal (epithelium, nerves, blood supply all change here).</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Operations &amp; procedures</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>LAR</strong> — low anterior resection (rectal cancer, sphincter-preserving). <strong>APR</strong> — abdominoperineal resection (removes anus → permanent colostomy).</li>
-              <li><strong>TAC</strong> — total abdominal colectomy; <strong>IRA</strong> — ileorectal anastomosis. <strong>IPAA</strong> — ileal pouch-anal anastomosis (the "J-pouch"). <strong>Hartmann</strong> — resection + end colostomy + closed rectal stump.</li>
-              <li><strong>TaTME</strong> — transanal TME; <strong>TAMIS / TEM</strong> — transanal minimally invasive / endoscopic microsurgery (local rectal excision). <strong>EMR / ESD</strong> — endoscopic mucosal resection / submucosal dissection.</li>
-              <li><strong>LIFT</strong> — ligation of intersphincteric fistula tract; <strong>LIS</strong> — lateral internal sphincterotomy (fissures). <strong>I&amp;D</strong> — incision and drainage. <strong>CRS / HIPEC</strong> — cytoreductive surgery / hyperthermic intraperitoneal chemo.</li>
-              <li><strong>ICG</strong> — indocyanine green (fluorescent perfusion dye). <strong>Brooke ileostomy</strong> — standard spouted ileostomy; <strong>end vs loop</strong> — single-lumen vs diverting two-opening stoma.</li>
+              <li><strong>LAR</strong> — low anterior resection (rectal cancer, sphincter-preserving).</li><li><strong>APR</strong> — abdominoperineal resection (removes anus → permanent colostomy).</li>
+              <li><strong>TAC</strong> — total abdominal colectomy; <strong>IRA</strong> — ileorectal anastomosis.</li><li><strong>IPAA</strong> — ileal pouch-anal anastomosis (the "J-pouch").</li><li><strong>Hartmann</strong> — resection + end colostomy + closed rectal stump.</li>
+              <li><strong>TaTME</strong> — transanal TME; <strong>TAMIS / TEM</strong> — transanal minimally invasive / endoscopic microsurgery (local rectal excision).</li><li><strong>EMR / ESD</strong> — endoscopic mucosal resection / submucosal dissection.</li>
+              <li><strong>LIFT</strong> — ligation of intersphincteric fistula tract; <strong>LIS</strong> — lateral internal sphincterotomy (fissures).</li><li><strong>I&amp;D</strong> — incision and drainage.</li><li><strong>CRS / HIPEC</strong> — cytoreductive surgery / hyperthermic intraperitoneal chemo.</li>
+              <li><strong>ICG</strong> — indocyanine green (fluorescent perfusion dye).</li><li><strong>Brooke ileostomy</strong> — standard spouted ileostomy; <strong>end vs loop</strong> — single-lumen vs diverting two-opening stoma.</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Cancer staging &amp; pathology</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>CRC / LARC / mCRC</strong> — colorectal cancer / locally advanced rectal cancer / metastatic CRC. <strong>TNM</strong> — Tumor/Node/Metastasis staging; <strong>AJCC</strong> — publishes it.</li>
-              <li><strong>CEA</strong> — carcinoembryonic antigen (trend marker, not screening). <strong>pCR / cCR / MPR</strong> — pathologic / clinical complete response / major pathologic response.</li>
-              <li><strong>LVI / PNI</strong> — lymphovascular / perineural invasion (high-risk features). <strong>IHC / NGS</strong> — immunohistochemistry / next-generation sequencing.</li>
+              <li><strong>CRC / LARC / mCRC</strong> — colorectal cancer / locally advanced rectal cancer / metastatic CRC.</li><li><strong>TNM</strong> — Tumor/Node/Metastasis staging; <strong>AJCC</strong> — publishes it.</li>
+              <li><strong>CEA</strong> — carcinoembryonic antigen (trend marker, not screening).</li><li><strong>pCR / cCR / MPR</strong> — pathologic / clinical complete response / major pathologic response.</li>
+              <li><strong>LVI / PNI</strong> — lymphovascular / perineural invasion (high-risk features).</li><li><strong>IHC / NGS</strong> — immunohistochemistry / next-generation sequencing.</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Molecular markers &amp; genes</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>MMR</strong> — mismatch repair; <strong>dMMR / pMMR</strong> — deficient / proficient. <strong>MSI / MSI-H / MSS</strong> — microsatellite instability / high / stable (the genomic signature of dMMR).</li>
-              <li><strong>ctDNA</strong> — circulating tumor DNA; <strong>MRD</strong> — minimal/molecular residual disease. <strong>KRAS / NRAS / BRAF / PIK3CA / HER2</strong> — mutations/markers guiding targeted drugs.</li>
-              <li><strong>APC, MLH1, MSH2, MSH6, PMS2, EPCAM, MUTYH</strong> — genes behind hereditary CRC syndromes. <strong>EGFR</strong> — target of cetuximab/panitumumab. <strong>PD-1 / PD-L1 / CTLA-4</strong> — immune checkpoints blocked by immunotherapy.</li>
+              <li><strong>MMR</strong> — mismatch repair; <strong>dMMR / pMMR</strong> — deficient / proficient.</li><li><strong>MSI / MSI-H / MSS</strong> — microsatellite instability / high / stable (the genomic signature of dMMR).</li>
+              <li><strong>ctDNA</strong> — circulating tumor DNA; <strong>MRD</strong> — minimal/molecular residual disease.</li><li><strong>KRAS / NRAS / BRAF / PIK3CA / HER2</strong> — mutations/markers guiding targeted drugs.</li>
+              <li><strong>APC, MLH1, MSH2, MSH6, PMS2, EPCAM, MUTYH</strong> — genes behind hereditary CRC syndromes.</li><li><strong>EGFR</strong> — target of cetuximab/panitumumab.</li><li><strong>PD-1 / PD-L1 / CTLA-4</strong> — immune checkpoints blocked by immunotherapy.</li>
               <li><strong>Lynch / HNPCC, FAP, MAP</strong> — hereditary nonpolyposis CRC / familial adenomatous polyposis / MUTYH-associated polyposis.</li>
             </ul>
           </div>
@@ -237,47 +227,47 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Chemo, drugs &amp; immunotherapy</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>5-FU</strong> — 5-fluorouracil (backbone); <strong>leucovorin</strong> — potentiates 5-FU; <strong>capecitabine</strong> — oral 5-FU prodrug.</li>
-              <li><strong>FOLFOX / mFOLFOX6</strong> — 5-FU + leucovorin + oxaliplatin. <strong>CAPOX / XELOX</strong> — capecitabine + oxaliplatin. <strong>FOLFIRI</strong> — 5-FU + leucovorin + irinotecan; <strong>FOLFIRINOX</strong> — adds both.</li>
-              <li><strong>Oxaliplatin</strong> — platinum; signature toxicity is cumulative <strong>neuropathy</strong>. <strong>ICI</strong> — immune checkpoint inhibitor (nivolumab, pembrolizumab, dostarlimab, atezolizumab; ipilimumab = anti-CTLA-4).</li>
-              <li><strong>Anti-EGFR</strong> — cetuximab, panitumumab (only in RAS wild-type, left-sided). <strong>Bevacizumab</strong> — anti-VEGF (anti-angiogenesis).</li>
+              <li><strong>FOLFOX / mFOLFOX6</strong> — 5-FU + leucovorin + oxaliplatin.</li><li><strong>CAPOX / XELOX</strong> — capecitabine + oxaliplatin.</li><li><strong>FOLFIRI</strong> — 5-FU + leucovorin + irinotecan; <strong>FOLFIRINOX</strong> — adds both.</li>
+              <li><strong>Oxaliplatin</strong> — platinum; signature toxicity is cumulative <strong>neuropathy</strong>.</li><li><strong>ICI</strong> — immune checkpoint inhibitor (nivolumab, pembrolizumab, dostarlimab, atezolizumab; ipilimumab = anti-CTLA-4).</li>
+              <li><strong>Anti-EGFR</strong> — cetuximab, panitumumab (only in RAS wild-type, left-sided).</li><li><strong>Bevacizumab</strong> — anti-VEGF (anti-angiogenesis).</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Treatment-strategy terms</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Neoadjuvant</strong> — therapy before surgery; <strong>adjuvant</strong> — after. <strong>TNT</strong> — total neoadjuvant therapy (all chemo + radiation before surgery).</li>
-              <li><strong>CRT / SCRT / LCRT</strong> — chemoradiation / short-course RT / long-course chemoradiation. <strong>W&amp;W / NOM</strong> — watch-and-wait / non-operative management.</li>
-              <li><strong>DFS / OS / PFS / RFS</strong> — disease-free / overall / progression-free / recurrence-free survival. <strong>NCCN</strong> — writes the cancer-treatment guidelines.</li>
+              <li><strong>Neoadjuvant</strong> — therapy before surgery; <strong>adjuvant</strong> — after.</li><li><strong>TNT</strong> — total neoadjuvant therapy (all chemo + radiation before surgery).</li>
+              <li><strong>CRT / SCRT / LCRT</strong> — chemoradiation / short-course RT / long-course chemoradiation.</li><li><strong>W&amp;W / NOM</strong> — watch-and-wait / non-operative management.</li>
+              <li><strong>DFS / OS / PFS / RFS</strong> — disease-free / overall / progression-free / recurrence-free survival.</li><li><strong>NCCN</strong> — writes the cancer-treatment guidelines.</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Perioperative, complications &amp; management</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>ERAS</strong> — Enhanced Recovery After Surgery (the perioperative pathway you round inside). <strong>MBP</strong> — mechanical bowel prep; <strong>ORS</strong> — oral rehydration solution.</li>
-              <li><strong>VTE / DVT / PE</strong> — venous thromboembolism / DVT / pulmonary embolism. <strong>LMWH</strong> — low-molecular-weight heparin; <strong>SCD</strong> — sequential compression device.</li>
-              <li><strong>SSI</strong> — surgical site infection; <strong>AKI</strong> — acute kidney injury. <strong>SBO / LBO</strong> — small / large bowel obstruction; <strong>ileus</strong> — sluggish non-mechanical bowel.</li>
-              <li><strong>NG tube</strong> — nasogastric (decompresses stomach); <strong>Foley</strong> — urinary catheter. <strong>TAP block</strong> — transversus abdominis plane block (regional analgesia).</li>
-              <li><strong>MAP</strong> — mean arterial pressure (≥65 intraop); <strong>PONV</strong> — post-op nausea/vomiting; <strong>LOS</strong> — length of stay; <strong>ASA class</strong> — anesthesia risk grade. <strong>Alvimopan</strong> — speeds return of bowel function; <strong>loperamide</strong> — anti-diarrheal for high stoma output.</li>
+              <li><strong>ERAS</strong> — Enhanced Recovery After Surgery (the perioperative pathway you round inside).</li><li><strong>MBP</strong> — mechanical bowel prep; <strong>ORS</strong> — oral rehydration solution.</li>
+              <li><strong>VTE / DVT / PE</strong> — venous thromboembolism / DVT / pulmonary embolism.</li><li><strong>LMWH</strong> — low-molecular-weight heparin; <strong>SCD</strong> — sequential compression device.</li>
+              <li><strong>SSI</strong> — surgical site infection; <strong>AKI</strong> — acute kidney injury.</li><li><strong>SBO / LBO</strong> — small / large bowel obstruction; <strong>ileus</strong> — sluggish non-mechanical bowel.</li>
+              <li><strong>NG tube</strong> — nasogastric (decompresses stomach); <strong>Foley</strong> — urinary catheter.</li><li><strong>TAP block</strong> — transversus abdominis plane block (regional analgesia).</li>
+              <li><strong>MAP</strong> — mean arterial pressure (≥65 intraop); <strong>PONV</strong> — post-op nausea/vomiting; <strong>LOS</strong> — length of stay; <strong>ASA class</strong> — anesthesia risk grade.</li><li><strong>Alvimopan</strong> — speeds return of bowel function; <strong>loperamide</strong> — anti-diarrheal for high stoma output.</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Disease &amp; benign-condition terms</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>IBD / UC / CD</strong> — inflammatory bowel disease / ulcerative colitis / Crohn's; <strong>ASUC</strong> — acute severe UC. <strong>Anti-TNF</strong> — anti-tumor-necrosis-factor biologic (e.g., infliximab).</li>
-              <li><strong>LARS</strong> — low anterior resection syndrome. <strong>Hinchey</strong> — severity grading for complicated diverticulitis (I–IV). <strong>Goodsall's rule</strong> — predicts the path of an anal fistula.</li>
-              <li><strong>C. diff</strong> — Clostridioides difficile (post-antibiotic colitis bug). <strong>HPV</strong> — human papillomavirus (cause of anal squamous cancer).</li>
+              <li><strong>IBD / UC / CD</strong> — inflammatory bowel disease / ulcerative colitis / Crohn's; <strong>ASUC</strong> — acute severe UC.</li><li><strong>Anti-TNF</strong> — anti-tumor-necrosis-factor biologic (e.g., infliximab).</li>
+              <li><strong>LARS</strong> — low anterior resection syndrome.</li><li><strong>Hinchey</strong> — severity grading for complicated diverticulitis (I–IV).</li><li><strong>Goodsall's rule</strong> — predicts the path of an anal fistula.</li>
+              <li><strong>C. diff</strong> — Clostridioides difficile (post-antibiotic colitis bug).</li><li><strong>HPV</strong> — human papillomavirus (cause of anal squamous cancer).</li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Trials you'll hear name-dropped</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>PROSPECT</strong> — selected rectal cancers can skip radiation (FOLFOX + selective chemoradiation). <strong>OPRA / RAPIDO / PRODIGE 23</strong> — established TNT and organ preservation in rectal cancer.</li>
-              <li><strong>CheckMate 8HW / KEYNOTE-177</strong> — immunotherapy first-line for metastatic dMMR CRC. <strong>ATOMIC</strong> — adjuvant atezolizumab + FOLFOX for stage III dMMR colon. <strong>NICHE-2 / NICHE-3</strong> — neoadjuvant immunotherapy for dMMR colon.</li>
-              <li><strong>BREAKWATER</strong> — first-line encorafenib + cetuximab + chemo for BRAF V600E mCRC. <strong>DYNAMIC / CIRCULATE / ORACLE</strong> — ctDNA-guided adjuvant trials (ORACLE enrolls at UCSD). <strong>IDEA</strong> — defined 3- vs 6-month adjuvant chemo duration.</li>
+              <li><strong>PROSPECT</strong> — selected rectal cancers can skip radiation (FOLFOX + selective chemoradiation).</li><li><strong>OPRA / RAPIDO / PRODIGE 23</strong> — established TNT and organ preservation in rectal cancer.</li>
+              <li><strong>CheckMate 8HW / KEYNOTE-177</strong> — immunotherapy first-line for metastatic dMMR CRC.</li><li><strong>ATOMIC</strong> — adjuvant atezolizumab + FOLFOX for stage III dMMR colon.</li><li><strong>NICHE-2 / NICHE-3</strong> — neoadjuvant immunotherapy for dMMR colon.</li>
+              <li><strong>BREAKWATER</strong> — first-line encorafenib + cetuximab + chemo for BRAF V600E mCRC.</li><li><strong>DYNAMIC / CIRCULATE / ORACLE</strong> — ctDNA-guided adjuvant trials (ORACLE enrolls at UCSD).</li><li><strong>IDEA</strong> — defined 3- vs 6-month adjuvant chemo duration.</li>
             </ul>
           </div>
 
@@ -299,7 +289,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Segments, fixation &amp; surface anatomy</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Order:</strong> cecum → ascending → hepatic flexure → transverse → splenic flexure → descending → sigmoid → rectum (12–15 cm) → anal canal (~2–5 cm).</li>
-              <li><strong>Fixation</strong> (dictates what gets mobilized): ascending and descending colon are <strong>retroperitoneal (fixed)</strong>; transverse and sigmoid are <strong>intraperitoneal on a mesentery (mobile)</strong>. Flexures must be <strong>taken down</strong> for anastomotic reach, and the mobile sigmoid &amp; cecum are the segments that <strong>volvulize</strong>.</li>
+              <li><strong>Fixation</strong> (dictates what gets mobilized): ascending and descending colon are <strong>retroperitoneal (fixed)</strong>; transverse and sigmoid are <strong>intraperitoneal on a mesentery (mobile)</strong>.<ul class="crs-sub"><li>Flexures must be <strong>taken down</strong> for anastomotic reach, and the mobile sigmoid &amp; cecum are the segments that <strong>volvulize</strong>.</li></ul></li>
               <li><strong>Taeniae coli:</strong> three longitudinal bands that <strong>converge at the appendiceal base</strong> (landmark for the appendix) and again at the <strong>rectosigmoid junction</strong>, fanning into the continuous longitudinal muscle of the rectum (rectum has no taeniae, haustra, or appendices epiploicae).</li>
             </ul>
           </div>
@@ -307,9 +297,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Arterial supply, by embryologic origin</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Midgut → SMA:</strong> cecum, ascending, hepatic flexure, proximal ⅔ transverse. Branches: <strong>ileocolic</strong> (most consistent, supplies cecum/TI), <strong>right colic</strong> (variable, often absent), <strong>middle colic</strong>.</li>
-              <li><strong>Hindgut → IMA:</strong> distal ⅓ transverse, descending, sigmoid, upper rectum. Branches: <strong>left colic</strong>, <strong>sigmoidal branches</strong>, terminating as the <strong>superior rectal (hemorrhoidal) artery</strong>.</li>
-              <li><strong>Why oncologic resections look the way they do:</strong> take the whole vascular pedicle plus draining lymphatics. Right cancer → ligate ileocolic ± right/middle colic (right hemicolectomy); left → high IMA ligation. Margin is dictated by blood supply &amp; lymphatics, not just tumor edge. Examine a minimum of <strong>12 lymph nodes</strong> for accurate staging.</li>
+              <li><strong>Midgut → SMA:</strong> cecum, ascending, hepatic flexure, proximal ⅔ transverse.<ul class="crs-sub"><li>Branches: <strong>ileocolic</strong> (most consistent, supplies cecum/TI), <strong>right colic</strong> (variable, often absent), <strong>middle colic</strong>.</li></ul></li>
+              <li><strong>Hindgut → IMA:</strong> distal ⅓ transverse, descending, sigmoid, upper rectum.<ul class="crs-sub"><li>Branches: <strong>left colic</strong>, <strong>sigmoidal branches</strong>, terminating as the <strong>superior rectal (hemorrhoidal) artery</strong>.</li></ul></li>
+              <li><strong>Why oncologic resections look the way they do:</strong> take the whole vascular pedicle plus draining lymphatics.<ul class="crs-sub"><li>Right cancer → ligate ileocolic ± right/middle colic (right hemicolectomy); left → high IMA ligation.</li><li>Margin is dictated by blood supply &amp; lymphatics, not just tumor edge.</li><li>Examine a minimum of <strong>12 lymph nodes</strong> for accurate staging.</li></ul></li>
             </ul>
           </div>
 
@@ -318,8 +308,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Marginal artery of Drummond:</strong> continuous collateral arcade along the mesenteric border connecting SMA &amp; IMA territories; perfuses colon after a pedicle is ligated.</li>
               <li><strong>Arc of Riolan (meandering mesenteric artery):</strong> a more central, variable SMA–IMA collateral; prominent with proximal SMA/IMA stenosis.</li>
-              <li><strong>Griffiths point (splenic flexure):</strong> watershed between middle colic (SMA) &amp; left colic (IMA) — <strong>#1 site of ischemic colitis</strong>. <strong>Sudeck point (rectosigmoid):</strong> watershed between last sigmoidal branch &amp; superior rectal artery.</li>
-              <li><strong>Clinical payoff:</strong> after high IMA ligation, distal perfusion hinges on the marginal artery via the SMA. A poor marginal artery = a tenuous, leak-prone anastomosis — one reason surgeons <strong>mobilize the splenic flexure</strong> for a well-perfused, tension-free reach.</li>
+              <li><strong>Griffiths point (splenic flexure):</strong> watershed between middle colic (SMA) &amp; left colic (IMA) — <strong>#1 site of ischemic colitis</strong>.<ul class="crs-sub"><li><strong>Sudeck point (rectosigmoid):</strong> watershed between last sigmoidal branch &amp; superior rectal artery.</li></ul></li>
+              <li><strong>Clinical payoff:</strong> after high IMA ligation, distal perfusion hinges on the marginal artery via the SMA.<ul class="crs-sub"><li>A poor marginal artery = a tenuous, leak-prone anastomosis — one reason surgeons <strong>mobilize the splenic flexure</strong> for a well-perfused, tension-free reach.</li></ul></li>
             </ul>
           </div>
 
@@ -328,16 +318,16 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li>Colon and <strong>upper rectum</strong> → portal system (SMV/IMV → portal vein) → <strong>liver is the first and most common met site</strong>.</li>
               <li><strong>Lower rectum/anal canal</strong> → partly systemic via middle/inferior rectal veins → internal iliac → IVC, so low lesions can metastasize to <strong>lung directly, bypassing the liver</strong>.</li>
-              <li>Lymphatics follow arteries. Above the dentate line → internal iliac/mesenteric nodes; below → <strong>inguinal nodes</strong> (why anal canal cancers get groin attention).</li>
+              <li>Lymphatics follow arteries.<ul class="crs-sub"><li>Above the dentate line → internal iliac/mesenteric nodes; below → <strong>inguinal nodes</strong> (why anal canal cancers get groin attention).</li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Rectum &amp; the surgical planes</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li>Rectum ~12–15 cm from the anal verge; three transverse folds (valves of Houston). No true mesentery — it carries the <strong>mesorectum</strong>, a fascial envelope of fat, vessels, lymphatics.</li>
-              <li><strong>Total mesorectal excision (TME):</strong> sharp dissection in the avascular areolar "holy plane" between mesorectal fascia (visceral) and presacral/parietal fascia. Sharp TME (Heald) dramatically reduced local recurrence vs blunt technique.</li>
-              <li><strong>Circumferential resection margin (CRM):</strong> the radial margin. Positive/threatened CRM (≤1 mm) is the strongest predictor of local recurrence and a key reason for neoadjuvant therapy. Pelvic MRI pre-op assesses tumor vs mesorectal fascia.</li>
+              <li>Rectum ~12–15 cm from the anal verge; three transverse folds (valves of Houston).<ul class="crs-sub"><li>No true mesentery — it carries the <strong>mesorectum</strong>, a fascial envelope of fat, vessels, lymphatics.</li></ul></li>
+              <li><strong>Total mesorectal excision (TME):</strong> sharp dissection in the avascular areolar "holy plane" between mesorectal fascia (visceral) and presacral/parietal fascia.<ul class="crs-sub"><li>Sharp TME (Heald) dramatically reduced local recurrence vs blunt technique.</li></ul></li>
+              <li><strong>Circumferential resection margin (CRM):</strong> the radial margin.<ul class="crs-sub"><li>Positive/threatened CRM (≤1 mm) is the strongest predictor of local recurrence and a key reason for neoadjuvant therapy.</li><li>Pelvic MRI pre-op assesses tumor vs mesorectal fascia.</li></ul></li>
               <li><strong>Rectal arterial supply:</strong> superior rectal (IMA), middle rectal (internal iliac), inferior rectal (internal pudendal from internal iliac).</li>
             </ul>
           </div>
@@ -373,15 +363,15 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Internal anal sphincter (IAS):</strong> smooth muscle, involuntary, autonomic; continuation of the rectal circular muscle; provides most resting tone.</li>
               <li><strong>External anal sphincter (EAS):</strong> skeletal muscle, voluntary (pudendal n.); continuous superiorly with puborectalis and levator ani.</li>
-              <li><strong>Puborectalis sling</strong> maintains the anorectal angle — key to gross continence. The palpable upper edge on DRE is the <strong>anorectal ring</strong>; dividing it causes incontinence (limits how aggressive a fistulotomy can be).</li>
+              <li><strong>Puborectalis sling</strong> maintains the anorectal angle — key to gross continence.<ul class="crs-sub"><li>The palpable upper edge on DRE is the <strong>anorectal ring</strong>; dividing it causes incontinence (limits how aggressive a fistulotomy can be).</li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Pelvic autonomic nerves (the ones surgeons protect)</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Superior hypogastric plexus / hypogastric nerves (sympathetic, L1–L3):</strong> ejaculation, bladder-neck closure. Injury → <strong>retrograde ejaculation</strong>, bladder dysfunction. At risk at the IMA origin and sacral promontory.</li>
-              <li><strong>Pelvic splanchnic / inferior hypogastric (nervi erigentes) plexus (parasympathetic, S2–S4):</strong> erection, detrusor contraction. Injury → <strong>erectile and bladder dysfunction</strong>. At risk along the lateral pelvic sidewalls during low dissection.</li>
+              <li><strong>Superior hypogastric plexus / hypogastric nerves (sympathetic, L1–L3):</strong> ejaculation, bladder-neck closure.<ul class="crs-sub"><li>Injury → <strong>retrograde ejaculation</strong>, bladder dysfunction.</li><li>At risk at the IMA origin and sacral promontory.</li></ul></li>
+              <li><strong>Pelvic splanchnic / inferior hypogastric (nervi erigentes) plexus (parasympathetic, S2–S4):</strong> erection, detrusor contraction.<ul class="crs-sub"><li>Injury → <strong>erectile and bladder dysfunction</strong>.</li><li>At risk along the lateral pelvic sidewalls during low dissection.</li></ul></li>
               <li>"Nerve-sparing TME" is the deliberate preservation of these planes — a major quality-of-life issue, especially in younger patients.</li>
             </ul>
           </div>
@@ -403,12 +393,12 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">The core resections</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Right hemicolectomy:</strong> cecum/ascending ± hepatic flexure; ileocolic anastomosis. Generally lower leak risk (small bowel to colon, excellent supply; stapled ileocolic leaks less than handsewn). <strong>Extended right</strong> adds the transverse for hepatic flexure/proximal transverse lesions.</li>
-              <li><strong>Left hemicolectomy / sigmoidectomy:</strong> descending/sigmoid; colocolonic or colorectal anastomosis. Higher leak risk than right-sided.</li>
-              <li><strong>Low anterior resection (LAR):</strong> rectal cancer with <strong>sphincter preservation</strong>. TME + colorectal or coloanal anastomosis. Low (&lt;5 cm from verge), coloanal, and IPAA anastomoses are usually <strong>protected by a diverting loop ileostomy</strong>.</li>
-              <li><strong>Abdominoperineal resection (APR):</strong> very low rectal/anal cancers where the sphincter can't be spared. Removes rectum <strong>and</strong> anus → <strong>permanent end colostomy</strong>. The <strong>perineal wound</strong> is large and slow-healing (sometimes flap-reconstructed) — watch it on rounds.</li>
-              <li><strong>Hartmann procedure:</strong> segmental (usually sigmoid/rectal) resection with <strong>end colostomy + oversewn rectal stump</strong>, no anastomosis. Classic for perforated diverticulitis or obstructing left-sided cancer in a contaminated/unstable field. "Reversal" is a real, sometimes difficult second operation; a meaningful fraction are never reversed.</li>
-              <li><strong>Total abdominal colectomy (TAC):</strong> entire colon removed; ileorectal anastomosis (elective) or <strong>end ileostomy</strong> (emergent/sick). Indications: UC, fulminant C. diff, synchronous tumors, attenuated FAP/Lynch, slow-transit constipation.</li>
+              <li><strong>Right hemicolectomy:</strong> cecum/ascending ± hepatic flexure; ileocolic anastomosis.<ul class="crs-sub"><li>Generally lower leak risk (small bowel to colon, excellent supply; stapled ileocolic leaks less than handsewn).</li><li><strong>Extended right</strong> adds the transverse for hepatic flexure/proximal transverse lesions.</li></ul></li>
+              <li><strong>Left hemicolectomy / sigmoidectomy:</strong> descending/sigmoid; colocolonic or colorectal anastomosis.<ul class="crs-sub"><li>Higher leak risk than right-sided.</li></ul></li>
+              <li><strong>Low anterior resection (LAR):</strong> rectal cancer with <strong>sphincter preservation</strong>.<ul class="crs-sub"><li>TME + colorectal or coloanal anastomosis.</li><li>Low (&lt;5 cm from verge), coloanal, and IPAA anastomoses are usually <strong>protected by a diverting loop ileostomy</strong>.</li></ul></li>
+              <li><strong>Abdominoperineal resection (APR):</strong> very low rectal/anal cancers where the sphincter can't be spared.<ul class="crs-sub"><li>Removes rectum <strong>and</strong> anus → <strong>permanent end colostomy</strong>.</li><li>The <strong>perineal wound</strong> is large and slow-healing (sometimes flap-reconstructed) — watch it on rounds.</li></ul></li>
+              <li><strong>Hartmann procedure:</strong> segmental (usually sigmoid/rectal) resection with <strong>end colostomy + oversewn rectal stump</strong>, no anastomosis.<ul class="crs-sub"><li>Classic for perforated diverticulitis or obstructing left-sided cancer in a contaminated/unstable field. "Reversal" is a real, sometimes difficult second operation; a meaningful fraction are never reversed.</li></ul></li>
+              <li><strong>Total abdominal colectomy (TAC):</strong> entire colon removed; ileorectal anastomosis (elective) or <strong>end ileostomy</strong> (emergent/sick).<ul class="crs-sub"><li>Indications: UC, fulminant C. diff, synchronous tumors, attenuated FAP/Lynch, slow-transit constipation.</li></ul></li>
               <li><strong>Total proctocolectomy:</strong> colon + rectum + anus (end ileostomy) or with <strong>IPAA</strong> (sphincter-preserving).</li>
             </ul>
           </div>
@@ -416,8 +406,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Restorative &amp; specialized</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Restorative proctocolectomy with IPAA ("J-pouch"):</strong> definitive operation for UC and FAP. Removes colon &amp; rectum, builds an ileal reservoir anastomosed to the anus, restoring transanal defecation. Usually <strong>staged</strong>. Complications: <strong>pouchitis</strong> (most common long-term), leak, pelvic sepsis, <strong>cuffitis</strong>, pouch fistula, pouch failure.</li>
-              <li><strong>TaTME (transanal TME):</strong> bottom-up dissection for difficult low rectal tumors, obese/narrow male pelvis. Note the <strong>local-recurrence controversy</strong> — Norway paused TaTME nationally over early recurrence signals; reserved for selected cases at experienced centers.</li>
+              <li><strong>Restorative proctocolectomy with IPAA ("J-pouch"):</strong> definitive operation for UC and FAP.<ul class="crs-sub"><li>Removes colon &amp; rectum, builds an ileal reservoir anastomosed to the anus, restoring transanal defecation.</li><li>Usually <strong>staged</strong>.</li><li>Complications: <strong>pouchitis</strong> (most common long-term), leak, pelvic sepsis, <strong>cuffitis</strong>, pouch fistula, pouch failure.</li></ul></li>
+              <li><strong>TaTME (transanal TME):</strong> bottom-up dissection for difficult low rectal tumors, obese/narrow male pelvis.<ul class="crs-sub"><li>Note the <strong>local-recurrence controversy</strong> — Norway paused TaTME nationally over early recurrence signals; reserved for selected cases at experienced centers.</li></ul></li>
               <li><strong>Local options:</strong> transanal excision / TAMIS / TEM for select early (T1, favorable) rectal lesions; polypectomy/EMR/ESD endoscopically for early lesions.</li>
             </ul>
           </div>
@@ -464,7 +454,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
               </table>
             </div>
             <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>End vs loop:</strong> <em>End</em> = single lumen, distal bowel removed/oversewn (APR, Hartmann, end ileostomy after TAC). <em>Loop</em> = two openings on one stoma, almost always <strong>temporary/diverting</strong> to protect a downstream anastomosis (loop ileostomy after LAR or IPAA).</li>
+              <li><strong>End vs loop:</strong> <em>End</em> = single lumen, distal bowel removed/oversewn (APR, Hartmann, end ileostomy after TAC).<ul class="crs-sub"><li><em>Loop</em> = two openings on one stoma, almost always <strong>temporary/diverting</strong> to protect a downstream anastomosis (loop ileostomy after LAR or IPAA).</li></ul></li>
               <li><strong>Diverting loop ileostomy is preferred over loop transverse colostomy</strong> for protecting low anastomoses — lower prolapse, parastomal hernia, and reversal complications.</li>
             </ul>
           </div>
@@ -472,7 +462,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">High ostomy output — the thing you'll actually manage</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li>A new ileostomy putting out <strong>&gt;1200–1500 mL/day</strong> drives dehydration, <strong>AKI, hypokalemia, hypomagnesemia, metabolic acidosis</strong>. <strong>Dehydration from high ostomy output is the leading cause of readmission after colorectal surgery.</strong></li>
+              <li>A new ileostomy putting out <strong>&gt;1200–1500 mL/day</strong> drives dehydration, <strong>AKI, hypokalemia, hypomagnesemia, metabolic acidosis</strong>.<ul class="crs-sub"><li><strong>Dehydration from high ostomy output is the leading cause of readmission after colorectal surgery.</strong></li></ul></li>
               <li><strong>Management ladder:</strong> anti-motility agents (loperamide, often high-dose; add diphenoxylate-atropine) → bulking/thickening (fiber, banana flakes) → <strong>oral rehydration solution</strong> rather than free water (hypotonic fluid worsens sodium loss) → PPI/H2 blocker to reduce secretory volume → hold diuretics/laxatives → <strong>aggressively replete magnesium</strong> → somatostatin analogs if refractory.</li>
               <li><strong>Round on the number:</strong> "Ileostomy put out 1,400 over 24h, making good urine, lytes stable, repleted Mg" signals competence.</li>
             </ul>
@@ -481,7 +471,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Viability &amp; complications</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Viability:</strong> pink/red = healthy; <strong>dusky/black = ischemia → escalate now</strong>. A small rim of necrosis above fascia may be watched; necrosis below fascia is an emergency.</li>
+              <li><strong>Viability:</strong> pink/red = healthy; <strong>dusky/black = ischemia → escalate now</strong>.<ul class="crs-sub"><li>A small rim of necrosis above fascia may be watched; necrosis below fascia is an emergency.</li></ul></li>
               <li><strong>A stoma that stops + distension + nausea = obstruction or ileus</strong>, not "it's resting." Loop ileostomy "outlet obstruction" is a known early complication.</li>
               <li>Chronic: <strong>parastomal hernia, prolapse, retraction, stenosis, high-output dermatitis</strong>.</li>
             </ul>
@@ -504,8 +494,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Workup &amp; staging</h3>
             <ul style="margin:0 0 14px;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Colon:</strong> full colonoscopy with biopsy + <strong>tattoo</strong> of the lesion, <strong>CT chest/abdomen/pelvis</strong>, baseline <strong>CEA</strong>. Clear the whole colon (synchronous cancers ~3–5%).</li>
-              <li><strong>Rectal adds:</strong> <strong>pelvic MRI</strong> (T stage, nodes, CRM, EMVI) and often endorectal ultrasound for early lesions. Local staging drives neoadjuvant decisions.</li>
+              <li><strong>Colon:</strong> full colonoscopy with biopsy + <strong>tattoo</strong> of the lesion, <strong>CT chest/abdomen/pelvis</strong>, baseline <strong>CEA</strong>.<ul class="crs-sub"><li>Clear the whole colon (synchronous cancers ~3–5%).</li></ul></li>
+              <li><strong>Rectal adds:</strong> <strong>pelvic MRI</strong> (T stage, nodes, CRM, EMVI) and often endorectal ultrasound for early lesions.<ul class="crs-sub"><li>Local staging drives neoadjuvant decisions.</li></ul></li>
             </ul>
 
             <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 8px;">AJCC 8th edition · TNM</div>
@@ -553,21 +543,19 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             </table>
 
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>CEA</strong> is surveillance/trend, <strong>not screening</strong>. A rising CEA after curative resection = recurrence until proven otherwise.</li>
-              <li><strong>Screening &amp; epidemiology:</strong> early-onset CRC (&lt;50) is rising; average-risk screening now <strong>starts at age 45</strong> (ACS/USPSTF). Options: colonoscopy, FIT, stool-DNA, and the blood-based <strong>cfDNA test (Shield)</strong> — FDA-approved (2024), NCCN-recognized (2025) for average-risk 45+; colonoscopy remains gold standard and is required for any positive non-colonoscopy test.</li>
-              <li><strong>Stage IV / advanced:</strong> <strong>colorectal liver metastases</strong> can be <strong>resected for cure</strong> when feasible, sometimes after <strong>conversion chemotherapy</strong> downsizes them. <strong>Peritoneal mets:</strong> CRS ± HIPEC at specialized centers — though <strong>PRODIGE 7</strong> questioned the added benefit of HIPEC (mitomycin) over complete cytoreduction alone.</li>
+              <li><strong>CEA</strong> is surveillance/trend, <strong>not screening</strong>.<ul class="crs-sub"><li>A rising CEA after curative resection = recurrence until proven otherwise.</li></ul></li>
+              <li><strong>Screening &amp; epidemiology:</strong> early-onset CRC (&lt;50) is rising; average-risk screening now <strong>starts at age 45</strong> (ACS/USPSTF).<ul class="crs-sub"><li>Options: colonoscopy, FIT, stool-DNA, and the blood-based <strong>cfDNA test (Shield)</strong> — FDA-approved (2024), NCCN-recognized (2025) for average-risk 45+; colonoscopy remains gold standard and is required for any positive non-colonoscopy test.</li></ul></li>
+              <li><strong>Stage IV / advanced:</strong> <strong>colorectal liver metastases</strong> can be <strong>resected for cure</strong> when feasible, sometimes after <strong>conversion chemotherapy</strong> downsizes them.<ul class="crs-sub"><li><strong>Peritoneal mets:</strong> CRS ± HIPEC at specialized centers — though <strong>PRODIGE 7</strong> questioned the added benefit of HIPEC (mitomycin) over complete cytoreduction alone.</li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Molecular testing every tumor gets — and why</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Universal MMR/MSI testing</strong> on all CRC (IHC for MLH1/MSH2/MSH6/PMS2, or PCR/NGS for MSI). Two reasons:</li>
-              <li style="list-style:none;margin-left:-18px;"><strong>1. Lynch screening.</strong> Loss of staining flags possible Lynch → germline testing + genetics. If <strong>MLH1 is lost</strong>, reflex <strong>BRAF V600E</strong> and/or <strong>MLH1 promoter methylation</strong> — if positive, likely <strong>sporadic</strong> (methylation-driven), not Lynch.</li>
-              <li style="list-style:none;margin-left:-18px;"><strong>2. Therapy &amp; prognosis.</strong> <strong>dMMR/MSI-high tumors respond to ICIs</strong> and <strong>resist single-agent fluoropyrimidine</strong>. In stage II, dMMR is a <strong>good</strong> prognostic sign and argues against adjuvant 5-FU monotherapy.</li>
-              <li><strong>RAS/RAF &amp; targeted therapy (metastatic):</strong> <strong>KRAS/NRAS mutations</strong> → no benefit from anti-EGFR (cetuximab/panitumumab); those work only in <strong>RAS wild-type</strong>. Even then, <strong>right-sided primaries respond poorly to anti-EGFR</strong> — sidedness guides first-line biologic (anti-EGFR for left, bevacizumab for right).</li>
-              <li><strong>BRAF V600E</strong> (~10%, poor prognosis): <strong>BREAKWATER</strong> established first-line <strong>encorafenib + cetuximab + mFOLFOX6</strong>, roughly doubling median OS (~30 months) — FDA fully approved (2026). Now first-line, not just salvage (older BEACON used it after progression).</li>
-              <li><strong>KRAS G12C:</strong> sotorasib or adagrasib + cetuximab (CodeBreaK 300), later lines. <strong>HER2 amplification:</strong> tucatinib + trastuzumab (MOUNTAINEER), trastuzumab-deruxtecan — actionable in RAS/BRAF wild-type.</li>
+              <li><strong>Universal MMR/MSI testing</strong> on all CRC (IHC for MLH1/MSH2/MSH6/PMS2, or PCR/NGS for MSI) — two reasons:<ul class="crs-sub" style="list-style:none;padding-left:2px;"><li><strong>1. Lynch screening.</strong> Loss of staining flags possible Lynch → germline testing + genetics. If <strong>MLH1 is lost</strong>, reflex <strong>BRAF V600E</strong> and/or <strong>MLH1 promoter methylation</strong> — if positive, likely <strong>sporadic</strong> (methylation-driven), not Lynch.</li><li><strong>2. Therapy &amp; prognosis.</strong> <strong>dMMR/MSI-high tumors respond to ICIs</strong> and <strong>resist single-agent fluoropyrimidine</strong>. In stage II, dMMR is a <strong>good</strong> prognostic sign and argues against adjuvant 5-FU monotherapy.</li></ul></li>
+              <li><strong>RAS/RAF &amp; targeted therapy (metastatic):</strong> <strong>KRAS/NRAS mutations</strong> → no benefit from anti-EGFR (cetuximab/panitumumab); those work only in <strong>RAS wild-type</strong>.<ul class="crs-sub"><li>Even then, <strong>right-sided primaries respond poorly to anti-EGFR</strong> — sidedness guides first-line biologic (anti-EGFR for left, bevacizumab for right).</li></ul></li>
+              <li><strong>BRAF V600E</strong> (~10%, poor prognosis): <strong>BREAKWATER</strong> established first-line <strong>encorafenib + cetuximab + mFOLFOX6</strong>, roughly doubling median OS (~30 months) — FDA fully approved (2026).<ul class="crs-sub"><li>Now first-line, not just salvage (older BEACON used it after progression).</li></ul></li>
+              <li><strong>KRAS G12C:</strong> sotorasib or adagrasib + cetuximab (CodeBreaK 300), later lines.<ul class="crs-sub"><li><strong>HER2 amplification:</strong> tucatinib + trastuzumab (MOUNTAINEER), trastuzumab-deruxtecan — actionable in RAS/BRAF wild-type.</li></ul></li>
             </ul>
           </div>
 
@@ -575,18 +563,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Adjuvant chemotherapy after colon resection</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Stage III (node-positive): adjuvant chemo is standard</strong> — <strong>FOLFOX</strong> or <strong>CAPOX/XELOX</strong>, ~<strong>15% absolute survival benefit</strong>.</li>
-              <li><strong>Duration (IDEA):</strong> <strong>3 vs 6 months</strong> risk-adapted. Lower-risk (T1–3, N1) often 3 months of CAPOX (less oxaliplatin neurotoxicity); higher-risk (T4 or N2) generally 6 months.</li>
+              <li><strong>Duration (IDEA):</strong> <strong>3 vs 6 months</strong> risk-adapted.<ul class="crs-sub"><li>Lower-risk (T1–3, N1) often 3 months of CAPOX (less oxaliplatin neurotoxicity); higher-risk (T4 or N2) generally 6 months.</li></ul></li>
               <li><strong>Oxaliplatin's signature toxicity:</strong> cumulative, dose-dependent <strong>peripheral sensory neuropathy</strong> (and cold dysesthesia) — the reason shorter courses are attractive.</li>
-              <li><strong>Stage II:</strong> chemo is <strong>selective</strong>, for high-risk features — T4, &lt;12 nodes, poor differentiation, <strong>LVI/PNI</strong>, obstruction or perforation. <strong>dMMR stage II generally should NOT get 5-FU monotherapy.</strong></li>
+              <li><strong>Stage II:</strong> chemo is <strong>selective</strong>, for high-risk features — T4, &lt;12 nodes, poor differentiation, <strong>LVI/PNI</strong>, obstruction or perforation.<ul class="crs-sub"><li><strong>dMMR stage II generally should NOT get 5-FU monotherapy.</strong></li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Immunotherapy across dMMR/MSI-high (~10–15% of CRC) — moving earlier</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Metastatic:</strong> <strong>nivolumab + ipilimumab</strong> is now first-line (CheckMate 8HW) — 2-yr PFS ~72% vs ~14% with chemo; <strong>pembrolizumab</strong> monotherapy (KEYNOTE-177) is the single-agent option. Chemo is comparatively ineffective here.</li>
+              <li><strong>Metastatic:</strong> <strong>nivolumab + ipilimumab</strong> is now first-line (CheckMate 8HW) — 2-yr PFS ~72% vs ~14% with chemo; <strong>pembrolizumab</strong> monotherapy (KEYNOTE-177) is the single-agent option.<ul class="crs-sub"><li>Chemo is comparatively ineffective here.</li></ul></li>
               <li><strong>Stage III colon — adjuvant (ATOMIC, ASCO 2025 plenary):</strong> adding <strong>atezolizumab to FOLFOX</strong> improved 3-yr DFS to <strong>~86% vs ~77%</strong> (HR ~0.50) — practice-changing for dMMR stage III.</li>
-              <li><strong>Locally advanced colon — neoadjuvant (NICHE-2/NICHE-3):</strong> short course of <strong>nivolumab + ipilimumab</strong> (or nivo + relatlimab) before surgery → <strong>~98–99% pathologic response, ~68% pCR</strong>; NICHE-2 reported <strong>~100% 3-yr DFS</strong>. Open question: neoadjuvant immuno may beat adjuvant and allow de-escalation of chemo &amp; surgery.</li>
+              <li><strong>Locally advanced colon — neoadjuvant (NICHE-2/NICHE-3):</strong> short course of <strong>nivolumab + ipilimumab</strong> (or nivo + relatlimab) before surgery → <strong>~98–99% pathologic response, ~68% pCR</strong>; NICHE-2 reported <strong>~100% 3-yr DFS</strong>.<ul class="crs-sub"><li>Open question: neoadjuvant immuno may beat adjuvant and allow de-escalation of chemo &amp; surgery.</li></ul></li>
               <li><strong>Bottom line:</strong> if a dMMR patient is going to medical oncology before (or instead of) the OR, immunotherapy is usually why — and the field is pushing it earlier.</li>
             </ul>
           </div>
@@ -594,18 +582,18 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Rectal cancer neoadjuvant strategy — what tumor board debates</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Total neoadjuvant therapy (TNT):</strong> deliver <strong>all</strong> chemoradiation <strong>and</strong> systemic chemo <strong>before</strong> surgery. Improves distant control and downstaging, raises pCR/cCR. <strong>OPRA</strong> showed consolidation chemo after chemoradiation preserves the rectum in ~half of selected patients.</li>
-              <li><strong>Watch-and-wait / NOM:</strong> patients with a <strong>clinical complete response (cCR)</strong> after TNT may be surveilled instead of resected — DRE + flexible endoscopy + MRI intensively (scope every 3–4 months, MRI ~every 6 months early), salvage surgery if regrowth. Builds on Habr-Gama &amp; the International Watch &amp; Wait Database.</li>
-              <li><strong>PROSPECT (de-escalation of radiation):</strong> for <strong>intermediate-risk</strong> rectal cancer (cT2N+, cT3N0, cT3N+) eligible for sphincter-sparing surgery, <strong>neoadjuvant FOLFOX with selective chemoradiation</strong> was <strong>non-inferior</strong> to standard chemoradiation; only ~9–10% needed radiation. <strong>Excluded</strong> T4, N2, and tumors ≤3 mm from the mesorectal fascia — does <strong>not</strong> apply to high-risk disease.</li>
-              <li><strong>dMMR locally advanced rectal — the headline shift:</strong> neoadjuvant <strong>PD-1 blockade (dostarlimab)</strong> produced <strong>cCR approaching 100%</strong> in the landmark cohort, durable over years, patients avoiding chemoradiation <strong>and</strong> surgery. Now in NCCN guidance; trials (AZUR-1) extending it. If a rectal patient is routed to med-onc instead of the OR, this is often why.</li>
+              <li><strong>Total neoadjuvant therapy (TNT):</strong> deliver <strong>all</strong> chemoradiation <strong>and</strong> systemic chemo <strong>before</strong> surgery.<ul class="crs-sub"><li>Improves distant control and downstaging, raises pCR/cCR.</li><li><strong>OPRA</strong> showed consolidation chemo after chemoradiation preserves the rectum in ~half of selected patients.</li></ul></li>
+              <li><strong>Watch-and-wait / NOM:</strong> patients with a <strong>clinical complete response (cCR)</strong> after TNT may be surveilled instead of resected — DRE + flexible endoscopy + MRI intensively (scope every 3–4 months, MRI ~every 6 months early), salvage surgery if regrowth.<ul class="crs-sub"><li>Builds on Habr-Gama &amp; the International Watch &amp; Wait Database.</li></ul></li>
+              <li><strong>PROSPECT (de-escalation of radiation):</strong> for <strong>intermediate-risk</strong> rectal cancer (cT2N+, cT3N0, cT3N+) eligible for sphincter-sparing surgery, <strong>neoadjuvant FOLFOX with selective chemoradiation</strong> was <strong>non-inferior</strong> to standard chemoradiation; only ~9–10% needed radiation.<ul class="crs-sub"><li><strong>Excluded</strong> T4, N2, and tumors ≤3 mm from the mesorectal fascia — does <strong>not</strong> apply to high-risk disease.</li></ul></li>
+              <li><strong>dMMR locally advanced rectal — the headline shift:</strong> neoadjuvant <strong>PD-1 blockade (dostarlimab)</strong> produced <strong>cCR approaching 100%</strong> in the landmark cohort, durable over years, patients avoiding chemoradiation <strong>and</strong> surgery.<ul class="crs-sub"><li>Now in NCCN guidance; trials (AZUR-1) extending it.</li><li>If a rectal patient is routed to med-onc instead of the OR, this is often why.</li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">ctDNA / minimal residual disease — the emerging tool</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>ctDNA</strong> detects <strong>MRD</strong> after curative resection. Post-op positivity carries a <strong>markedly higher recurrence risk</strong> (HR often 5–10×), outperforms CEA, with lead times up to ~11 months before radiographic recurrence.</li>
-              <li><strong>De-escalation is better supported than escalation:</strong> DYNAMIC showed a ctDNA-negative result can safely <strong>spare chemo</strong> in stage II; whether intensifying chemo rescues ctDNA-positive patients is still unproven (CIRCULATE, COBRA, DYNAMIC-III validating). Increasingly ordered — recognize it on a chart, but don't treat ctDNA-positive escalation as settled. (UCSD's <strong>ORACLE</strong> observational trial is enrolling here.)</li>
+              <li><strong>ctDNA</strong> detects <strong>MRD</strong> after curative resection.<ul class="crs-sub"><li>Post-op positivity carries a <strong>markedly higher recurrence risk</strong> (HR often 5–10×), outperforms CEA, with lead times up to ~11 months before radiographic recurrence.</li></ul></li>
+              <li><strong>De-escalation is better supported than escalation:</strong> DYNAMIC showed a ctDNA-negative result can safely <strong>spare chemo</strong> in stage II; whether intensifying chemo rescues ctDNA-positive patients is still unproven (CIRCULATE, COBRA, DYNAMIC-III validating).<ul class="crs-sub"><li>Increasingly ordered — recognize it on a chart, but don't treat ctDNA-positive escalation as settled. (UCSD's <strong>ORACLE</strong> observational trial is enrolling here.)</li></ul></li>
             </ul>
           </div>
 
@@ -627,7 +615,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">ERAS — colorectal is where it was born</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Preop:</strong> structured counseling, <strong>carbohydrate loading</strong>, avoid prolonged fasting (<strong>clears up to 2 h, solids up to 6 h</strong>), no routine long-acting sedative premed, immunonutrition for malnourished, VTE/antibiotic prophylaxis timing.</li>
-              <li><strong>Bowel prep:</strong> trend favors <strong>mechanical bowel prep + oral antibiotics</strong> (neomycin/erythromycin or neomycin/metronidazole) for elective colorectal to cut SSI and possibly leak; "no prep" used selectively. Don't be surprised by either.</li>
+              <li><strong>Bowel prep:</strong> trend favors <strong>mechanical bowel prep + oral antibiotics</strong> (neomycin/erythromycin or neomycin/metronidazole) for elective colorectal to cut SSI and possibly leak; "no prep" used selectively.<ul class="crs-sub"><li>Don't be surprised by either.</li></ul></li>
               <li><strong>Intraop:</strong> MIS when feasible, <strong>goal-directed (euvolemic) fluids</strong>, <strong>avoid hypotension (MAP ≥65)</strong>, normothermia, multimodal/regional analgesia (<strong>TAP block</strong>, epidural for open), <strong>avoid routine NG tubes &amp; drains</strong>.</li>
               <li><strong>Postop:</strong> <strong>early oral feeding</strong> (don't wait for flatus), <strong>early mobilization</strong> (OOB POD0–1), opioid-sparing multimodal analgesia, early Foley/IV removal, VTE prophylaxis, <strong>alvimopan</strong> to speed bowel recovery, gum chewing as a cheap motility nudge.</li>
               <li><strong>Why you care:</strong> most "orders" you write are ERAS elements — knowing the pathway lets you anticipate the next step.</li>
@@ -637,8 +625,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Ileus vs mechanical obstruction</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Ileus</strong> (expected, functional): diffuse quiet bowel sounds, gradual distension, nausea, <strong>diffuse</strong> gas pattern. Worsened by <strong>opioids, hypokalemia, hypomagnesemia</strong>, immobility, inflammation. Manage: minimize opioids, <strong>correct electrolytes</strong>, mobilize, alvimopan, NG if vomiting.</li>
-              <li><strong>Early mechanical SBO:</strong> colicky pain, <strong>transition point</strong> on CT, often adhesive or internal hernia / twisted stoma limb. Different problem; may need intervention.</li>
+              <li><strong>Ileus</strong> (expected, functional): diffuse quiet bowel sounds, gradual distension, nausea, <strong>diffuse</strong> gas pattern.<ul class="crs-sub"><li>Worsened by <strong>opioids, hypokalemia, hypomagnesemia</strong>, immobility, inflammation.</li><li>Manage: minimize opioids, <strong>correct electrolytes</strong>, mobilize, alvimopan, NG if vomiting.</li></ul></li>
+              <li><strong>Early mechanical SBO:</strong> colicky pain, <strong>transition point</strong> on CT, often adhesive or internal hernia / twisted stoma limb.<ul class="crs-sub"><li>Different problem; may need intervention.</li></ul></li>
               <li>Both look like "distended, not passing gas, nauseated" — the team leans on exam, electrolytes, and CT to separate them.</li>
             </ul>
           </div>
@@ -646,7 +634,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">SSI &amp; post-op diarrhea</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>SSI</strong> is among the most common complications (why MBP + oral antibiotics trend). <strong>Superficial incisional:</strong> open the wound, pack, ± antibiotics for surrounding cellulitis. <strong>Deep / organ-space (intra-abdominal/pelvic abscess):</strong> image-guided percutaneous drainage or return to OR + antibiotics — always raises the question of an <strong>underlying anastomotic leak</strong>.</li>
+              <li><strong>SSI</strong> is among the most common complications (why MBP + oral antibiotics trend).<ul class="crs-sub"><li><strong>Superficial incisional:</strong> open the wound, pack, ± antibiotics for surrounding cellulitis.</li><li><strong>Deep / organ-space (intra-abdominal/pelvic abscess):</strong> image-guided percutaneous drainage or return to OR + antibiotics — always raises the question of an <strong>underlying anastomotic leak</strong>.</li></ul></li>
               <li><strong>Post-op C. diff:</strong> new watery diarrhea, especially after perioperative antibiotics → send <strong>stool C. diff toxin/PCR</strong>; first-line is <strong>oral vancomycin</strong> (or fidaxomicin), not metronidazole, for all but the mildest cases.</li>
             </ul>
           </div>
@@ -654,9 +642,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">VTE prophylaxis &amp; fluids/nutrition</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>VTE:</strong> malignancy + pelvic surgery + immobility = high risk. Inpatient pharmacologic (LMWH/heparin) + mechanical (SCDs). <strong>Extended prophylaxis (~4 weeks of LMWH after discharge)</strong> is standard for abdominopelvic cancer resections.</li>
-              <li>New ileostomy / high output → track <strong>Na, K, Mg, HCO3, Cr</strong> daily; replete Mg liberally. Watch the <strong>POD2–3 mobilization diuresis</strong> after third-spacing.</li>
-              <li><strong>Albumin/prealbumin, recent steroid/biologic exposure, smoking</strong> are modifiable leak/wound-healing risks — flag in IBD and cancer patients. Severe malnutrition may warrant preoperative optimization or delayed anastomosis.</li>
+              <li><strong>VTE:</strong> malignancy + pelvic surgery + immobility = high risk.<ul class="crs-sub"><li>Inpatient pharmacologic (LMWH/heparin) + mechanical (SCDs).</li><li><strong>Extended prophylaxis (~4 weeks of LMWH after discharge)</strong> is standard for abdominopelvic cancer resections.</li></ul></li>
+              <li>New ileostomy / high output → track <strong>Na, K, Mg, HCO3, Cr</strong> daily; replete Mg liberally.<ul class="crs-sub"><li>Watch the <strong>POD2–3 mobilization diuresis</strong> after third-spacing.</li></ul></li>
+              <li><strong>Albumin/prealbumin, recent steroid/biologic exposure, smoking</strong> are modifiable leak/wound-healing risks — flag in IBD and cancer patients.<ul class="crs-sub"><li>Severe malnutrition may warrant preoperative optimization or delayed anastomosis.</li></ul></li>
             </ul>
           </div>
 
@@ -679,7 +667,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Incidence ~1–30%</strong> by location — <strong>low rectal/coloanal leak the most</strong>, right-sided/ileocolic the least.</li>
               <li><strong>Classic timing: POD 5–7</strong> (can be earlier, or present as late as 2–3 weeks).</li>
-              <li><strong>First sign is often tachycardia</strong> and a clinical "something's off" <em>before</em> frank peritonitis. Then: fever, <strong>leukocytosis, rising CRP/procalcitonin</strong>, <strong>failure to progress / new or persistent ileus</strong>, increasing pain, <strong>purulent or feculent drain output</strong>, and the telltale patient who <strong>was improving then plateaus/backslides around POD 5</strong>. A <strong>CRP that fails to fall by ~POD 3–4</strong> is a useful early red flag.</li>
+              <li><strong>First sign is often tachycardia</strong> and a clinical "something's off" <em>before</em> frank peritonitis.<ul class="crs-sub"><li>Then: fever, <strong>leukocytosis, rising CRP/procalcitonin</strong>, <strong>failure to progress / new or persistent ileus</strong>, increasing pain, <strong>purulent or feculent drain output</strong>, and the telltale patient who <strong>was improving then plateaus/backslides around POD 5</strong>.</li><li>A <strong>CRP that fails to fall by ~POD 3–4</strong> is a useful early red flag.</li></ul></li>
               <li>Many signs are <strong>neither sensitive nor specific</strong>, and a diverting ileostomy can <strong>mask</strong> the presentation — keep suspicion high.</li>
               <li><strong>Workup (stable):</strong> <strong>triple-contrast CT</strong> (oral + rectal + IV) of abdomen/pelvis — rectal contrast is key for low anastomoses — plus labs and exam.</li>
             </ul>
@@ -690,16 +678,16 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Non-modifiable:</strong> low (rectal) anastomosis / short distance from verge, <strong>male sex / narrow pelvis</strong>, emergency surgery, comorbidity, prior pelvic radiation.</li>
               <li><strong>Modifiable:</strong> <strong>malnutrition/hypoalbuminemia, steroids/immunosuppression, smoking, obesity, perioperative transfusion</strong>, possibly NSAIDs.</li>
-              <li><strong>Intraoperative:</strong> <strong>tension</strong> (mitigated by splenic flexure mobilization), <strong>poor perfusion</strong> (assessed by ICG), contamination, technical factors. Higher-volume surgeons and stapled ileocolic anastomoses leak less.</li>
+              <li><strong>Intraoperative:</strong> <strong>tension</strong> (mitigated by splenic flexure mobilization), <strong>poor perfusion</strong> (assessed by ICG), contamination, technical factors.<ul class="crs-sub"><li>Higher-volume surgeons and stapled ileocolic anastomoses leak less.</li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Management &amp; the classic teaching points</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Management</strong> ranges from <strong>antibiotics ± percutaneous drainage</strong> (contained leak, stable) to <strong>reoperation with washout + proximal diversion or takedown</strong> (free leak, peritonitis, sepsis). <strong>Delay in recognition directly increases mortality.</strong></li>
+              <li><strong>Management</strong> ranges from <strong>antibiotics ± percutaneous drainage</strong> (contained leak, stable) to <strong>reoperation with washout + proximal diversion or takedown</strong> (free leak, peritonitis, sepsis).<ul class="crs-sub"><li><strong>Delay in recognition directly increases mortality.</strong></li></ul></li>
               <li><strong>The diverting loop ileostomy mitigates the consequences of a leak</strong> (less peritonitis/sepsis, fewer reoperations, lower mortality) — <strong>it does NOT prevent the leak itself.</strong> A classic, frequent pimp question.</li>
-              <li><strong>The NSAID debate:</strong> non-selective NSAIDs (especially ketorolac) associated in some studies with higher leak rates; practice varies. Know it's <strong>debated, not settled</strong>.</li>
+              <li><strong>The NSAID debate:</strong> non-selective NSAIDs (especially ketorolac) associated in some studies with higher leak rates; practice varies.<ul class="crs-sub"><li>Know it's <strong>debated, not settled</strong>.</li></ul></li>
             </ul>
           </div>
 
@@ -735,13 +723,13 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
               </table>
             </div>
             <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Acute severe UC (ASUC):</strong> diagnosed by <strong>Truelove &amp; Witts criteria</strong>. Treat with <strong>IV corticosteroids</strong>; no response in ~3–5 days → <strong>rescue infliximab or cyclosporine</strong>; ongoing failure, perforation, refractory bleeding, or toxic megacolon → <strong>surgery</strong>.</li>
-              <li><strong>Emergency UC surgery = subtotal/total abdominal colectomy with end ileostomy — NOT a pouch.</strong> Sick patients on high-dose steroids have far higher pouch complication rates and the diagnosis may be indeterminate. Rectum and pouch dealt with later.</li>
-              <li><strong>IPAA staging — 2-stage</strong> (standard elective): (1) proctocolectomy + pouch + diverting loop ileostomy, (2) ileostomy reversal ~8–12 weeks later. <strong>3-stage</strong> (sick/steroids/emergency/toxic megacolon): (1) TAC + end ileostomy, (2) completion proctectomy + pouch + diverting ileostomy, (3) reversal.</li>
-              <li><strong>Crohn's caution:</strong> generally a <strong>contraindication to IPAA</strong> (high failure from fistulizing/recurrent disease), though selected Crohn's-colitis patients are offered pouches at expert centers. Many "pouch failures" labeled Crohn's are actually <strong>mechanical</strong> problems fixable with redo pouch surgery.</li>
-              <li><strong>Toxic megacolon:</strong> colonic dilation (<strong>&gt;6 cm</strong>) + systemic toxicity; complicates UC or C. diff. Surgical emergency if it doesn't reverse → <strong>TAC with end ileostomy</strong>.</li>
-              <li><strong>Pouchitis:</strong> most common long-term IPAA complication; treat with <strong>antibiotics (ciprofloxacin/metronidazole)</strong>. Recurrent/refractory raises suspicion for Crohn's of the pouch. ~10–15% of colitis is "indeterminate."</li>
-              <li><strong>Perioperative biologics/steroids:</strong> high-dose corticosteroids raise complication/infection risk — a major reason emergency/steroid-dependent patients get <strong>staged</strong> operations with diversion. Data on anti-TNF, vedolizumab, ustekinumab are mixed/reassuring, but timing relative to surgery and steroid taper is a routine multidisciplinary discussion.</li>
+              <li><strong>Acute severe UC (ASUC):</strong> diagnosed by <strong>Truelove &amp; Witts criteria</strong>.<ul class="crs-sub"><li>Treat with <strong>IV corticosteroids</strong>; no response in ~3–5 days → <strong>rescue infliximab or cyclosporine</strong>; ongoing failure, perforation, refractory bleeding, or toxic megacolon → <strong>surgery</strong>.</li></ul></li>
+              <li><strong>Emergency UC surgery = subtotal/total abdominal colectomy with end ileostomy — NOT a pouch.</strong> Sick patients on high-dose steroids have far higher pouch complication rates and the diagnosis may be indeterminate.<ul class="crs-sub"><li>Rectum and pouch dealt with later.</li></ul></li>
+              <li><strong>IPAA staging — 2-stage</strong> (standard elective): (1) proctocolectomy + pouch + diverting loop ileostomy, (2) ileostomy reversal ~8–12 weeks later.<ul class="crs-sub"><li><strong>3-stage</strong> (sick/steroids/emergency/toxic megacolon): (1) TAC + end ileostomy, (2) completion proctectomy + pouch + diverting ileostomy, (3) reversal.</li></ul></li>
+              <li><strong>Crohn's caution:</strong> generally a <strong>contraindication to IPAA</strong> (high failure from fistulizing/recurrent disease), though selected Crohn's-colitis patients are offered pouches at expert centers.<ul class="crs-sub"><li>Many "pouch failures" labeled Crohn's are actually <strong>mechanical</strong> problems fixable with redo pouch surgery.</li></ul></li>
+              <li><strong>Toxic megacolon:</strong> colonic dilation (<strong>&gt;6 cm</strong>) + systemic toxicity; complicates UC or C. diff.<ul class="crs-sub"><li>Surgical emergency if it doesn't reverse → <strong>TAC with end ileostomy</strong>.</li></ul></li>
+              <li><strong>Pouchitis:</strong> most common long-term IPAA complication; treat with <strong>antibiotics (ciprofloxacin/metronidazole)</strong>.<ul class="crs-sub"><li>Recurrent/refractory raises suspicion for Crohn's of the pouch. ~10–15% of colitis is "indeterminate."</li></ul></li>
+              <li><strong>Perioperative biologics/steroids:</strong> high-dose corticosteroids raise complication/infection risk — a major reason emergency/steroid-dependent patients get <strong>staged</strong> operations with diversion.<ul class="crs-sub"><li>Data on anti-TNF, vedolizumab, ustekinumab are mixed/reassuring, but timing relative to surgery and steroid taper is a routine multidisciplinary discussion.</li></ul></li>
             </ul>
           </div>
 
@@ -750,17 +738,17 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Modified Hinchey:</strong> <strong>Ia</strong> confined pericolic inflammation/phlegmon; <strong>Ib</strong> pericolic/mesocolic abscess; <strong>II</strong> walled-off pelvic/retroperitoneal/distant abscess; <strong>III</strong> purulent peritonitis; <strong>IV</strong> feculent peritonitis (free perforation).</li>
               <li><strong>Diagnosis:</strong> CT abdomen/pelvis with IV contrast (<strong>sensitivity ~94%, specificity ~99%</strong>).</li>
-              <li><strong>Uncomplicated (Hinchey Ia):</strong> increasingly <strong>outpatient</strong>; oral antibiotics shorten stays, and selected immunocompetent patients can be managed <strong>without antibiotics</strong> (DINAMO and related RCTs). When used: ciprofloxacin + metronidazole or amoxicillin-clavulanate. Sigmoid is the usual site (~60–70%); right-sided predominates in Asian populations.</li>
-              <li><strong>Abscess (Ib/II):</strong> <strong>percutaneous drainage</strong> when ≥~4 cm + IV antibiotics (pip-tazo or cipro/metronidazole); smaller abscesses often resolve on antibiotics alone. <strong>Failure to improve within ~48 h</strong> → escalate to surgery.</li>
-              <li><strong>Perforated (III/IV):</strong> resection. <strong>Hartmann</strong> classically for unstable/feculent contamination, but <strong>primary resection with anastomosis (± diverting loop ileostomy)</strong> is increasingly preferred in selected stable patients — lower overall morbidity, higher eventual reversal rates. <strong>Laparoscopic lavage</strong> a bridging option in select Hinchey III.</li>
-              <li><strong>Follow-up colonoscopy</strong> (6–8 weeks) after <strong>complicated</strong> diverticulitis to exclude malignancy; <strong>no longer routine after an uncomplicated first episode</strong> (malignancy yield ~2–3%). <strong>Elective sigmoidectomy</strong> is individualized (recurrence, complications, fistula like <strong>colovesical</strong> → pneumaturia/fecaluria, stricture), not a fixed episode count.</li>
+              <li><strong>Uncomplicated (Hinchey Ia):</strong> increasingly <strong>outpatient</strong>; oral antibiotics shorten stays, and selected immunocompetent patients can be managed <strong>without antibiotics</strong> (DINAMO and related RCTs).<ul class="crs-sub"><li>When used: ciprofloxacin + metronidazole or amoxicillin-clavulanate.</li><li>Sigmoid is the usual site (~60–70%); right-sided predominates in Asian populations.</li></ul></li>
+              <li><strong>Abscess (Ib/II):</strong> <strong>percutaneous drainage</strong> when ≥~4 cm + IV antibiotics (pip-tazo or cipro/metronidazole); smaller abscesses often resolve on antibiotics alone.<ul class="crs-sub"><li><strong>Failure to improve within ~48 h</strong> → escalate to surgery.</li></ul></li>
+              <li><strong>Perforated (III/IV):</strong> resection.<ul class="crs-sub"><li><strong>Hartmann</strong> classically for unstable/feculent contamination, but <strong>primary resection with anastomosis (± diverting loop ileostomy)</strong> is increasingly preferred in selected stable patients — lower overall morbidity, higher eventual reversal rates.</li><li><strong>Laparoscopic lavage</strong> a bridging option in select Hinchey III.</li></ul></li>
+              <li><strong>Follow-up colonoscopy</strong> (6–8 weeks) after <strong>complicated</strong> diverticulitis to exclude malignancy; <strong>no longer routine after an uncomplicated first episode</strong> (malignancy yield ~2–3%).<ul class="crs-sub"><li><strong>Elective sigmoidectomy</strong> is individualized (recurrence, complications, fistula like <strong>colovesical</strong> → pneumaturia/fecaluria, stricture), not a fixed episode count.</li></ul></li>
             </ul>
           </div>
 
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Ischemic colitis &amp; C. diff (surgical angle)</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Ischemic colitis:</strong> lives at the <strong>watershed zones</strong> (Griffiths, Sudeck). Older patient, low-flow/hypotensive event, <strong>bloody diarrhea + crampy pain</strong>, <strong>"thumbprinting"</strong> (submucosal edema) on imaging. <strong>Rectum usually spared</strong> (dual supply). Mostly <strong>medical</strong> (bowel rest, IV fluids, antibiotics); surgery for full-thickness necrosis, perforation, peritonitis. Distinguish from <strong>acute mesenteric ischemia</strong> (SMA event, "pain out of proportion," small bowel, surgical emergency).</li>
+              <li><strong>Ischemic colitis:</strong> lives at the <strong>watershed zones</strong> (Griffiths, Sudeck).<ul class="crs-sub"><li>Older patient, low-flow/hypotensive event, <strong>bloody diarrhea + crampy pain</strong>, <strong>"thumbprinting"</strong> (submucosal edema) on imaging.</li><li><strong>Rectum usually spared</strong> (dual supply).</li><li>Mostly <strong>medical</strong> (bowel rest, IV fluids, antibiotics); surgery for full-thickness necrosis, perforation, peritonitis.</li><li>Distinguish from <strong>acute mesenteric ischemia</strong> (SMA event, "pain out of proportion," small bowel, surgical emergency).</li></ul></li>
               <li><strong>Fulminant C. diff</strong> (ileus, megacolon, shock, rising lactate, marked leukocytosis) failing maximal medical therapy → surgery: <strong>TAC with end ileostomy</strong>, or the colon-sparing <strong>diverting loop ileostomy + intraoperative colonic lavage</strong> with antegrade vancomycin.</li>
             </ul>
           </div>
@@ -769,12 +757,12 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Anorectal disease (clinic &amp; minor OR)</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Cryptoglandular hypothesis:</strong> obstruction/infection of anal glands at the dentate line is the common origin of <strong>abscess → fistula</strong>.</li>
-              <li><strong>Anorectal abscess:</strong> treat with <strong>incision and drainage</strong> (don't wait it out; antibiotics alone insufficient). Add antibiotics for cellulitis, immunosuppression, diabetes, valvular disease. Named by space: perianal, ischiorectal, intersphincteric, supralevator.</li>
-              <li><strong>Fistula-in-ano (Parks):</strong> intersphincteric, transsphincteric, suprasphincteric, extrasphincteric. <strong>Goodsall's rule:</strong> external opening <strong>anterior</strong> to the transverse anal line → <strong>straight radial</strong> tract; <strong>posterior</strong> (or anterior &gt;3 cm away) → <strong>curved</strong> tract to the posterior midline. Treatment: <strong>fistulotomy</strong> for low/simple; <strong>seton</strong> (draining/cutting), <strong>LIFT</strong>, or advancement flap for complex/high tracts to protect continence. <strong>Perianal Crohn's:</strong> drain sepsis, place setons, then <strong>medical therapy (anti-TNF) first</strong>.</li>
-              <li><strong>Anal fissure:</strong> <strong>posterior midline</strong> tear (lateral/multiple suggest Crohn's, HIV, TB, malignancy); severe pain with defecation + bright-red blood; driven by <strong>internal sphincter hypertonia/ischemia</strong>. Medical first: fiber, sitz baths, <strong>topical nitroglycerin or CCB (nifedipine/diltiazem)</strong>, botulinum toxin; <strong>lateral internal sphincterotomy</strong> for refractory (small incontinence risk).</li>
-              <li><strong>Hemorrhoids:</strong> internal graded I–IV (I bleed/no prolapse, II prolapse-reduce spontaneously, III need manual reduction, IV irreducible). <strong>Rubber band ligation</strong> grades I–III; <strong>hemorrhoidectomy</strong> grade III–IV or mixed; <strong>stapled hemorrhoidopexy</strong> alternative for II–III. <strong>Thrombosed external:</strong> excise if presenting <strong>within ~72 h</strong>, else supportive.</li>
+              <li><strong>Anorectal abscess:</strong> treat with <strong>incision and drainage</strong> (don't wait it out; antibiotics alone insufficient).<ul class="crs-sub"><li>Add antibiotics for cellulitis, immunosuppression, diabetes, valvular disease.</li><li>Named by space: perianal, ischiorectal, intersphincteric, supralevator.</li></ul></li>
+              <li><strong>Fistula-in-ano (Parks):</strong> intersphincteric, transsphincteric, suprasphincteric, extrasphincteric.<ul class="crs-sub"><li><strong>Goodsall's rule:</strong> external opening <strong>anterior</strong> to the transverse anal line → <strong>straight radial</strong> tract; <strong>posterior</strong> (or anterior &gt;3 cm away) → <strong>curved</strong> tract to the posterior midline.</li><li>Treatment: <strong>fistulotomy</strong> for low/simple; <strong>seton</strong> (draining/cutting), <strong>LIFT</strong>, or advancement flap for complex/high tracts to protect continence.</li><li><strong>Perianal Crohn's:</strong> drain sepsis, place setons, then <strong>medical therapy (anti-TNF) first</strong>.</li></ul></li>
+              <li><strong>Anal fissure:</strong> <strong>posterior midline</strong> tear (lateral/multiple suggest Crohn's, HIV, TB, malignancy); severe pain with defecation + bright-red blood; driven by <strong>internal sphincter hypertonia/ischemia</strong>.<ul class="crs-sub"><li>Medical first: fiber, sitz baths, <strong>topical nitroglycerin or CCB (nifedipine/diltiazem)</strong>, botulinum toxin; <strong>lateral internal sphincterotomy</strong> for refractory (small incontinence risk).</li></ul></li>
+              <li><strong>Hemorrhoids:</strong> internal graded I–IV (I bleed/no prolapse, II prolapse-reduce spontaneously, III need manual reduction, IV irreducible).<ul class="crs-sub"><li><strong>Rubber band ligation</strong> grades I–III; <strong>hemorrhoidectomy</strong> grade III–IV or mixed; <strong>stapled hemorrhoidopexy</strong> alternative for II–III.</li><li><strong>Thrombosed external:</strong> excise if presenting <strong>within ~72 h</strong>, else supportive.</li></ul></li>
               <li><strong>Pilonidal disease</strong>, <strong>rectal prolapse</strong> (rectopexy ± resection; vs internal prolapse), and <strong>pelvic floor / defecatory dysfunction</strong> also flow through this service.</li>
-              <li><strong>Anal cancer</strong> (squamous, HPV-related) is treated with <strong>chemoradiation (Nigro protocol)</strong>, not primary surgery — APR is salvage. Don't reflexively assume an anal lesion goes to the OR first.</li>
+              <li><strong>Anal cancer</strong> (squamous, HPV-related) is treated with <strong>chemoradiation (Nigro protocol)</strong>, not primary surgery — APR is salvage.<ul class="crs-sub"><li>Don't reflexively assume an anal lesion goes to the OR first.</li></ul></li>
             </ul>
           </div>
 
@@ -795,8 +783,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Quality-of-life &amp; intraoperative dread</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Low Anterior Resection Syndrome (LARS):</strong> after sphincter-preserving rectal surgery — <strong>urgency, frequency, clustering, fragmentation, incontinence</strong>. A major QoL burden and part of why organ-preserving strategies are attractive. Has a name and a validated <strong>LARS score</strong>.</li>
-              <li><strong>Prophylactic ureteral stents:</strong> urology often places stents before <strong>redo pelvic, large tumor, or severe diverticular</strong> cases because the <strong>ureters get encased in inflammation</strong>. Postop stents = that's why; watch urine output and for hematuria.</li>
+              <li><strong>Low Anterior Resection Syndrome (LARS):</strong> after sphincter-preserving rectal surgery — <strong>urgency, frequency, clustering, fragmentation, incontinence</strong>.<ul class="crs-sub"><li>A major QoL burden and part of why organ-preserving strategies are attractive.</li><li>Has a name and a validated <strong>LARS score</strong>.</li></ul></li>
+              <li><strong>Prophylactic ureteral stents:</strong> urology often places stents before <strong>redo pelvic, large tumor, or severe diverticular</strong> cases because the <strong>ureters get encased in inflammation</strong>.<ul class="crs-sub"><li>Postop stents = that's why; watch urine output and for hematuria.</li></ul></li>
               <li><strong>Presacral venous bleeding:</strong> dreaded complication during low rectal/TME dissection — the <strong>presacral venous plexus</strong> is valveless, high-volume, very hard to control.</li>
               <li><strong>Perineal wound after APR / pelvic exenteration:</strong> large, slow-healing, sometimes <strong>flap-reconstructed</strong> (e.g., VRAM) — an ongoing source of morbidity to track.</li>
               <li><strong>ICG fluorescence angiography:</strong> inject indocyanine green to <strong>assess anastomotic perfusion</strong> intraoperatively — a leak risk you can sometimes see in the OR.</li>
@@ -806,9 +794,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Hereditary syndromes you should recognize</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Why CEA, why MMR, why genetics:</strong> not checkbox labs. A young patient, right-sided or multiple tumors, and dMMR → <strong>Lynch workup that changes the whole family's care</strong>.</li>
-              <li><strong>Lynch (HNPCC):</strong> germline <strong>MLH1, MSH2, MSH6, PMS2, or EPCAM</strong>. Identified mainly by <strong>universal tumor MMR/MSI testing</strong> (old Amsterdam II / Bethesda criteria miss ~half). Surveillance colonoscopy <strong>every 1–2 years</strong>. When CRC develops, many advocate <strong>extended/subtotal colectomy</strong> (high metachronous risk). <strong>Aspirin</strong> reduces CRC risk (CAPP2). <strong>Endometrial cancer is the #2 malignancy</strong> — extracolonic surveillance matters.</li>
-              <li><strong>Familial adenomatous polyposis (FAP):</strong> germline <strong>APC</strong>, hundreds–thousands of adenomas, near-100% cancer risk → <strong>prophylactic colectomy/proctocolectomy</strong> (TAC-IRA or proctocolectomy-IPAA) typically in late teens/20s. Plus <strong>upper GI/duodenal surveillance</strong> (ampullary/duodenal cancer) and <strong>desmoid tumor</strong> risk (can preclude pouch).</li>
+              <li><strong>Why CEA, why MMR, why genetics:</strong> not checkbox labs.<ul class="crs-sub"><li>A young patient, right-sided or multiple tumors, and dMMR → <strong>Lynch workup that changes the whole family's care</strong>.</li></ul></li>
+              <li><strong>Lynch (HNPCC):</strong> germline <strong>MLH1, MSH2, MSH6, PMS2, or EPCAM</strong>.<ul class="crs-sub"><li>Identified mainly by <strong>universal tumor MMR/MSI testing</strong> (old Amsterdam II / Bethesda criteria miss ~half).</li><li>Surveillance colonoscopy <strong>every 1–2 years</strong>.</li><li>When CRC develops, many advocate <strong>extended/subtotal colectomy</strong> (high metachronous risk).</li><li><strong>Aspirin</strong> reduces CRC risk (CAPP2).</li><li><strong>Endometrial cancer is the #2 malignancy</strong> — extracolonic surveillance matters.</li></ul></li>
+              <li><strong>Familial adenomatous polyposis (FAP):</strong> germline <strong>APC</strong>, hundreds–thousands of adenomas, near-100% cancer risk → <strong>prophylactic colectomy/proctocolectomy</strong> (TAC-IRA or proctocolectomy-IPAA) typically in late teens/20s.<ul class="crs-sub"><li>Plus <strong>upper GI/duodenal surveillance</strong> (ampullary/duodenal cancer) and <strong>desmoid tumor</strong> risk (can preclude pouch).</li></ul></li>
               <li><strong>MUTYH-associated polyposis (MAP):</strong> <strong>autosomal recessive (biallelic MUTYH)</strong>, attenuated-polyposis phenotype — the recessive mimic of FAP.</li>
               <li><strong>Synchronous (3–5%) &amp; metachronous cancers:</strong> the reason for full preoperative colonoscopy and lifelong surveillance.</li>
             </ul>
@@ -817,8 +805,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">Drains &amp; readmissions</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Drains tell stories:</strong> know each drain's <strong>volume and character</strong> daily. <strong>Feculent/purulent or a sudden change around POD 5</strong> = think leak.</li>
-              <li><strong>Why the loop-ileostomy patient bounces back in a month:</strong> <strong>dehydration from high output → AKI → readmission</strong>, not the incision. Counsel hydration + loperamide before discharge.</li>
+              <li><strong>Drains tell stories:</strong> know each drain's <strong>volume and character</strong> daily.<ul class="crs-sub"><li><strong>Feculent/purulent or a sudden change around POD 5</strong> = think leak.</li></ul></li>
+              <li><strong>Why the loop-ileostomy patient bounces back in a month:</strong> <strong>dehydration from high output → AKI → readmission</strong>, not the incision.<ul class="crs-sub"><li>Counsel hydration + loperamide before discharge.</li></ul></li>
             </ul>
           </div>
 
@@ -839,8 +827,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
               <li><strong>Prerounds checklist per patient:</strong> POD#, operation + indication, vitals and <strong>trends (especially HR)</strong>, <strong>I&amp;Os</strong>, <strong>stoma &amp; drain outputs (volume + character)</strong>, flatus/stool, diet status, lines/tubes/Foley, pain regimen (and opioid-sparing progress), ambulation, key labs (<strong>WBC, lytes, Cr, Mg, Hgb, lactate</strong> if sick), antibiotics + day, VTE prophylaxis.</li>
-              <li><strong>Present in surgical cadence — tight and forward-looking:</strong> "POD3 from sigmoidectomy for a diverticular stricture, afebrile, HR 70s–80s, tolerating regular diet, ostomy 600 mL over 24h, passing flatus, ambulating, pain controlled on PO. Plan: Foley out, transition fully to PO analgesia, continue ERAS, anticipate discharge POD4–5."</li>
-              <li><strong>In the OR:</strong> know <strong>today's</strong> relevant anatomy (TME plane, ureter, vascular pedicle), ask <strong>one</strong> good thinking question, otherwise retract well and watch the planes. You don't have to perform enthusiasm.</li>
+              <li><strong>Present in surgical cadence — tight and forward-looking:</strong> "POD3 from sigmoidectomy for a diverticular stricture, afebrile, HR 70s–80s, tolerating regular diet, ostomy 600 mL over 24h, passing flatus, ambulating, pain controlled on PO.<ul class="crs-sub"><li>Plan: Foley out, transition fully to PO analgesia, continue ERAS, anticipate discharge POD4–5."</li></ul></li>
+              <li><strong>In the OR:</strong> know <strong>today's</strong> relevant anatomy (TME plane, ureter, vascular pedicle), ask <strong>one</strong> good thinking question, otherwise retract well and watch the planes.<ul class="crs-sub"><li>You don't have to perform enthusiasm.</li></ul></li>
               <li><strong>The data the team cares about most:</strong> trending <strong>heart rate</strong>, <strong>stoma/drain output</strong>, <strong>return of bowel function</strong>, and whether the patient is <strong>progressing or backsliding</strong>.</li>
               <li><strong>Be the student who flags the POD5 tachycardia.</strong> Anticipating the leak conversation is worth a month of forced enthusiasm.</li>
             </ul>
@@ -913,9 +901,9 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">The day</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Arrive early (~5:00–5:30 AM)</strong> to preround. Surgery runs ahead of the clock; being late once is remembered.</li>
-              <li><strong>Preround data per patient:</strong> overnight events, vitals + trends (especially <strong>HR</strong>), <strong>I&amp;Os</strong>, <strong>drain outputs (volume + character)</strong>, <strong>stoma output (color, volume)</strong>, <strong>labs (CBC, BMP, ± lactate)</strong>, wound/incision check, and ask the patient directly about <strong>pain, flatus/BM, nausea, ambulation, diet tolerance</strong>. Have your note/card ready before rounds.</li>
-              <li><strong>Rounding presentation (surgical cadence):</strong> one-liner → overnight events → vitals/I&amp;Os → focused exam → labs → <strong>assessment + plan toward discharge</strong>. For post-ops, lead with <strong>POD# + procedure</strong> and frame everything around discharge criteria.</li>
+              <li><strong>Arrive early (~5:00–5:30 AM)</strong> to preround.<ul class="crs-sub"><li>Surgery runs ahead of the clock; being late once is remembered.</li></ul></li>
+              <li><strong>Preround data per patient:</strong> overnight events, vitals + trends (especially <strong>HR</strong>), <strong>I&amp;Os</strong>, <strong>drain outputs (volume + character)</strong>, <strong>stoma output (color, volume)</strong>, <strong>labs (CBC, BMP, ± lactate)</strong>, wound/incision check, and ask the patient directly about <strong>pain, flatus/BM, nausea, ambulation, diet tolerance</strong>.<ul class="crs-sub"><li>Have your note/card ready before rounds.</li></ul></li>
+              <li><strong>Rounding presentation (surgical cadence):</strong> one-liner → overnight events → vitals/I&amp;Os → focused exam → labs → <strong>assessment + plan toward discharge</strong>.<ul class="crs-sub"><li>For post-ops, lead with <strong>POD# + procedure</strong> and frame everything around discharge criteria.</li></ul></li>
             </ul>
           </div>
 
@@ -927,8 +915,8 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">What to carry &amp; how to be genuinely useful</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Carry:</strong> trauma shears, penlight, stethoscope, a pocket reference, a couple of pens. Knowing where to find <strong>op notes, pathology, and imaging</strong> quickly in Epic is its own skill — set up your patient lists and reports ahead of time.</li>
-              <li>Offer to help with <strong>dressing changes, drain management, and stoma care</strong>. See and present <strong>consults</strong> proactively. Read about <strong>tomorrow's cases tonight</strong>. Know your patients cold — labs, imaging, pathology. When unsure, <strong>go examine the patient</strong>.</li>
+              <li><strong>Carry:</strong> trauma shears, penlight, stethoscope, a pocket reference, a couple of pens.<ul class="crs-sub"><li>Knowing where to find <strong>op notes, pathology, and imaging</strong> quickly in Epic is its own skill — set up your patient lists and reports ahead of time.</li></ul></li>
+              <li>Offer to help with <strong>dressing changes, drain management, and stoma care</strong>.<ul class="crs-sub"><li>See and present <strong>consults</strong> proactively.</li><li>Read about <strong>tomorrow's cases tonight</strong>.</li><li>Know your patients cold — labs, imaging, pathology.</li><li>When unsure, <strong>go examine the patient</strong>.</li></ul></li>
             </ul>
           </div>
 
@@ -957,11 +945,11 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
           <div data-card style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;">
             <h3 style="margin:0 0 9px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--cat);">In the room</h3>
             <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:var(--ink);">
-              <li><strong>Introduce yourself to the scrub tech and circulating nurse</strong> — they run the room and will help you. Ask <strong>where you can stand</strong> and <strong>what you can touch</strong>.</li>
+              <li><strong>Introduce yourself to the scrub tech and circulating nurse</strong> — they run the room and will help you.<ul class="crs-sub"><li>Ask <strong>where you can stand</strong> and <strong>what you can touch</strong>.</li></ul></li>
               <li><strong>Scrub in early.</strong> Keep your hands above your waist and in front of you; assume everything below the waist and behind you is non-sterile.</li>
               <li><strong>Assisting:</strong> hold retractors <strong>steadily</strong> (constant, quiet tension — don't drift), <strong>follow the camera</strong> smoothly if driving the laparoscope, and <strong>suction where the surgeon is looking</strong>, not where you want to.</li>
-              <li><strong>Cutting sutures:</strong> cut to a <strong>~3 mm tail unless told otherwise</strong> (shorter for fine/deep sutures, longer for a planned tie-back). Cut with the tips, flat to the suture, and pause for the "cut" cue.</li>
-              <li><strong>Know your knots:</strong> be able to <strong>two-hand tie</strong> and <strong>instrument tie</strong> competently; practice on any spare suture. Volunteering "can I throw a few?" at the right moment earns reps.</li>
+              <li><strong>Cutting sutures:</strong> cut to a <strong>~3 mm tail unless told otherwise</strong> (shorter for fine/deep sutures, longer for a planned tie-back).<ul class="crs-sub"><li>Cut with the tips, flat to the suture, and pause for the "cut" cue.</li></ul></li>
+              <li><strong>Know your knots:</strong> be able to <strong>two-hand tie</strong> and <strong>instrument tie</strong> competently; practice on any spare suture.<ul class="crs-sub"><li>Volunteering "can I throw a few?" at the right moment earns reps.</li></ul></li>
               <li><strong>Anticipate, don't narrate.</strong> Watch the field, have the next move ready; ask <strong>one</strong> good question per case rather than a running commentary.</li>
             </ul>
           </div>
@@ -973,7 +961,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">13</span>
           <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Key numbers &amp; thresholds ★</h2>
+            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Key numbers &amp; thresholds</h2>
             <div style="font-size:12px;color:var(--ink-3);">Quick card — every figure consolidated</div>
           </div>
           <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
@@ -1012,7 +1000,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">14</span>
           <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Red flags — when to grab a resident ★</h2>
+            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Red flags — when to grab a resident</h2>
             <div style="font-size:12px;color:var(--cat);font-weight:500;">Don't sit on these. State finding, trend, concern.</div>
           </div>
           <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>
@@ -1063,7 +1051,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">15</span>
           <div style="flex:1;min-width:0;">
-            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Note &amp; SmartPhrase templates ★</h2>
+            <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Note &amp; SmartPhrase templates</h2>
             <div style="font-size:12px;color:var(--ink-3);">Skeletons to adapt into Epic SmartPhrases</div>
           </div>
           <span data-chev style="color:var(--ink-3);font-size:13px;transition:transform .2s;flex:none;">▾</span>

@@ -1,7 +1,7 @@
 // Service worker for the Colorectal Surgery Rotation Reference.
 // Cache-first with background refresh so the page works offline after the
 // first visit. Bump CACHE to invalidate when the app shell changes.
-const CACHE = 'crs-v1';
+const CACHE = 'crs-v5';
 
 // Same-origin app shell to precache on install.
 const ASSETS = [
