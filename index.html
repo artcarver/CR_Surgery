@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colorectal Surgery Rotation Reference</title>
+<meta name="description" content="An interactive colorectal surgery clerkship reference: anatomy, operations, stomas, oncology, perioperative management, the anastomotic leak, IBD, and rapid-fire pimp prep. Educational aid — not medical advice.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f6f2">
+<link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="CR Surgery">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="./site.webmanifest">
+<meta property="og:image" content="./icon-512.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Colorectal Surgery Rotation Reference">
+<meta property="og:description" content="An interactive colorectal surgery clerkship reference. Educational aid — not medical advice.">
+<meta name="twitter:card" content="summary">
 <script src="./support.js"></script>
 </head>
 <body>
+<noscript>
+  <div style="max-width:760px;margin:0 auto;padding:2rem;font-family:system-ui,sans-serif;line-height:1.6;color:#26211c;">
+    <h1 style="font-family:Georgia,serif;">Colorectal Surgery Rotation Reference</h1>
+    <p>This interactive reference needs JavaScript to render. The full source
+    content is available as Markdown:
+    <a href="./colorectal_surgery_cheat_sheet.md">colorectal_surgery_cheat_sheet.md</a>.</p>
+    <p style="color:#6b635a;">Educational aid — not medical advice.</p>
+  </div>
+</noscript>
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +40,9 @@
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg)}
-[data-theme="clinical"]{--bg:oklch(0.985 0.006 85);--surface:oklch(1 0 0);--surface-2:oklch(0.962 0.008 85);--ink:oklch(0.26 0.012 70);--ink-2:oklch(0.5 0.015 70);--ink-3:oklch(0.63 0.013 70);--line:oklch(0.9 0.01 80);--accent:oklch(0.52 0.09 195);--accent-soft:oklch(0.95 0.028 195);--critical:oklch(0.53 0.18 27);}
-[data-theme="slate"]{--bg:oklch(0.97 0.006 245);--surface:oklch(0.995 0.003 245);--surface-2:oklch(0.945 0.009 245);--ink:oklch(0.27 0.02 255);--ink-2:oklch(0.48 0.02 255);--ink-3:oklch(0.6 0.018 255);--line:oklch(0.9 0.013 248);--accent:oklch(0.5 0.1 250);--accent-soft:oklch(0.95 0.03 250);--critical:oklch(0.53 0.18 27);}
-[data-theme="night"]{--bg:oklch(0.205 0.014 262);--surface:oklch(0.248 0.015 262);--surface-2:oklch(0.295 0.017 262);--ink:oklch(0.93 0.01 250);--ink-2:oklch(0.74 0.014 250);--ink-3:oklch(0.62 0.014 250);--line:oklch(0.36 0.018 262);--accent:oklch(0.74 0.1 200);--accent-soft:oklch(0.32 0.045 220);--critical:oklch(0.7 0.16 30);}
+[data-theme="clinical"]{--bg:oklch(0.985 0.006 85);--surface:oklch(1 0 0);--surface-2:oklch(0.962 0.008 85);--ink:oklch(0.26 0.012 70);--ink-2:oklch(0.5 0.015 70);--ink-3:oklch(0.56 0.013 70);--line:oklch(0.9 0.01 80);--accent:oklch(0.52 0.09 195);--accent-soft:oklch(0.95 0.028 195);--critical:oklch(0.53 0.18 27);}
+[data-theme="slate"]{--bg:oklch(0.97 0.006 245);--surface:oklch(0.995 0.003 245);--surface-2:oklch(0.945 0.009 245);--ink:oklch(0.27 0.02 255);--ink-2:oklch(0.48 0.02 255);--ink-3:oklch(0.54 0.018 255);--line:oklch(0.9 0.013 248);--accent:oklch(0.5 0.1 250);--accent-soft:oklch(0.95 0.03 250);--critical:oklch(0.53 0.18 27);}
+[data-theme="night"]{--bg:oklch(0.205 0.014 262);--surface:oklch(0.248 0.015 262);--surface-2:oklch(0.295 0.017 262);--ink:oklch(0.93 0.01 250);--ink-2:oklch(0.74 0.014 250);--ink-3:oklch(0.68 0.014 250);--line:oklch(0.36 0.018 262);--accent:oklch(0.74 0.1 200);--accent-soft:oklch(0.32 0.045 220);--critical:oklch(0.7 0.16 30);}
 .crs-layout{display:grid;grid-template-columns:268px minmax(0,1fr);gap:30px;max-width:1200px;margin:0 auto;padding:0 22px 80px;}
 .crs-side{position:sticky;top:64px;align-self:start;max-height:calc(100vh - 76px);overflow:auto;padding:6px 4px 24px;}
 .crs-menu{display:none}
@@ -37,6 +62,20 @@ body{margin:0;background:var(--bg)}
 section[data-sec]>[data-toggle]{box-shadow:0 1px 2px rgba(0,0,0,.045),0 1px 0 rgba(0,0,0,.02);transition:border-color .18s,box-shadow .18s}
 section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat) 45%,var(--line));box-shadow:0 2px 8px rgba(0,0,0,.06)}
 [data-card]{transition:border-color .18s}
+/* visible keyboard focus for all interactive controls */
+[data-toggle]:focus-visible,[data-nav]:focus-visible,[data-theme-btn]:focus-visible,[data-menu]:focus-visible,[data-expand-all]:focus-visible,[data-collapse-all]:focus-visible,[data-search]:focus-visible,[data-clear]:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+/* top bar: wrap to a second row on narrow screens so the search field and
+   theme switcher stay reachable instead of overflowing off-screen */
+@media (max-width:600px){
+  .crs-bar{flex-wrap:wrap;row-gap:8px}
+  .crs-bar>.crs-logo{flex:1 1 auto;min-width:0}
+  .crs-search{order:5;flex:1 1 60%;min-width:0!important}
+  .crs-themes{order:6}
+}
+/* stack the "How to use" callout label above its text on small screens */
+@media (max-width:520px){
+  .crs-howto{flex-direction:column;gap:5px}
+}
 @media (max-width:860px){
   .crs-layout{grid-template-columns:1fr;gap:0}
   .crs-side{position:fixed;top:0;left:0;height:100vh;max-height:none;width:286px;transform:translateX(-101%);transition:transform .26s cubic-bezier(.4,0,.2,1);z-index:60;background:var(--surface);border-right:1px solid var(--line);padding-top:14px}
@@ -55,21 +94,21 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
 <div data-theme="clinical" ref="{{ rootRef }}" style="min-height:100vh;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;--cat:var(--accent);font-size:15px;line-height:1.5;">
 
   <div class="crs-topbar" data-noprint style="position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
-    <div style="max-width:1200px;margin:0 auto;padding:9px 22px;display:flex;align-items:center;gap:14px;">
-      <button class="crs-menu" data-menu aria-label="Menu" style="appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:10px;align-items:center;justify-content:center;cursor:pointer;flex:none;font-size:17px;">≡</button>
-      <div style="display:flex;align-items:center;gap:11px;flex:none;">
+    <div class="crs-bar" style="max-width:1200px;margin:0 auto;padding:9px 22px;display:flex;align-items:center;gap:14px;">
+      <button class="crs-menu" data-menu aria-label="Menu" aria-expanded="false" aria-controls="crs-drawer" style="appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:10px;align-items:center;justify-content:center;cursor:pointer;flex:none;font-size:17px;">≡</button>
+      <div class="crs-logo" style="display:flex;align-items:center;gap:11px;flex:none;">
         <div style="width:34px;height:34px;border-radius:9px;background:var(--accent);color:var(--surface);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;">CR</div>
         <div style="line-height:1.1;">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:var(--ink-3);">COLORECTAL SURGERY</div>
           <div style="font-family:'IBM Plex Serif',serif;font-weight:600;font-size:16px;">Rotation Reference</div>
         </div>
       </div>
-      <div style="flex:1;min-width:120px;position:relative;display:flex;align-items:center;">
+      <div class="crs-search" style="flex:1;min-width:120px;position:relative;display:flex;align-items:center;">
         <span style="position:absolute;left:13px;color:var(--ink-3);font-size:14px;pointer-events:none;">⌕</span>
-        <input data-search type="text" placeholder="Search all 16 sections…" autocomplete="off" spellcheck="false" style="width:100%;padding:9px 36px 9px 32px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;font-family:inherit;font-size:14px;outline:none;" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);">
+        <input data-search type="search" aria-label="Search all sections" placeholder="Search all 16 sections…" autocomplete="off" spellcheck="false" style="width:100%;padding:9px 36px 9px 32px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;font-family:inherit;font-size:14px;outline:none;" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);">
         <button data-clearwrap data-clear aria-label="Clear" style="display:none;position:absolute;right:8px;appearance:none;border:none;background:var(--surface-2);color:var(--ink-2);width:22px;height:22px;border-radius:6px;cursor:pointer;font-size:13px;line-height:1;">✕</button>
       </div>
-      <div style="display:flex;gap:4px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:3px;flex:none;">
+      <div class="crs-themes" style="display:flex;gap:4px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:3px;flex:none;">
         <button data-theme-btn="clinical" title="Clinical" style="appearance:none;border:none;background:transparent;color:var(--ink-2);font-family:inherit;font-size:12px;font-weight:500;padding:5px 9px;border-radius:7px;cursor:pointer;">Clinical</button>
         <button data-theme-btn="slate" title="Slate" style="appearance:none;border:none;background:transparent;color:var(--ink-2);font-family:inherit;font-size:12px;font-weight:500;padding:5px 9px;border-radius:7px;cursor:pointer;">Slate</button>
         <button data-theme-btn="night" title="Night" style="appearance:none;border:none;background:transparent;color:var(--ink-2);font-family:inherit;font-size:12px;font-weight:500;padding:5px 9px;border-radius:7px;cursor:pointer;">Night</button>
@@ -77,11 +116,11 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
     </div>
   </div>
 
-  <div data-scrim class="crs-scrim" style="position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:55;"></div>
+  <div data-scrim class="crs-scrim" aria-hidden="true" style="position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:55;"></div>
 
   <div class="crs-layout">
 
-    <nav class="crs-side" data-drawer data-open="0" aria-label="Sections">
+    <nav id="crs-drawer" class="crs-side" data-drawer data-open="0" aria-label="Sections">
       <div style="display:flex;gap:6px;margin:4px 6px 12px;">
         <button data-expand-all style="flex:1;appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);font-family:inherit;font-size:11px;font-weight:500;padding:7px;border-radius:8px;cursor:pointer;" style-hover="border-color:var(--accent);color:var(--accent);">Expand all</button>
         <button data-collapse-all style="flex:1;appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);font-family:inherit;font-size:11px;font-weight:500;padding:7px;border-radius:8px;cursor:pointer;" style-hover="border-color:var(--accent);color:var(--accent);">Collapse all</button>
@@ -118,10 +157,10 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <a data-nav="sec-1" href="#sec-1" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:500;" style-hover="border-color:var(--accent);"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.52 0.09 195);"></span>Anatomy</a>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:22px;">
+      <div data-intro style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:22px;">
         <div style="font-family:'IBM Plex Serif',serif;font-size:20px;font-weight:600;margin-bottom:8px;">Colorectal Surgery Clerkship Cheat Sheet</div>
         <p style="margin:0 0 10px;color:var(--ink-2);font-size:14px;line-height:1.55;">Built for a tertiary/quaternary referral center (UCSD La Jolla / Thornton), where the case mix skews toward IBD, redo pelvic surgery, hereditary cancer syndromes, post-neoadjuvant oncology, complex diverticular disease, and reoperative bowel. Organized so you can round well, present cleanly, and survive pimping.</p>
-        <div style="display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);border-radius:10px;padding:11px 13px;">
+        <div class="crs-howto" style="display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);border-radius:10px;padding:11px 13px;">
           <span style="color:var(--accent);font-weight:600;font-size:13px;flex:none;">How to use</span>
           <p style="margin:0;color:var(--ink-2);font-size:13px;line-height:1.5;">§0 decodes the jargon (read once). §1–9 are the clinical core, §10 is rapid-fire pimp prep, §11–12 are logistics &amp; OR etiquette, §13–16 are quick-glance cards. On rounds the fastest paths are §13 (Key numbers), §14 (Red flags), §15 (templates). Use the search box to filter every section at once. <em>Oncology sections reflect mid-2026 practice and go stale fastest — re-verify against current NCCN and your tumor board.</em></p>
         </div>
@@ -133,7 +172,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </div>
 
       <section data-sec id="sec-0" data-collapsed="0" style="--cat:oklch(0.5 0.1 330);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">00</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Decode the alphabet soup</h2>
@@ -246,7 +285,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-1" data-collapsed="0" style="--cat:oklch(0.52 0.09 195);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">01</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Anatomy you will actually be asked about</h2>
@@ -351,7 +390,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-2" data-collapsed="0" style="--cat:oklch(0.5 0.11 280);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">02</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">The operations — decode the eponyms &amp; know the why</h2>
@@ -397,7 +436,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
       <section data-sec id="sec-3" data-collapsed="0" style="--cat:oklch(0.58 0.1 70);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">03</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Stomas</h2>
@@ -452,7 +491,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-4" data-collapsed="0" style="--cat:oklch(0.5 0.12 330);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">04</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Colorectal oncology</h2>
@@ -574,7 +613,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-5" data-collapsed="0" style="--cat:oklch(0.52 0.09 150);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">05</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Perioperative / medical management</h2>
@@ -625,7 +664,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
       <section data-sec id="sec-6" data-collapsed="0" style="--cat:oklch(0.53 0.18 27);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">06</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">The anastomotic leak</h2>
@@ -668,7 +707,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-7" data-collapsed="0" style="--cat:oklch(0.57 0.11 50);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">07</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Benign &amp; inflammatory disease</h2>
@@ -743,7 +782,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-8" data-collapsed="0" style="--cat:oklch(0.5 0.1 245);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">08</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Things you maybe didn't realize were relevant</h2>
@@ -787,7 +826,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
       <section data-sec id="sec-9" data-collapsed="0" style="--cat:oklch(0.52 0.09 150);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">09</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">How to be useful</h2>
@@ -811,7 +850,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-10" data-collapsed="0" style="--cat:oklch(0.52 0.09 195);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">10</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Rapid-fire pimp answers</h2>
@@ -861,7 +900,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-11" data-collapsed="0" style="--cat:oklch(0.5 0.1 245);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">11</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Daily routine, logistics &amp; discharge criteria</h2>
@@ -897,7 +936,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
       <section data-sec id="sec-12" data-collapsed="0" style="--cat:oklch(0.5 0.11 280);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">12</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">OR etiquette &amp; technical basics</h2>
@@ -931,7 +970,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-13" data-collapsed="0" style="--cat:oklch(0.5 0.12 195);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">13</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Key numbers &amp; thresholds ★</h2>
@@ -970,7 +1009,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
       <section data-sec id="sec-14" data-collapsed="0" style="--cat:oklch(0.53 0.18 27);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">14</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Red flags — when to grab a resident ★</h2>
@@ -1021,7 +1060,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
       </section>
 
             <section data-sec id="sec-15" data-collapsed="0" style="--cat:oklch(0.45 0.03 250);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">15</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Note &amp; SmartPhrase templates ★</h2>
@@ -1067,7 +1106,7 @@ Plan: [next 1-2 concrete steps] — targeting discharge POD[#].</pre>
       </section>
 
       <section data-sec id="sec-16" data-collapsed="0" style="--cat:oklch(0.52 0.09 150);scroll-margin-top:74px;margin:0 0 16px;">
-        <div data-toggle style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
+        <div data-toggle role="button" tabindex="0" aria-expanded="true" style="display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none;">
           <span style="width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none;">16</span>
           <div style="flex:1;min-width:0;">
             <h2 style="margin:0;font-family:'IBM Plex Serif',serif;font-size:18px;font-weight:600;">Make it yours</h2>
@@ -1154,6 +1193,9 @@ class Component extends DCLogic {
     try { const t = localStorage.getItem('crs-theme'); if (t) theme = t; } catch (e) {}
     this.setTheme(theme);
 
+    // restore which sections were collapsed last visit
+    this.restoreCollapsed();
+
     root.addEventListener('click', (e) => {
       const themeBtn = e.target.closest('[data-theme-btn]');
       if (themeBtn) { this.setTheme(themeBtn.getAttribute('data-theme-btn')); return; }
@@ -1171,21 +1213,40 @@ class Component extends DCLogic {
       const clr = e.target.closest('[data-clear]');
       if (clr) { const inp = root.querySelector('[data-search]'); inp.value = ''; this.applySearch(''); inp.focus(); return; }
 
-      if (e.target.closest('[data-expand-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.expand(s)); return; }
-      if (e.target.closest('[data-collapse-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.collapse(s)); return; }
+      if (e.target.closest('[data-expand-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.expand(s)); this.saveCollapsed(); return; }
+      if (e.target.closest('[data-collapse-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.collapse(s)); this.saveCollapsed(); return; }
     });
 
     root.addEventListener('input', (e) => {
       if (e.target.closest('[data-search]')) this.applySearch(e.target.value);
     });
 
+    // Keyboard: Enter/Space activates the focusable section headers.
+    root.addEventListener('keydown', (e) => {
+      const tog = e.target.closest('[data-toggle]');
+      if (tog && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        const sec = tog.closest('[data-sec]');
+        if (sec) this.toggle(sec);
+      }
+    });
+
     this._spy = () => this.spy();
     window.addEventListener('scroll', this._spy, { passive: true });
     this.spy();
+
+    // honor a #sec-N deep link on load, and respond to back/forward
+    this._onHash = () => {
+      const id = (location.hash || '').slice(1);
+      if (/^sec-\d+$/.test(id) && root.querySelector('#' + id)) this.goTo(id);
+    };
+    window.addEventListener('hashchange', this._onHash);
+    if (location.hash) setTimeout(this._onHash, 0);
   }
 
   componentWillUnmount() {
     if (this._spy) window.removeEventListener('scroll', this._spy);
+    if (this._onHash) window.removeEventListener('hashchange', this._onHash);
   }
 
   setTheme(name) {
@@ -1204,6 +1265,8 @@ class Component extends DCLogic {
     const sec = this.root.querySelector('#' + id);
     if (sec) {
       this.expand(sec);
+      this.saveCollapsed();
+      try { history.replaceState(null, '', '#' + id); } catch (e) {}
       const top = sec.getBoundingClientRect().top + window.scrollY - 64;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -1214,40 +1277,67 @@ class Component extends DCLogic {
     const b = sec.querySelector('[data-body]'); if (b) b.style.display = 'flex';
     sec.setAttribute('data-collapsed', '0');
     const c = sec.querySelector('[data-chev]'); if (c) c.style.transform = 'none';
+    const t = sec.querySelector('[data-toggle]'); if (t) t.setAttribute('aria-expanded', 'true');
   }
   collapse(sec) {
     const b = sec.querySelector('[data-body]'); if (b) b.style.display = 'none';
     sec.setAttribute('data-collapsed', '1');
     const c = sec.querySelector('[data-chev]'); if (c) c.style.transform = 'rotate(-90deg)';
+    const t = sec.querySelector('[data-toggle]'); if (t) t.setAttribute('aria-expanded', 'false');
   }
   toggle(sec) {
     if (sec.getAttribute('data-collapsed') === '1') this.expand(sec); else this.collapse(sec);
+    this.saveCollapsed();
+  }
+
+  restoreCollapsed() {
+    let ids = [];
+    try { ids = JSON.parse(localStorage.getItem('crs-collapsed') || '[]'); } catch (e) {}
+    if (!Array.isArray(ids) || !ids.length) return;
+    const set = new Set(ids);
+    this.root.querySelectorAll('[data-sec]').forEach(sec => { if (set.has(sec.id)) this.collapse(sec); });
+  }
+  saveCollapsed() {
+    const ids = [...this.root.querySelectorAll('[data-sec]')]
+      .filter(s => s.getAttribute('data-collapsed') === '1')
+      .map(s => s.id);
+    try { localStorage.setItem('crs-collapsed', JSON.stringify(ids)); } catch (e) {}
   }
 
   applySearch(q) {
     q = (q || '').trim().toLowerCase();
     this.q = q;
     const root = this.root;
+    // AND together whitespace-separated tokens so word order doesn't matter
+    const tokens = q ? q.split(/\s+/) : [];
+    const match = (text) => { const t = (text || '').toLowerCase(); return tokens.every(tok => t.includes(tok)); };
     const clr = root.querySelector('[data-clearwrap]');
     if (clr) clr.style.display = q ? 'flex' : 'none';
+    // intro/top matter is noise once you're searching
+    const intro = root.querySelector('[data-intro]');
+    if (intro) intro.style.display = q ? 'none' : '';
     let total = 0;
     root.querySelectorAll('[data-sec]').forEach(sec => {
+      const header = sec.querySelector('[data-toggle]');
+      // a hit on the section title/subtitle reveals the whole section
+      const headerHit = !!q && match(header ? header.textContent : '');
       let hits = 0;
       sec.querySelectorAll('[data-card]').forEach(card => {
-        const hit = !q || card.textContent.toLowerCase().includes(q);
+        const hit = !q || headerHit || match(card.textContent);
         card.style.display = hit ? '' : 'none';
         if (hit) hits++;
       });
+      const show = !q || headerHit || hits > 0;
       const nav = root.querySelector('[data-nav="' + sec.id + '"]');
       if (q) {
-        sec.style.display = hits ? '' : 'none';
-        if (nav) nav.style.display = hits ? '' : 'none';
-        if (hits) this.expand(sec);
+        sec.style.display = show ? '' : 'none';
+        if (nav) nav.style.display = show ? '' : 'none';
+        if (show) this.expand(sec);
       } else {
         sec.style.display = '';
         if (nav) nav.style.display = '';
       }
-      total += hits;
+      if (show && q) total++;
     });
     const nr = root.querySelector('[data-noresults]');
     if (nr) nr.style.display = (q && total === 0) ? 'block' : 'none';
@@ -1270,16 +1360,28 @@ class Component extends DCLogic {
   toggleDrawer() {
     const d = this.root.querySelector('[data-drawer]');
     const s = this.root.querySelector('[data-scrim]');
+    const m = this.root.querySelector('[data-menu]');
     const open = d.getAttribute('data-open') === '1';
     d.setAttribute('data-open', open ? '0' : '1');
     if (s) s.style.display = open ? 'none' : 'block';
+    if (m) m.setAttribute('aria-expanded', open ? 'false' : 'true');
   }
   closeDrawer() {
     const d = this.root.querySelector('[data-drawer]');
     const s = this.root.querySelector('[data-scrim]');
+    const m = this.root.querySelector('[data-menu]');
     if (d) d.setAttribute('data-open', '0');
     if (s) s.style.display = 'none';
+    if (m) m.setAttribute('aria-expanded', 'false');
   }
+}
+</script>
+<script>
+// Register the service worker for offline use (no-op on http:// or older browsers).
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('./sw.js').catch(function () {});
+  });
 }
 </script>
 </body>
