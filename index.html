@@ -1172,6 +1172,9 @@ class Component extends DCLogic {
     try { const t = localStorage.getItem('crs-theme'); if (t) theme = t; } catch (e) {}
     this.setTheme(theme);
 
+    // restore which sections were collapsed last visit
+    this.restoreCollapsed();
+
     root.addEventListener('click', (e) => {
       const themeBtn = e.target.closest('[data-theme-btn]');
       if (themeBtn) { this.setTheme(themeBtn.getAttribute('data-theme-btn')); return; }
@@ -1189,8 +1192,8 @@ class Component extends DCLogic {
       const clr = e.target.closest('[data-clear]');
       if (clr) { const inp = root.querySelector('[data-search]'); inp.value = ''; this.applySearch(''); inp.focus(); return; }
 
-      if (e.target.closest('[data-expand-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.expand(s)); return; }
-      if (e.target.closest('[data-collapse-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.collapse(s)); return; }
+      if (e.target.closest('[data-expand-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.expand(s)); this.saveCollapsed(); return; }
+      if (e.target.closest('[data-collapse-all]')) { root.querySelectorAll('[data-sec]').forEach(s => this.collapse(s)); this.saveCollapsed(); return; }
     });
 
     root.addEventListener('input', (e) => {
@@ -1210,10 +1213,19 @@ class Component extends DCLogic {
     this._spy = () => this.spy();
     window.addEventListener('scroll', this._spy, { passive: true });
     this.spy();
+
+    // honor a #sec-N deep link on load, and respond to back/forward
+    this._onHash = () => {
+      const id = (location.hash || '').slice(1);
+      if (/^sec-\d+$/.test(id) && root.querySelector('#' + id)) this.goTo(id);
+    };
+    window.addEventListener('hashchange', this._onHash);
+    if (location.hash) setTimeout(this._onHash, 0);
   }
 
   componentWillUnmount() {
     if (this._spy) window.removeEventListener('scroll', this._spy);
+    if (this._onHash) window.removeEventListener('hashchange', this._onHash);
   }
 
   setTheme(name) {
@@ -1232,6 +1244,8 @@ class Component extends DCLogic {
     const sec = this.root.querySelector('#' + id);
     if (sec) {
       this.expand(sec);
+      this.saveCollapsed();
+      try { history.replaceState(null, '', '#' + id); } catch (e) {}
       const top = sec.getBoundingClientRect().top + window.scrollY - 64;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -1252,6 +1266,21 @@ class Component extends DCLogic {
   }
   toggle(sec) {
     if (sec.getAttribute('data-collapsed') === '1') this.expand(sec); else this.collapse(sec);
+    this.saveCollapsed();
+  }
+
+  restoreCollapsed() {
+    let ids = [];
+    try { ids = JSON.parse(localStorage.getItem('crs-collapsed') || '[]'); } catch (e) {}
+    if (!Array.isArray(ids) || !ids.length) return;
+    const set = new Set(ids);
+    this.root.querySelectorAll('[data-sec]').forEach(sec => { if (set.has(sec.id)) this.collapse(sec); });
+  }
+  saveCollapsed() {
+    const ids = [...this.root.querySelectorAll('[data-sec]')]
+      .filter(s => s.getAttribute('data-collapsed') === '1')
+      .map(s => s.id);
+    try { localStorage.setItem('crs-collapsed', JSON.stringify(ids)); } catch (e) {}
   }
 
   applySearch(q) {
