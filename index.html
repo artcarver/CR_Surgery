@@ -64,6 +64,7 @@ section[data-sec]>[data-toggle]{box-shadow:0 1px 2px rgba(0,0,0,.045),0 1px 0 rg
 section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat) 45%,var(--line));box-shadow:0 2px 8px rgba(0,0,0,.06)}
 [data-card]{transition:border-color .18s}
 /* ============ uniform component styles (replaces former inline styles) ============ */
+.crs-app{min-height:100vh;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px;line-height:1.5;--cat:var(--accent);--cat0:oklch(0.5 0.1 330);--cat1:oklch(0.52 0.09 195);--cat2:oklch(0.5 0.11 280);--cat3:oklch(0.58 0.1 70);--cat4:oklch(0.5 0.12 330);--cat5:oklch(0.52 0.09 150);--cat6:oklch(0.53 0.18 27);--cat7:oklch(0.57 0.11 50);--cat8:oklch(0.5 0.1 245);--cat9:oklch(0.52 0.09 150);--cat10:oklch(0.52 0.09 195);--cat11:oklch(0.5 0.1 245);--cat12:oklch(0.5 0.11 280);--cat13:oklch(0.5 0.12 195);--cat14:oklch(0.53 0.18 27);--cat15:oklch(0.45 0.03 250);--cat16:oklch(0.52 0.09 150)}
 .crs-section{scroll-margin-top:74px;margin:0 0 16px}
 .crs-toggle{display:flex;align-items:center;gap:13px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:13px;cursor:pointer;user-select:none}
 .crs-badge{width:34px;height:34px;border-radius:9px;background:color-mix(in oklab,var(--cat) 15%,transparent);color:var(--cat);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;flex:none}
@@ -138,7 +139,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
 }
 </style>
 </helmet>
-<div data-theme="clinical" ref="{{ rootRef }}" style="min-height:100vh;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;--cat:var(--accent);font-size:15px;line-height:1.5;">
+<div class="crs-app" data-theme="clinical" ref="{{ rootRef }}">
 
   <div class="crs-topbar" data-noprint style="position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
     <div class="crs-bar" style="max-width:1200px;margin:0 auto;padding:9px 22px;display:flex;align-items:center;gap:14px;">
@@ -173,24 +174,24 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <button data-collapse-all style="flex:1;appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);font-family:inherit;font-size:11px;font-weight:500;padding:7px;border-radius:8px;cursor:pointer;" style-hover="border-color:var(--accent);color:var(--accent);">Collapse all</button>
       </div>
       <div data-navlist style="display:flex;flex-direction:column;gap:1px;">
-        <a data-nav="sec-0" href="#sec-0" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.1 330)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">00</span><span>Decode the alphabet soup</span></a>
-        <a data-nav="sec-1" href="#sec-1" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 195)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">01</span><span>Anatomy</span></a>
-        <a data-nav="sec-2" href="#sec-2" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.11 280)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">02</span><span>The operations</span></a>
-        <a data-nav="sec-3" href="#sec-3" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.58 0.1 70)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">03</span><span>Stomas</span></a>
-        <a data-nav="sec-4" href="#sec-4" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.12 330)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">04</span><span>Colorectal oncology</span></a>
-        <a data-nav="sec-5" href="#sec-5" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 150)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">05</span><span>Perioperative management</span></a>
-        <a data-nav="sec-6" href="#sec-6" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.53 0.18 27)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">06</span><span>The anastomotic leak</span></a>
-        <a data-nav="sec-7" href="#sec-7" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.57 0.11 50)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">07</span><span>Benign &amp; inflammatory</span></a>
-        <a data-nav="sec-8" href="#sec-8" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.1 245)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">08</span><span>Didn't realize relevant</span></a>
-        <a data-nav="sec-9" href="#sec-9" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 150)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">09</span><span>How to be useful</span></a>
-        <a data-nav="sec-10" href="#sec-10" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 195)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">10</span><span>Rapid-fire pimp answers</span></a>
-        <a data-nav="sec-11" href="#sec-11" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.1 245)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">11</span><span>Daily routine &amp; logistics</span></a>
-        <a data-nav="sec-12" href="#sec-12" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.11 280)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">12</span><span>OR etiquette</span></a>
+        <a data-nav="sec-0" href="#sec-0" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat0)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">00</span><span>Decode the alphabet soup</span></a>
+        <a data-nav="sec-1" href="#sec-1" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat1)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">01</span><span>Anatomy</span></a>
+        <a data-nav="sec-2" href="#sec-2" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat2)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">02</span><span>The operations</span></a>
+        <a data-nav="sec-3" href="#sec-3" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat3)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">03</span><span>Stomas</span></a>
+        <a data-nav="sec-4" href="#sec-4" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat4)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">04</span><span>Colorectal oncology</span></a>
+        <a data-nav="sec-5" href="#sec-5" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat5)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">05</span><span>Perioperative management</span></a>
+        <a data-nav="sec-6" href="#sec-6" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat6)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">06</span><span>The anastomotic leak</span></a>
+        <a data-nav="sec-7" href="#sec-7" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat7)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">07</span><span>Benign &amp; inflammatory</span></a>
+        <a data-nav="sec-8" href="#sec-8" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat8)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">08</span><span>Didn't realize relevant</span></a>
+        <a data-nav="sec-9" href="#sec-9" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat9)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">09</span><span>How to be useful</span></a>
+        <a data-nav="sec-10" href="#sec-10" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat10)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">10</span><span>Rapid-fire pimp answers</span></a>
+        <a data-nav="sec-11" href="#sec-11" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat11)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">11</span><span>Daily routine &amp; logistics</span></a>
+        <a data-nav="sec-12" href="#sec-12" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat12)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">12</span><span>OR etiquette</span></a>
         <div style="height:1px;background:var(--line);margin:8px 10px;"></div>
-        <a data-nav="sec-13" href="#sec-13" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.5 0.12 195)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">13</span><span>Key numbers</span></a>
-        <a data-nav="sec-14" href="#sec-14" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.53 0.18 27)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">14</span><span>Red flags</span></a>
-        <a data-nav="sec-15" href="#sec-15" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.45 0.03 250)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">15</span><span>Note templates</span></a>
-        <a data-nav="sec-16" href="#sec-16" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:oklch(0.52 0.09 150)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">16</span><span>Make it yours</span></a>
+        <a data-nav="sec-13" href="#sec-13" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat13)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">13</span><span>Key numbers</span></a>
+        <a data-nav="sec-14" href="#sec-14" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat14)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">14</span><span>Red flags</span></a>
+        <a data-nav="sec-15" href="#sec-15" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat15)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">15</span><span>Note templates</span></a>
+        <a data-nav="sec-16" href="#sec-16" class="crs-navlink" style-hover="background:var(--surface-2);"><span class="crs-dot" style="background:var(--cat16)"></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-3);width:18px;flex:none;">16</span><span>Make it yours</span></a>
       </div>
     </nav>
 
@@ -198,10 +199,10 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
 
       <div data-noprint style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--ink-3);align-self:center;margin-right:2px;">QUICK ACCESS</span>
-        <a data-nav="sec-13" href="#sec-13" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:oklch(0.5 0.12 195)"></span>Key numbers</a>
-        <a data-nav="sec-14" href="#sec-14" class="crs-chip" style-hover="border-color:var(--critical);"><span class="crs-dot-sm" style="background:oklch(0.53 0.18 27)"></span>Red flags</a>
-        <a data-nav="sec-15" href="#sec-15" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:oklch(0.45 0.03 250)"></span>Note templates</a>
-        <a data-nav="sec-1" href="#sec-1" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:oklch(0.52 0.09 195)"></span>Anatomy</a>
+        <a data-nav="sec-13" href="#sec-13" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:var(--cat13)"></span>Key numbers</a>
+        <a data-nav="sec-14" href="#sec-14" class="crs-chip" style-hover="border-color:var(--critical);"><span class="crs-dot-sm" style="background:var(--cat14)"></span>Red flags</a>
+        <a data-nav="sec-15" href="#sec-15" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:var(--cat15)"></span>Note templates</a>
+        <a data-nav="sec-1" href="#sec-1" class="crs-chip" style-hover="border-color:var(--accent);"><span class="crs-dot-sm" style="background:var(--cat1)"></span>Anatomy</a>
       </div>
 
       <div data-intro style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:22px;">
@@ -218,7 +219,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         <div style="font-size:15px;">No matches. Try a shorter or different term.</div>
       </div>
 
-      <section data-sec id="sec-0" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.1 330)">
+      <section data-sec id="sec-0" data-collapsed="0" class="crs-section" style="--cat:var(--cat0)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">00</span>
           <div class="crs-titlewrap">
@@ -320,7 +321,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-1" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 195)">
+            <section data-sec id="sec-1" data-collapsed="0" class="crs-section" style="--cat:var(--cat1)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">01</span>
           <div class="crs-titlewrap">
@@ -425,7 +426,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-2" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.11 280)">
+            <section data-sec id="sec-2" data-collapsed="0" class="crs-section" style="--cat:var(--cat2)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">02</span>
           <div class="crs-titlewrap">
@@ -471,7 +472,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-3" data-collapsed="0" class="crs-section" style="--cat:oklch(0.58 0.1 70)">
+      <section data-sec id="sec-3" data-collapsed="0" class="crs-section" style="--cat:var(--cat3)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">03</span>
           <div class="crs-titlewrap">
@@ -526,7 +527,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-4" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.12 330)">
+            <section data-sec id="sec-4" data-collapsed="0" class="crs-section" style="--cat:var(--cat4)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">04</span>
           <div class="crs-titlewrap">
@@ -646,7 +647,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-5" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 150)">
+            <section data-sec id="sec-5" data-collapsed="0" class="crs-section" style="--cat:var(--cat5)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">05</span>
           <div class="crs-titlewrap">
@@ -697,7 +698,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-6" data-collapsed="0" class="crs-section" style="--cat:oklch(0.53 0.18 27)">
+      <section data-sec id="sec-6" data-collapsed="0" class="crs-section" style="--cat:var(--cat6)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">06</span>
           <div class="crs-titlewrap">
@@ -740,7 +741,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-7" data-collapsed="0" class="crs-section" style="--cat:oklch(0.57 0.11 50)">
+            <section data-sec id="sec-7" data-collapsed="0" class="crs-section" style="--cat:var(--cat7)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">07</span>
           <div class="crs-titlewrap">
@@ -815,7 +816,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-8" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.1 245)">
+            <section data-sec id="sec-8" data-collapsed="0" class="crs-section" style="--cat:var(--cat8)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">08</span>
           <div class="crs-titlewrap">
@@ -859,7 +860,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-9" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 150)">
+      <section data-sec id="sec-9" data-collapsed="0" class="crs-section" style="--cat:var(--cat9)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">09</span>
           <div class="crs-titlewrap">
@@ -883,7 +884,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-10" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 195)">
+            <section data-sec id="sec-10" data-collapsed="0" class="crs-section" style="--cat:var(--cat10)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">10</span>
           <div class="crs-titlewrap">
@@ -933,7 +934,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-11" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.1 245)">
+            <section data-sec id="sec-11" data-collapsed="0" class="crs-section" style="--cat:var(--cat11)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">11</span>
           <div class="crs-titlewrap">
@@ -969,7 +970,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-12" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.11 280)">
+      <section data-sec id="sec-12" data-collapsed="0" class="crs-section" style="--cat:var(--cat12)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">12</span>
           <div class="crs-titlewrap">
@@ -1003,7 +1004,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-13" data-collapsed="0" class="crs-section" style="--cat:oklch(0.5 0.12 195)">
+            <section data-sec id="sec-13" data-collapsed="0" class="crs-section" style="--cat:var(--cat13)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">13</span>
           <div class="crs-titlewrap">
@@ -1042,7 +1043,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-      <section data-sec id="sec-14" data-collapsed="0" class="crs-section" style="--cat:oklch(0.53 0.18 27)">
+      <section data-sec id="sec-14" data-collapsed="0" class="crs-section" style="--cat:var(--cat14)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">14</span>
           <div class="crs-titlewrap">
@@ -1093,7 +1094,7 @@ section[data-sec]>[data-toggle]:hover{border-color:color-mix(in oklab,var(--cat)
         </div>
       </section>
 
-            <section data-sec id="sec-15" data-collapsed="0" class="crs-section" style="--cat:oklch(0.45 0.03 250)">
+            <section data-sec id="sec-15" data-collapsed="0" class="crs-section" style="--cat:var(--cat15)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">15</span>
           <div class="crs-titlewrap">
@@ -1139,7 +1140,7 @@ Plan: [next 1-2 concrete steps] — targeting discharge POD[#].</pre>
         </div>
       </section>
 
-      <section data-sec id="sec-16" data-collapsed="0" class="crs-section" style="--cat:oklch(0.52 0.09 150)">
+      <section data-sec id="sec-16" data-collapsed="0" class="crs-section" style="--cat:var(--cat16)">
         <div data-toggle role="button" tabindex="0" aria-expanded="true" class="crs-toggle">
           <span class="crs-badge">16</span>
           <div class="crs-titlewrap">
